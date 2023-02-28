@@ -7,6 +7,11 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven("https://maven.fabricmc.net/")
+}
+
+dependencies {
+    implementation("net.fabricmc:stitch:0.6.2")
 }
 
 val pluginName = "desk-dock-reverse-engineering-plugin"

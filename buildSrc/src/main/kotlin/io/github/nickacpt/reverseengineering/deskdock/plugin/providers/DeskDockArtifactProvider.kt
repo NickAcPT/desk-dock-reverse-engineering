@@ -1,9 +1,8 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.providers
 
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.ConfigurationConstants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.DependencyConstants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.MavenConstants
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.getDependencyInfo
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.deskDockDependency
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.maven.getVirtualMavenRepository
 import org.gradle.api.Project
 import java.nio.file.Path
@@ -16,7 +15,7 @@ abstract class DeskDockArtifactProvider {
 
     fun provide(project: Project) {
         val repo = project.getVirtualMavenRepository(repoName)
-        val originalDependency = project.getDependencyInfo(ConfigurationConstants.DESKDOCK_CONFIGURATION_NAME)
+        val originalDependency = project.deskDockDependency
 
         val newDependency = originalDependency.copy(
             artifact = name,

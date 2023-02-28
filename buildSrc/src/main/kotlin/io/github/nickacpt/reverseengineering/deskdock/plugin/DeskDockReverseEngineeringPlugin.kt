@@ -20,7 +20,11 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
         target.getVirtualMavenRepository(MavenConstants.DESKDOCK_MAVEN_REPOSITORY).addRepository()
 
         target.afterEvaluate {
+            // First, provide the original deskdock jar
             OriginalDeskDockProvider.provide(this)
+
+            // Now, we want to provide the intermediary
+
         }
     }
 }
