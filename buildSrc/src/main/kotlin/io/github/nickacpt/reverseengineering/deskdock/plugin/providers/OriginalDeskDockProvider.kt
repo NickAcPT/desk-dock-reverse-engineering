@@ -1,10 +1,9 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.providers
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.DownloadUtils
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.DependencyConstants
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.deskDockDependency
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.deskDockWorkspaceType
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.fetchOrGetCachedFile
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
 import org.gradle.api.Project
 import java.net.URL
 import java.nio.file.FileSystems
@@ -14,12 +13,12 @@ import kotlin.io.path.*
 object OriginalDeskDockProvider : DeskDockArtifactProvider() {
 
     override val classifier: String
-        get() = DependencyConstants.DESKDOCK_ORIGINAL_CLASSIFIER
+        get() = Constants.DESKDOCK_ORIGINAL_CLASSIFIER
 
     @OptIn(ExperimentalPathApi::class)
     override fun provideArtifact(project: Project): Path {
-        val dependency = project.deskDockDependency
-        val type = project.deskDockWorkspaceType
+        val dependency = project.workspace.deskDockDependencyInfo
+        val type = project.workspace.type
 
         check(dependency.version != null) { "Artifact version cannot be missing!" }
         val version = dependency.version

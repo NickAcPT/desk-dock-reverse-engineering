@@ -13,5 +13,4 @@ object DownloadUtils {
             it.writeBytes(url.readBytes())
         }
     }
-
 }

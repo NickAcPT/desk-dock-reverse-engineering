@@ -5,7 +5,9 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.getCacheFileP
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.repositories
 import java.nio.file.Path
-import kotlin.io.path.*
+import kotlin.io.path.copyTo
+import kotlin.io.path.createDirectories
+import kotlin.io.path.div
 
 data class VirtualMavenRepository(
     val project: Project,
@@ -30,20 +32,13 @@ data class VirtualMavenRepository(
         }
     }
 
-    fun publishDependency(dependencyInfo: DependencyInfo, original: Path) {
-        val path = path / dependencyInfo.finalMavenArtifactFilePath()
-        path.parent.createDirectories()
+    fun publishDependency(dependencyInfo: DependencyInfo, original: Path): Path {
+        val finalPath = path / dependencyInfo.finalMavenArtifactFilePath()
+        finalPath.parent.createDirectories()
 
-        original.copyTo(path, true)
+        original.copyTo(finalPath, true)
 
-    }
-
-    fun publishDependency(dependencyInfo: DependencyInfo, file: ByteArray) {
-        val path = path / dependencyInfo.finalMavenArtifactFilePath()
-        path.parent.createDirectories()
-        path.deleteIfExists()
-
-        path.writeBytes(file)
+        return finalPath
     }
 
 }
