@@ -1,11 +1,10 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.utils
 
-import io.github.nickacpt.reverseengineering.deskdock.plugin.model.WorkspaceExtension
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.DependencyInfoUtils
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.getByType
 import java.nio.file.Path
 
-val Project.workspace: WorkspaceExtension get() = extensions.getByType()
+fun Project.getDependencyInfo(configuration: String) = DependencyInfoUtils.getProjectDependency(this, configuration)
 
 fun Project.getCacheFile(vararg names: String): Path = CachedFilesUtils.getCacheFilePath(project, *names)
 

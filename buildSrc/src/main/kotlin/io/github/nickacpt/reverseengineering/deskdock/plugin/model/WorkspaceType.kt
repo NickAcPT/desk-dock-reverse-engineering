@@ -13,8 +13,3 @@ enum class WorkspaceType {
         return name.lowercase()
     }
 }
-
-open class WorkspaceExtension {
-    var type: WorkspaceType? = null
-    var version: String? = null
-}
