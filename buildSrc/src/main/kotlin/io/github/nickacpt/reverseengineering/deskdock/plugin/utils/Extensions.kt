@@ -6,7 +6,7 @@ import java.nio.file.Path
 
 fun Project.getDependencyInfo(configuration: String) = DependencyInfoUtils.getProjectDependency(this, configuration)
 
-fun Project.getCacheFile(vararg names: String): Path = CachedFilesUtils.getCacheFilePath(project, *names)
+fun Project.getCacheFilePath(vararg names: String): Path = CachedFilesUtils.getCacheFilePath(project, *names)
 
 fun Project.fetchOrGetCachedFile(vararg names: String, fetcher: (Path) -> Unit): Path =
     CachedFilesUtils.fetchOrGetCachedFile(project, *names, fileFetcher = fetcher)

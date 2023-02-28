@@ -3,6 +3,8 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency
 import org.gradle.api.Project
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.ExternalDependency
+import kotlin.io.path.Path
+import kotlin.io.path.div
 
 
 data class DependencyInfo(
@@ -12,7 +14,18 @@ data class DependencyInfo(
     val artifact: String,
     val version: String?,
     val classifier: String? = null
-)
+) {
+    private fun directoryPath() = listOfNotNull(
+        *(group?.split('.', '/')?.toTypedArray() ?: emptyArray()),
+        artifact,
+        version
+    ).fold(Path(".")) { acc, it -> acc / it }
+
+    private fun filePath() = listOfNotNull(artifact, version, classifier)
+        .joinToString(postfix = ".jar", separator = "-") { it }
+
+    internal fun finalMavenArtifactFilePath() = directoryPath() / filePath()
+}
 
 object DependencyInfoUtils {
     fun getProjectDependency(project: Project, configuration: String): DependencyInfo {

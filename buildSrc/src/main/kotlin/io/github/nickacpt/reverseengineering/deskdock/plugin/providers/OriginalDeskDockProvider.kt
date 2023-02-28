@@ -3,6 +3,7 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.providers
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.WorkspaceType
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.DownloadUtils
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.ConfigurationConstants.DESKDOCK_CONFIGURATION_NAME
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.DependencyConstants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.DependencyConstants.DESKDOCK_ARTIFACT
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.DependencyConstants.DESKDOCK_GROUP
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.fetchOrGetCachedFile
@@ -13,9 +14,13 @@ import java.nio.file.FileSystems
 import java.nio.file.Path
 import kotlin.io.path.*
 
-object OriginalDeskDockProvider : DeskDockArtifactProvider {
+object OriginalDeskDockProvider : DeskDockArtifactProvider() {
+
+    override val classifier: String
+        get() = DependencyConstants.DESKDOCK_ORIGINAL_CLASSIFIER
+
     @OptIn(ExperimentalPathApi::class)
-    override fun provide(project: Project): Path {
+    override fun provideArtifact(project: Project): Path {
         val dependency = project.getDependencyInfo(DESKDOCK_CONFIGURATION_NAME)
 
         check(dependency.group == DESKDOCK_GROUP) { "Expected deskdock group to be $DESKDOCK_GROUP." }
@@ -31,7 +36,6 @@ object OriginalDeskDockProvider : DeskDockArtifactProvider {
 
         val zipFile =
             DownloadUtils.downloadFile(project, URL(type.getDownloadUrl(version)), "deskdock-${type}-${version}.zip")
-
 
         return project.fetchOrGetCachedFile("downloads", "deskdock-${type}-${version}.jar") { outPath ->
             FileSystems.newFileSystem(zipFile).use { fs ->
