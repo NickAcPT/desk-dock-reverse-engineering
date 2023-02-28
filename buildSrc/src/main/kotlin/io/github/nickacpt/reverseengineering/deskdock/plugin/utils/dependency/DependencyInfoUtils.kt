@@ -15,6 +15,10 @@ data class DependencyInfo(
     val version: String?,
     val classifier: String? = null
 ) {
+    val notation by lazy {
+        listOfNotNull(group, artifact, version, classifier).joinToString(":") { it }
+    }
+
     private fun directoryPath() = listOfNotNull(
         *(group?.split('.', '/')?.toTypedArray() ?: emptyArray()),
         artifact,

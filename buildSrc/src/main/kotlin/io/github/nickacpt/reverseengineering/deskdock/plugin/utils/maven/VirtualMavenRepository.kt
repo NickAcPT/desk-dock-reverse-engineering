@@ -22,6 +22,10 @@ data class VirtualMavenRepository(
             maven {
                 name = repoName
                 url = path.toUri()
+
+                this.metadataSources {
+                    this.artifact()
+                }
             }
         }
     }
