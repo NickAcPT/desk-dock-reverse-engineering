@@ -34,10 +34,14 @@ object OriginalDeskDockProvider : DeskDockArtifactProvider() {
             "Expected artifact classifier to be any of [${WorkspaceType.values().joinToString { it.toString() }}]"
         }
 
-        val zipFile =
-            DownloadUtils.downloadFile(project, URL(type.getDownloadUrl(version)), "deskdock-${type}-${version}.zip")
-
         return project.fetchOrGetCachedFile("downloads", "deskdock-${type}-${version}.jar") { outPath ->
+            val zipFile =
+                DownloadUtils.downloadFile(
+                    project,
+                    URL(type.getDownloadUrl(version)),
+                    "deskdock-${type}-${version}.zip"
+                )
+
             FileSystems.newFileSystem(zipFile).use { fs ->
                 val jarPath = fs.getPath("/").walk().firstOrNull {
                     it.extension == "jar"

@@ -6,7 +6,6 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Mav
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.getDependencyInfo
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.maven.getVirtualMavenRepository
 import org.gradle.api.Project
-import org.gradle.api.plugins.JavaPlugin
 import java.nio.file.Path
 
 abstract class DeskDockArtifactProvider {
@@ -26,16 +25,6 @@ abstract class DeskDockArtifactProvider {
 
         val finalArtifact = provideArtifact(project)
         repo.publishDependency(newDependency, finalArtifact)
-
-        println(newDependency.notation)
-        val config = project.configurations.create("amogus").also {
-            project.configurations.getByName(JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME).extendsFrom(it)
-        }
-        val dep = project.dependencies.add("amogus", newDependency.notation)
-
-        config.files(dep!!)
-
-
     }
 
     protected abstract fun provideArtifact(project: Project): Path
