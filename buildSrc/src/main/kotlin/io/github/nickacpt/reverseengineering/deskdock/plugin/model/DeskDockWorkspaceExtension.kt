@@ -12,6 +12,7 @@ open class DeskDockWorkspaceExtension {
     internal lateinit var repository: VirtualMavenRepository
     internal lateinit var type: WorkspaceType
 
+    var intermediaryObfuscationPattern: String? = null
 
     internal fun Project.initWorkspace() {
         // Create configuration
@@ -20,13 +21,9 @@ open class DeskDockWorkspaceExtension {
         // Create virtual maven repository for storing artifacts
         repository = getVirtualMavenRepository(Constants.DESKDOCK_MAVEN_REPOSITORY)
         repository.addRepository()
-
-        afterEvaluate {
-            initAfterEvaluate()
-        }
     }
 
-    private fun Project.initAfterEvaluate() {
+    fun Project.initAfterEvaluate() {
         // Create dependency info for the main deskdock dependency
         initDeskDockDependencyInfo()
 
@@ -49,5 +46,7 @@ open class DeskDockWorkspaceExtension {
         check(type != null) {
             "Expected artifact classifier to be any of [${WorkspaceType.values().joinToString { it.toString() }}]"
         }
+
+        this.type = type
     }
 }

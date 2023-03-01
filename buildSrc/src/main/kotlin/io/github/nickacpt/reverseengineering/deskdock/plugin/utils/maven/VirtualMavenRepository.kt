@@ -7,6 +7,7 @@ import org.gradle.kotlin.dsl.repositories
 import java.nio.file.Path
 import kotlin.io.path.copyTo
 import kotlin.io.path.createDirectories
+import kotlin.io.path.deleteIfExists
 import kotlin.io.path.div
 
 data class VirtualMavenRepository(
@@ -32,11 +33,20 @@ data class VirtualMavenRepository(
         }
     }
 
-    fun publishDependency(dependencyInfo: DependencyInfo, original: Path): Path {
-        val finalPath = path / dependencyInfo.finalMavenArtifactFilePath()
-        finalPath.parent.createDirectories()
+    fun publishDependency(dependencyInfo: DependencyInfo, fileWriter: (Path) -> Unit): Path {
+        val finalPath = (path / dependencyInfo.finalMavenArtifactFilePath()).also { it.parent.createDirectories() }
 
-        original.copyTo(finalPath, true)
+        finalPath.deleteIfExists()
+        fileWriter(finalPath)
+
+        return finalPath
+    }
+
+    fun publishDependency(dependencyInfo: DependencyInfo, original: Path): Path {
+        val finalPath = (path / dependencyInfo.finalMavenArtifactFilePath()).also { it.parent.createDirectories() }
+        if (original != finalPath) {
+            original.copyTo(finalPath, true)
+        }
 
         return finalPath
     }

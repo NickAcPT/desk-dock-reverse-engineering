@@ -2,7 +2,6 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.DeskDockWorkspaceExtension
 import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.IntermediaryDeskDockProvider
-import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.OriginalDeskDockProvider
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -21,9 +20,10 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
         }
 
         target.afterEvaluate {
+            with(extension) {
+                target.initAfterEvaluate()
+            }
             // First, provide the original deskdock jar
-            OriginalDeskDockProvider.provide(this)
-
             IntermediaryDeskDockProvider.provide(this)
         }
     }

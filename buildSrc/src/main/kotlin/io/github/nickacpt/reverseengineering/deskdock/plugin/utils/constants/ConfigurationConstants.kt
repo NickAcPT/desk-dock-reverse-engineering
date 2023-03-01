@@ -12,4 +12,7 @@ object Constants {
     const val INTERMEDIARY_FOLDER_NAME = "intermediary"
 
     const val DESKDOCK_MAVEN_REPOSITORY = "deskdock"
+
+    const val OFFICIAL_NAMESPACE = "official"
+    const val INTERMEDIARY_NAMESPACE = "intermediary"
 }
