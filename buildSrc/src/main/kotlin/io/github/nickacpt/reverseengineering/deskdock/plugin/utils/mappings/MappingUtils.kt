@@ -19,7 +19,6 @@ object MappingUtils {
             .withMappings(TinyRemapperHelper.create(mappings, sourceNs, destNs, true))
             .fixPackageAccess(true)
             .rebuildSourceFilenames(true)
-            .renameInvalidLocals(true)
             .resolveMissing(true)
             .build()
 

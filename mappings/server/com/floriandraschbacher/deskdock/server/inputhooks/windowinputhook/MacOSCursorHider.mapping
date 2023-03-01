@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_91 com/floriandraschbacher/deskdock/server/inputhooks/windowinputhook/MacOSCursorHider
+	METHOD method_265 setCursorHidden (Z)V

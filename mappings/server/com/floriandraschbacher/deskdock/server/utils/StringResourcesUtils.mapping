@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_158 com/floriandraschbacher/deskdock/server/utils/StringResourcesUtils
+	FIELD field_403 loadedStringsMap Ljava/util/HashMap;
+	METHOD method_493 getString (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 key

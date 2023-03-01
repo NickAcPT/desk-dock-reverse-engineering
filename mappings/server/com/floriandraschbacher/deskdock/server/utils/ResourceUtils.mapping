@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_152 com/floriandraschbacher/deskdock/server/utils/ResourceUtils
+	METHOD method_476 getIcon (Ljava/lang/String;)Ljava/awt/Image;
+		ARG 0 path
+	METHOD method_477 readResource (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 resource
+	METHOD method_478 hasResource (Ljava/lang/String;)Z
+		ARG 0 path
+	METHOD method_479 path (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 path

@@ -1,0 +1,13 @@
+CLASS com/floriandraschbacher/deskdock/server/class_161 com/floriandraschbacher/deskdock/server/utils/VersionUtils
+	METHOD method_502 findJarFile ()Ljava/io/File;
+	METHOD method_503 checkUpdates (Lcom/floriandraschbacher/deskdock/server/class_161$class_162;)V
+		ARG 0 listener
+	METHOD method_504 currentVersion ()I
+	METHOD method_505 friendlyVersion ()Ljava/lang/String;
+	CLASS class_162 VersionUpdateListener
+		METHOD method_506 notifyUpdateAvailable (Ljava/lang/String;)V
+			ARG 1 update
+	CLASS class_163 UpdateCheckerThread
+		FIELD field_407 updateListener Lcom/floriandraschbacher/deskdock/server/class_161$class_162;
+		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_161$class_162;)V
+			ARG 1 listener

@@ -1,0 +1,10 @@
+CLASS com/floriandraschbacher/deskdock/server/class_9
+	METHOD method_38 isDebuggingEnalbed ()Z
+	CLASS class_10
+		FIELD field_11 CLIPBOARD_FORMAT_HTML Lcom/floriandraschbacher/deskdock/server/class_9$class_10;
+		FIELD field_12 CLIPBOARD_FORMAT_BITMAP Lcom/floriandraschbacher/deskdock/server/class_9$class_10;
+		FIELD field_9 CLIPBOARD_FORMAT_TEXT Lcom/floriandraschbacher/deskdock/server/class_9$class_10;
+	CLASS class_11
+		FIELD field_13 K_DATA_START Lcom/floriandraschbacher/deskdock/server/class_9$class_11;
+		FIELD field_14 K_DATA_CHUNK Lcom/floriandraschbacher/deskdock/server/class_9$class_11;
+		FIELD field_15 K_DATA_END Lcom/floriandraschbacher/deskdock/server/class_9$class_11;

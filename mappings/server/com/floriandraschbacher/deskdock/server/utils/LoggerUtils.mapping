@@ -1,0 +1,20 @@
+CLASS com/floriandraschbacher/deskdock/server/class_148 com/floriandraschbacher/deskdock/server/utils/LoggerUtils
+	FIELD field_386 debugLevel I
+	FIELD field_387 currentLevel I
+	FIELD field_388 outputPath Ljava/lang/String;
+	METHOD method_447 logEnvironment ()V
+	METHOD method_448 log (Ljava/lang/Object;ILjava/lang/String;)V
+		ARG 0 source
+		ARG 1 level
+		ARG 2 line
+	METHOD method_449 log (Ljava/lang/Object;Ljava/lang/String;)V
+		ARG 0 source
+		ARG 1 line
+	METHOD method_450 output (Ljava/lang/String;)V
+		ARG 0 path
+	METHOD method_451 log (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 output
+		ARG 1 line
+	METHOD method_452 debug (Ljava/lang/Object;Ljava/lang/String;)V
+		ARG 0 source
+		ARG 1 line
