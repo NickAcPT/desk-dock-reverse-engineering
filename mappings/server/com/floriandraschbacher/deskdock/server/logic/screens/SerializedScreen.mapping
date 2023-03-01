@@ -6,3 +6,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_186 com/floriandraschbacher/
 		ARG 2 deviceId
 	METHOD method_560 equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD hashCode hashCode ()I

@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_143
+	CLASS class_144
+		METHOD method_441 equals (Ljava/lang/Object;)Z
+		METHOD hashCode hashCode ()I
+		METHOD toString toString ()Ljava/lang/String;

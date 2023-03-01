@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_67
+	METHOD method_169 windowActivated (Ljava/awt/event/WindowEvent;)V
+	METHOD method_170 windowClosed (Ljava/awt/event/WindowEvent;)V
+	METHOD method_171 windowClosing (Ljava/awt/event/WindowEvent;)V
+	METHOD method_172 windowDeactivated (Ljava/awt/event/WindowEvent;)V
+	METHOD method_173 windowDeiconified (Ljava/awt/event/WindowEvent;)V
+	METHOD method_174 windowIconified (Ljava/awt/event/WindowEvent;)V
+	METHOD method_175 windowOpened (Ljava/awt/event/WindowEvent;)V

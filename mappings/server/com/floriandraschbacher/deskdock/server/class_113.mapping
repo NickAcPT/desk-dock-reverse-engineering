@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_113
+	METHOD method_352 windowClosing (Ljava/awt/event/WindowEvent;)V

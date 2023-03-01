@@ -2,3 +2,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_65
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_84;)V
 		ARG 3 blankCursorImage
 		ARG 4 blankCursor
+	METHOD method_155 addMouseListener (Ljava/awt/event/MouseListener;)V
+	METHOD method_156 addWindowListener (Ljava/awt/event/WindowListener;)V
+	METHOD method_163 removeWindowListener (Ljava/awt/event/WindowListener;)V

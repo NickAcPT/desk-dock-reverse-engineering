@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_193
+	METHOD method_590 createSocket ()Ljava/net/Socket;
+	METHOD method_591 createSocket (Ljava/lang/String;I)Ljava/net/Socket;
+	METHOD method_592 createSocket (Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;
+	METHOD method_593 createSocket (Ljava/net/InetAddress;I)Ljava/net/Socket;
+	METHOD method_594 createSocket (Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/Socket;
+	METHOD method_595 createSocket (Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
+	METHOD method_596 getDefaultCipherSuites ()[Ljava/lang/String;
+	METHOD method_597 getSupportedCipherSuites ()[Ljava/lang/String;

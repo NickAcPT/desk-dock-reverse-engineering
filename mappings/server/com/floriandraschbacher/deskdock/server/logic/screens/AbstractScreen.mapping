@@ -35,3 +35,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_93 com/floriandraschbacher/d
 		ARG 1 other
 		ARG 2 otherDevice
 	METHOD method_280 bottom ()I
+	METHOD hashCode hashCode ()I
+	METHOD toString toString ()Ljava/lang/String;

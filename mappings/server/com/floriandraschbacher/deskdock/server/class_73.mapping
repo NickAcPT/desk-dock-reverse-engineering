@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_73
+	METHOD method_200 canImport (Ljavax/swing/TransferHandler$TransferSupport;)Z
+	METHOD method_201 importData (Ljavax/swing/TransferHandler$TransferSupport;)Z

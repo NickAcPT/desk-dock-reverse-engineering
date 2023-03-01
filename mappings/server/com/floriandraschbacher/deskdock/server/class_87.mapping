@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_87
+	CLASS class_88
+		METHOD toString toString ()Ljava/lang/String;
+	CLASS class_89
+		METHOD method_257 equals (Ljava/lang/Object;)Z

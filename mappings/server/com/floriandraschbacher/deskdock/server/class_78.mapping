@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_78
+	METHOD method_206 caretPositionChanged (Ljava/awt/event/InputMethodEvent;)V
+	METHOD method_207 inputMethodTextChanged (Ljava/awt/event/InputMethodEvent;)V

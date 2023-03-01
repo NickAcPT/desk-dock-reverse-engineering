@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_146
+	METHOD method_443 nativeKeyPressed (Lcom/github/kwhat/jnativehook/keyboard/NativeKeyEvent;)V
+	METHOD method_444 nativeKeyReleased (Lcom/github/kwhat/jnativehook/keyboard/NativeKeyEvent;)V
+	METHOD method_445 nativeKeyTyped (Lcom/github/kwhat/jnativehook/keyboard/NativeKeyEvent;)V

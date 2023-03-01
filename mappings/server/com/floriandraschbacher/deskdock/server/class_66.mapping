@@ -1,0 +1,6 @@
+CLASS com/floriandraschbacher/deskdock/server/class_66
+	METHOD method_164 mouseClicked (Ljava/awt/event/MouseEvent;)V
+	METHOD method_165 mouseEntered (Ljava/awt/event/MouseEvent;)V
+	METHOD method_166 mouseExited (Ljava/awt/event/MouseEvent;)V
+	METHOD method_167 mousePressed (Ljava/awt/event/MouseEvent;)V
+	METHOD method_168 mouseReleased (Ljava/awt/event/MouseEvent;)V

@@ -19,9 +19,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_41 com/floriandraschbacher/d
 	METHOD method_104 cleanup ()V
 	METHOD method_105 globalCenter ()Ljava/awt/Point;
 	METHOD method_106 localCenter ()Ljava/awt/Point;
+	METHOD toString toString ()Ljava/lang/String;
 	CLASS class_42 CalibrationResult
 		FIELD field_94 xError I
 		FIELD field_95 yError I
 		METHOD <init> (II)V
 			ARG 1 xError
 			ARG 2 yError
+		METHOD toString toString ()Ljava/lang/String;

@@ -11,3 +11,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_161 com/floriandraschbacher/
 		FIELD field_407 updateListener Lcom/floriandraschbacher/deskdock/server/class_161$class_162;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_161$class_162;)V
 			ARG 1 listener
+		METHOD method_507 run ()V

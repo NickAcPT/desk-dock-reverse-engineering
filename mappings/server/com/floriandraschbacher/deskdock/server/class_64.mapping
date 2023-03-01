@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_64
+	METHOD method_150 nativeMouseDragged (Lcom/github/kwhat/jnativehook/mouse/NativeMouseEvent;)V
+	METHOD method_151 nativeMouseMoved (Lcom/github/kwhat/jnativehook/mouse/NativeMouseEvent;)V

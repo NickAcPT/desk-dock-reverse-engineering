@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_79
+	METHOD method_208 cancelLatestCommittedText ([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+	METHOD method_209 getCommittedText (II[Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+	METHOD method_210 getCommittedTextLength ()I
+	METHOD method_211 getInsertPositionOffset ()I
+	METHOD method_212 getLocationOffset (II)Ljava/awt/font/TextHitInfo;
+	METHOD method_213 getSelectedText ([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+	METHOD method_214 getTextLocation (Ljava/awt/font/TextHitInfo;)Ljava/awt/Rectangle;
