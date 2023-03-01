@@ -34,7 +34,7 @@ data class VirtualMavenRepository(
     }
 
     fun publishDependency(dependencyInfo: DependencyInfo, fileWriter: (Path) -> Unit): Path {
-        val finalPath = (path / dependencyInfo.finalMavenArtifactFilePath()).also { it.parent.createDirectories() }
+        val finalPath = getPath(dependencyInfo)
 
         finalPath.deleteIfExists()
         fileWriter(finalPath)
@@ -43,12 +43,16 @@ data class VirtualMavenRepository(
     }
 
     fun publishDependency(dependencyInfo: DependencyInfo, original: Path): Path {
-        val finalPath = (path / dependencyInfo.finalMavenArtifactFilePath()).also { it.parent.createDirectories() }
+        val finalPath = getPath(dependencyInfo)
         if (original != finalPath) {
             original.copyTo(finalPath, true)
         }
 
         return finalPath
+    }
+
+    fun getPath(dependencyInfo: DependencyInfo): Path {
+        return (path / dependencyInfo.finalMavenArtifactFilePath()).also { it.parent.createDirectories() }
     }
 
 }

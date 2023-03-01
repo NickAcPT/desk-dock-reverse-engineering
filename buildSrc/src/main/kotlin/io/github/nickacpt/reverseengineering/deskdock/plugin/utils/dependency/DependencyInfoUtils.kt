@@ -3,6 +3,7 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency
 import org.gradle.api.Project
 import org.gradle.api.artifacts.Configuration
 import org.gradle.api.artifacts.ExternalDependency
+import java.io.File
 import kotlin.io.path.Path
 import kotlin.io.path.div
 
@@ -17,6 +18,12 @@ data class DependencyInfo(
 ) {
     val notation by lazy {
         listOfNotNull(group, artifact, version, classifier).joinToString(":") { it }
+    }
+
+    private var resolvedFiles: Collection<File>? = null
+
+    fun resolve(): Collection<File> {
+        return resolvedFiles ?: (configuration.resolve().also { resolvedFiles = it })
     }
 
     private fun directoryPath() = listOfNotNull(

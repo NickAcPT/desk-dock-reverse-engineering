@@ -9,6 +9,7 @@ import org.gradle.api.Project
 
 open class DeskDockWorkspaceExtension {
     internal lateinit var deskDockDependencyInfo: DependencyInfo
+    internal lateinit var enigmaDependencyInfo: DependencyInfo
     internal lateinit var repository: VirtualMavenRepository
     internal lateinit var type: WorkspaceType
 
@@ -17,6 +18,7 @@ open class DeskDockWorkspaceExtension {
     internal fun Project.initWorkspace() {
         // Create configuration
         configurations.create(Constants.DESKDOCK_CONFIGURATION_NAME)
+        configurations.create(Constants.ENIGMA_CONFIGURATION_NAME)
 
         // Create virtual maven repository for storing artifacts
         repository = getVirtualMavenRepository(Constants.DESKDOCK_MAVEN_REPOSITORY)
@@ -29,6 +31,13 @@ open class DeskDockWorkspaceExtension {
 
         // Initialize our workspace type (whether it is the server or the client)
         initWorkspaceType()
+
+        // Create dependency info for the Engima UI
+        initEnigmaDependencyInfo()
+    }
+
+    private fun Project.initEnigmaDependencyInfo() {
+        enigmaDependencyInfo = DependencyInfoUtils.getProjectDependency(this, Constants.ENIGMA_CONFIGURATION_NAME)
     }
 
     private fun Project.initDeskDockDependencyInfo() {
