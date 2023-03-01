@@ -1,9 +1,26 @@
-CLASS com/floriandraschbacher/deskdock/server/class_9
+CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/deskdock/server/adb/Adb
+	METHOD method_13 setIcon (Ljava/awt/Image;III)Ljava/awt/image/BufferedImage;
 	METHOD method_15 adbExecutablePath (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 adbPath
+	METHOD method_27 run ([Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;ZZ)Ljava/lang/String;
+		ARG 1 processArgs
+		ARG 2 logStdOut
+		ARG 3 logStdErr
+		ARG 4 logPrefix
+		ARG 5 errorPrefix
+		ARG 6 wait
+		ARG 7 close
+		ARG 8 process
+		ARG 9 str
+		ARG 10 str
+		ARG 11 scanner
+		ARG 12 scanner
+	METHOD method_32 locateAdb ()Ljava/lang/String;
 	METHOD method_34 executableName ()Ljava/lang/String;
 	METHOD method_36 primary ()Lcom/floriandraschbacher/deskdock/server/class_93;
 	METHOD method_38 isDebuggingEnalbed ()Z
+	METHOD method_39 locateDefaultAndroidSdk ()Ljava/lang/String;
+	METHOD method_40 locateAndroidSdk ()Ljava/lang/String;
 	CLASS class_10
 		FIELD field_11 CLIPBOARD_FORMAT_HTML Lcom/floriandraschbacher/deskdock/server/class_9$class_10;
 		FIELD field_12 CLIPBOARD_FORMAT_BITMAP Lcom/floriandraschbacher/deskdock/server/class_9$class_10;

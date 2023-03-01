@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_125 com/floriandraschbacher/deskdock/server/tray/TrayStatusMenu
+	FIELD field_332 trayManager Lcom/floriandraschbacher/deskdock/server/class_122;

@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_156 com/floriandraschbacher/deskdock/server/utils/SingleInstanceUtils
+	FIELD field_400 lockPath Ljava/lang/String;
+	FIELD field_401 lockPathFile Ljava/io/File;
+	FIELD field_402 deleted Z
+	METHOD method_488 isRunning ()Z
+	METHOD method_489 deleteLock ()V
+	METHOD method_490 lockPathFile ()Ljava/io/File;
+	METHOD method_491 delete ()Z

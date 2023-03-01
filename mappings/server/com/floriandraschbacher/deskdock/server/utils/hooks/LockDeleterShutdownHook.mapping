@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_157 com/floriandraschbacher/deskdock/server/utils/hooks/LockDeleterShutdownHook
+	METHOD method_492 run ()V

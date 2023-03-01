@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_124 com/floriandraschbacher/deskdock/server/tray/MenuActionListener
+	FIELD field_331 manager Lcom/floriandraschbacher/deskdock/server/class_122;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_122;)V
+		ARG 1 manager
+	METHOD method_371 actionPerformed (Ljava/awt/event/ActionEvent;)V
+		ARG 1 event
+		ARG 2 manager
+		ARG 3 manager
+		ARG 4 manager

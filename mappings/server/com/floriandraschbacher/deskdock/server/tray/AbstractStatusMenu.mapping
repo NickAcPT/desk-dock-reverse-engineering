@@ -1,0 +1,24 @@
+CLASS com/floriandraschbacher/deskdock/server/class_108 com/floriandraschbacher/deskdock/server/tray/AbstractStatusMenu
+	FIELD field_253 actions Lcom/floriandraschbacher/deskdock/server/class_108$class_109;
+	METHOD method_322 showUpdateAvailable ()V
+	METHOD method_323 updateConnectedDevices (I)V
+		ARG 1 count
+	METHOD method_324 actions (Lcom/floriandraschbacher/deskdock/server/class_108$class_109;)V
+		ARG 1 actions
+	METHOD method_325 showMessage (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 title
+		ARG 2 message
+		ARG 4 manager
+	METHOD method_326 showWarning (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
+		ARG 1 title
+		ARG 2 message
+		ARG 3 runnable
+	METHOD method_327 show (Z)V
+		ARG 1 visible
+		ARG 5 manager
+	METHOD method_328 updateDetectedDevices (I)V
+		ARG 1 count
+	CLASS class_109 MenuActions
+		METHOD method_329 quit ()V
+		METHOD method_330 update ()V
+		METHOD method_331 openSettings ()V

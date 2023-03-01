@@ -1,0 +1,15 @@
+CLASS com/floriandraschbacher/deskdock/server/class_122 com/floriandraschbacher/deskdock/server/tray/TrayMenuManager
+	FIELD field_324 trayIcon Ljava/awt/TrayIcon;
+	FIELD field_325 popupMenu Ljava/awt/PopupMenu;
+	FIELD field_326 detectedDevicesItem Ljava/awt/MenuItem;
+	FIELD field_327 connectedDevicesItem Ljava/awt/MenuItem;
+	FIELD field_328 actions Lcom/floriandraschbacher/deskdock/server/class_122$class_123;
+	FIELD field_329 isShown Z
+	FIELD field_330 listener Ljava/awt/event/ActionListener;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_122$class_123;)V
+		ARG 1 actions
+	METHOD method_367 createPopupMenu ()Ljava/awt/PopupMenu;
+	CLASS class_123 TrayActions
+		METHOD method_368 quit ()V
+		METHOD method_369 update ()V
+		METHOD method_370 openSettings ()V

@@ -1,5 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_90 com/floriandraschbacher/deskdock/server/Main
-	FIELD field_203 showHelp Z
+	FIELD field_203 hide Z
+	FIELD field_204 adbPath Ljava/lang/String;
+	METHOD method_263 hide ()Z
 	METHOD method_264 main ([Ljava/lang/String;)V
 		ARG 0 args
 		ARG 12 argsArray
+		ARG 13 adbPathPreferences
