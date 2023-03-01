@@ -14,6 +14,7 @@ open class DeskDockWorkspaceExtension {
     internal lateinit var type: WorkspaceType
 
     var intermediaryObfuscationPattern: String? = null
+    var strippedPackages: List<String> = emptyList()
 
     internal fun Project.initWorkspace() {
         // Create configuration

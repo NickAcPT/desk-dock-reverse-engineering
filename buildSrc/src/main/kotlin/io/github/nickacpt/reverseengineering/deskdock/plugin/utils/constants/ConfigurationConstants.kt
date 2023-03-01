@@ -20,4 +20,5 @@ object Constants {
 
     const val OFFICIAL_NAMESPACE = "official"
     const val INTERMEDIARY_NAMESPACE = "intermediary"
+    const val NAMED_NAMESPACE = "named"
 }

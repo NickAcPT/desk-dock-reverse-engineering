@@ -2,10 +2,13 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.providers
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.WorkspaceType
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.HashUtils
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.ModifiedGenState
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
-import net.fabricmc.stitch.commands.CommandGenerateIntermediary
+import net.fabricmc.stitch.representation.JarReader
+import net.fabricmc.stitch.representation.JarRootEntry
 import org.gradle.api.Project
+import java.io.IOException
 import java.nio.file.Path
 import kotlin.io.path.*
 
@@ -53,15 +56,22 @@ object IntermediaryMappingProvider {
             // We don't have any intermediaries at all, we have to generate the first version
             val workspace = project.workspace
 
-            CommandGenerateIntermediary().run(
-                arrayOf(
-                    originalJarPath.toAbsolutePath().toString(),
-                    outputIntermediary.toAbsolutePath().toString(),
+            val state = ModifiedGenState()
 
-                    "-t",
-                    "com/floriandraschbacher/deskdock/${type}/",
-                ) + (workspace.intermediaryObfuscationPattern?.let { arrayOf("-p", it) } ?: emptyArray())
-            )
+            val jarEntry = JarRootEntry(originalJarPath.toFile())
+            try {
+                val reader = JarReader(jarEntry)
+                reader.apply()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+
+            state.setTargetNamespace("com/floriandraschbacher/deskdock/${type}/")
+            workspace.intermediaryObfuscationPattern?.also {
+                state.addObfuscatedPattern(it)
+            }
+
+            state.generate(outputIntermediary.toFile(), jarEntry, null)
         } else {
             // Intermediaries exist, but we have to match stuff to update the old one
             throw Exception("Please generate intermediaries for version $hash")

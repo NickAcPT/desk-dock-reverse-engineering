@@ -14,6 +14,7 @@ dependencies {
     implementation("net.fabricmc:stitch:0.6.2")
     implementation("net.fabricmc:mapping-io:0.3.0")
     implementation("net.fabricmc:tiny-remapper:0.8.6")
+    implementation("net.fabricmc:tiny-mappings-parser:0.3.0+build.17")
 }
 
 val pluginName = "desk-dock-reverse-engineering-plugin"

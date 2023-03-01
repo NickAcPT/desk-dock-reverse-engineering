@@ -10,5 +10,5 @@ dependencies {
 }
 
 workspace {
-    intermediaryObfuscationPattern = ".+"
+    intermediaryObfuscationPattern = "."
 }

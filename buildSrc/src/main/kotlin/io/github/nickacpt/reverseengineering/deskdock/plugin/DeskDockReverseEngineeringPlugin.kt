@@ -1,7 +1,8 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.DeskDockWorkspaceExtension
-import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.IntermediaryDeskDockProvider
+import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.StrippedIntermediaryDeskDockProvider
+import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.DumpNamesFromIntermediaryMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.LaunchEnigmaTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
@@ -30,6 +31,7 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
         }
 
         val engimaTask = target.tasks.create<LaunchEnigmaTask>("launchEnigma")
+        target.tasks.create<DumpNamesFromIntermediaryMappingsTask>("dumpIntermediaryNames")
 
         target.afterEvaluate {
             with(extension) {
@@ -37,7 +39,7 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
             }
 
             // First, provide the original deskdock jar
-            val intermediaryJar = IntermediaryDeskDockProvider.provide(this)
+            val intermediaryJar = StrippedIntermediaryDeskDockProvider.provide(this)
 
             engimaTask.apply {
                 workDirPath = project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME
