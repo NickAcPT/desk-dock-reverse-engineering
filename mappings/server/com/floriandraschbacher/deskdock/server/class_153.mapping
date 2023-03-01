@@ -1,0 +1,17 @@
+CLASS com/floriandraschbacher/deskdock/server/class_153
+	FIELD field_393 fullPath Ljava/lang/String;
+	FIELD field_394 mimeType Ljava/lang/String;
+	FIELD field_395 fileName Ljava/lang/String;
+	FIELD field_396 size J
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 fullPath
+		ARG 2 mimeType
+		ARG 3 fileName
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+		ARG 1 fullPath
+		ARG 2 mimeType
+		ARG 3 fileName
+		ARG 4 size
+	METHOD method_480 fileName ()Ljava/lang/String;
+	METHOD method_481 path ()Ljava/lang/String;
+	METHOD method_482 size ()J

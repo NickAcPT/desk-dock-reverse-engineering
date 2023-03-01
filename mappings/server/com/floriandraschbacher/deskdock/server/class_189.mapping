@@ -1,0 +1,7 @@
+CLASS com/floriandraschbacher/deskdock/server/class_189
+	FIELD field_449 logic Lcom/floriandraschbacher/deskdock/server/class_191;
+	FIELD field_458 options Ljava/util/Map;
+	METHOD method_561 cleanDisconnect ()V
+	METHOD method_562 writePacket (Lcom/floriandraschbacher/deskdock/server/class_39;Ljava/io/OutputStream;)V
+		ARG 0 packet
+	METHOD method_563 resetOptions ()V

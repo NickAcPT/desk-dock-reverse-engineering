@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_161 com/floriandraschbacher/deskdock/server/utils/VersionUtils
+CLASS com/floriandraschbacher/deskdock/server/class_161 com/floriandraschbacher/deskdock/server/utils/version/VersionUtils
 	METHOD method_502 findJarFile ()Ljava/io/File;
 	METHOD method_503 checkUpdates (Lcom/floriandraschbacher/deskdock/server/class_161$class_162;)V
 		ARG 0 listener

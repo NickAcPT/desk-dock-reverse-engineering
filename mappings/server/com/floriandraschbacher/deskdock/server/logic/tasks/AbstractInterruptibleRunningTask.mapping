@@ -1,0 +1,6 @@
+CLASS com/floriandraschbacher/deskdock/server/class_96 com/floriandraschbacher/deskdock/server/logic/tasks/AbstractInterruptibleRunningTask
+	FIELD field_218 thread Ljava/lang/Thread;
+	METHOD method_295 onRun ()V
+	METHOD method_296 running ()Z
+	METHOD method_297 interrupt ()V
+	METHOD method_298 run ()V

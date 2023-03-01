@@ -1,5 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_147
-	FIELD field_385 windowsMouseInfoSaver Lcom/floriandraschbacher/deskdock/server/class_92;
-	METHOD method_446 canSaveAndRestore (Ljava/awt/Robot;Ljava/awt/Point;)Z
-		ARG 1 robot
-		ARG 2 point

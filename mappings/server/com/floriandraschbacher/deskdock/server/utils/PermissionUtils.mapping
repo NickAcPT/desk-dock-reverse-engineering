@@ -1,4 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_155 com/floriandraschbacher/deskdock/server/utils/PermissionUtils
 	METHOD method_485 checkRunning ()V
+	METHOD method_486 checkAdb (Ljava/lang/String;)V
+		ARG 0 executable
 	METHOD method_487 makeExecutable (Ljava/lang/String;)Z
 		ARG 0 path

@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_83 com/floriandraschbacher/deskdock/server/logic/profiles/Profile
+	FIELD field_180 internalScreensRectangles Ljava/util/List;
+	FIELD field_181 screens Ljava/util/List;
+	METHOD <init> (Ljava/util/List;Ljava/util/List;)V
+		ARG 1 screens
+		ARG 4 screenIterator
+	METHOD method_249 description ()Ljava/lang/String;
+	METHOD method_250 screensLabel ()Ljava/lang/String;

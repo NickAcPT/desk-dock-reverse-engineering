@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/deskdock/server/logic/integration/AbstractSystemIntegrator
+	METHOD method_537 load ()V
+	METHOD method_538 addDevice (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+	METHOD method_539 unload ()V

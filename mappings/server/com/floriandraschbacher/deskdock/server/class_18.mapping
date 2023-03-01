@@ -1,5 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_18
+	METHOD method_67 startService (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Z
 	METHOD method_71 (Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;
+		ARG 1 screens
 		ARG 15 screen
 	METHOD method_72 findScreen (Ljava/util/List;Lcom/floriandraschbacher/deskdock/server/class_186;)Lcom/floriandraschbacher/deskdock/server/class_93;
 		ARG 0 screens

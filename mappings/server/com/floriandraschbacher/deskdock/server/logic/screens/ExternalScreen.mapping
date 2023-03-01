@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_86 com/floriandraschbacher/deskdock/server/logic/screens/ExternalScreen
+	FIELD field_190 device Lcom/floriandraschbacher/deskdock/server/class_85;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_85;Ljava/awt/Point;)V
+		ARG 1 device
+		ARG 2 position

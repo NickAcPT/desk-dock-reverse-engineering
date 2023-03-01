@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_181 com/floriandraschbacher/deskdock/server/adb/AdbDevice
+	FIELD field_429 name Ljava/lang/String;
+	FIELD field_430 serial Ljava/lang/String;
+	FIELD field_431 usb Ljava/lang/String;
+	METHOD method_555 serial ()Ljava/lang/String;
+	METHOD method_556 parseDevice (Ljava/lang/String;)Lcom/floriandraschbacher/deskdock/server/class_181;
+		ARG 0 inpuit
+	METHOD method_557 equals (Ljava/lang/Object;)Z
+		ARG 1 other

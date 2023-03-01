@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_135
+	METHOD method_422 isValidCharacter (C)Z
+		ARG 0 character

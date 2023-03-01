@@ -1,2 +1,3 @@
 CLASS com/floriandraschbacher/deskdock/server/class_16
+	FIELD field_33 fingerprint Ljava/lang/String;
 	METHOD method_64 run ()V

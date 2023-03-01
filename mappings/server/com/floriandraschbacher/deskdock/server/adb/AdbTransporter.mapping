@@ -1,0 +1,25 @@
+CLASS com/floriandraschbacher/deskdock/server/class_97 com/floriandraschbacher/deskdock/server/adb/AdbTransporter
+	FIELD field_219 port I
+	FIELD field_220 devicePort I
+	FIELD field_221 device Lcom/floriandraschbacher/deskdock/server/class_181;
+	FIELD field_222 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_223 socket Ljava/net/Socket;
+	FIELD field_224 is Ljava/io/InputStream;
+	FIELD field_225 os Ljava/io/OutputStream;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;I)V
+		ARG 1 adb
+		ARG 2 device
+	METHOD method_299 stop ()V
+	METHOD method_300 receive (IZ)[B
+		ARG 1 size
+		ARG 2 logErrors
+	METHOD method_301 connect (Z)I
+		ARG 1 logErrors
+	METHOD method_302 send ([B)Z
+		ARG 1 bytes
+	METHOD method_303 send ([BII)Z
+		ARG 1 bytes
+		ARG 2 offset
+		ARG 3 len
+	METHOD method_304 flush ()V
+	METHOD method_305 connected ()Z

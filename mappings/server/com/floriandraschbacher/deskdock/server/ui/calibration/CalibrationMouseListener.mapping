@@ -1,11 +1,15 @@
-CLASS com/floriandraschbacher/deskdock/server/class_44 com/floriandraschbacher/deskdock/server/ui/calibration/MouseListener
+CLASS com/floriandraschbacher/deskdock/server/class_44 com/floriandraschbacher/deskdock/server/ui/calibration/CalibrationMouseListener
 	FIELD field_97 dialog Lcom/floriandraschbacher/deskdock/server/class_41;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_41;)V
 		ARG 1 dialog
 	METHOD method_109 mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_110 mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_111 mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_112 mousePressed (Ljava/awt/event/MouseEvent;)V
 		ARG 1 mouseEvent
 	METHOD method_113 mouseReleased (Ljava/awt/event/MouseEvent;)V
 		ARG 1 mouseEvent
+		ARG 2 info

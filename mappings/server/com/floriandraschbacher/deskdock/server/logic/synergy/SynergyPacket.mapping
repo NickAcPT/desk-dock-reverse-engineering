@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_39 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyPacket
+	METHOD method_97 toSynergyString ()Ljava/lang/String;

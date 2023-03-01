@@ -1,0 +1,12 @@
+CLASS com/floriandraschbacher/deskdock/server/class_94
+	FIELD field_213 screens Ljava/util/List;
+	FIELD field_216 newScreen Lcom/floriandraschbacher/deskdock/server/class_93;
+	METHOD method_282 findScreenAtCoords (II)Lcom/floriandraschbacher/deskdock/server/class_93;
+		ARG 1 x
+		ARG 2 y
+	METHOD method_283 (IIII)Ljava/awt/Point;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 deltaX
+		ARG 4 deltaY
+		ARG 11 screen

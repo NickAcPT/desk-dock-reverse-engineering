@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_140 com/floriandraschbacher/deskdock/server/logic/tasks/DelayedInterruptibleRunningTask
+	FIELD field_374 task Ljava/lang/Runnable;
+	METHOD <init> (ILjava/lang/Runnable;)V
+		ARG 1 time
+		ARG 2 task

@@ -1,0 +1,6 @@
+CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/deskdock/server/logic/tasks/ClientReadingTask
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
+		ARG 1 transporter
+	CLASS class_105
+		METHOD method_314 ([B)V
+			ARG 3 packet

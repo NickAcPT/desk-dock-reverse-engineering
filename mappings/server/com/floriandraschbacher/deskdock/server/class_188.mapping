@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_188
+	FIELD field_444 screen Lcom/floriandraschbacher/deskdock/server/class_186;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_186;IIII)V
+		ARG 1 screen

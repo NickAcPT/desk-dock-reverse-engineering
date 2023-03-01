@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_159 com/floriandraschbacher/deskdock/server/profiles/ProfileManager
+CLASS com/floriandraschbacher/deskdock/server/class_159 com/floriandraschbacher/deskdock/server/logic/profiles/ProfileManager
 	FIELD field_404 instance Lcom/floriandraschbacher/deskdock/server/class_159;
 	FIELD field_405 profileList Ljava/util/List;
 	METHOD method_494 emptyPort ()I

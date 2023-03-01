@@ -1,6 +1,14 @@
 CLASS com/floriandraschbacher/deskdock/server/class_90 com/floriandraschbacher/deskdock/server/Main
+	FIELD field_202 updaterUrl Ljava/lang/String;
 	FIELD field_203 hide Z
 	FIELD field_204 adbPath Ljava/lang/String;
+	FIELD field_205 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_206 statusMenu Lcom/floriandraschbacher/deskdock/server/class_108;
+	METHOD method_258 adb ()Lcom/floriandraschbacher/deskdock/server/class_9;
+	METHOD method_259 updaterUrl (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 updaterUrl
+	METHOD method_260 updaterUrl ()Ljava/lang/String;
+	METHOD method_262 statusMenu ()Lcom/floriandraschbacher/deskdock/server/class_108;
 	METHOD method_263 hide ()Z
 	METHOD method_264 main ([Ljava/lang/String;)V
 		ARG 0 args

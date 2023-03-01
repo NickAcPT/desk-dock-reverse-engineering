@@ -1,0 +1,13 @@
+CLASS com/floriandraschbacher/deskdock/server/class_150 com/floriandraschbacher/deskdock/server/logic/networking/PacketReader
+	FIELD field_390 bytes [B
+	FIELD field_391 readBytes I
+	METHOD <init> ([BI)V
+		ARG 1 bytes
+		ARG 2 readSize
+	METHOD method_463 isEmpty ()Z
+	METHOD method_464 readString (Ljava/nio/charset/Charset;)Ljava/lang/String;
+		ARG 1 charset
+		ARG 3 str
+	METHOD method_465 readLong ()J
+	METHOD method_466 readInt ()I
+	METHOD method_467 readBool ()Z

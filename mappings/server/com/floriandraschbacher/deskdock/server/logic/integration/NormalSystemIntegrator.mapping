@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_106 com/floriandraschbacher/deskdock/server/logic/integration/NormalSystemIntegrator
+	FIELD field_247 switchShortcut Lcom/floriandraschbacher/deskdock/server/class_143$class_144;

@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_87
+CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/deskdock/server/logic/synergy/ClientInfo
 	CLASS class_88
 		METHOD toString toString ()Ljava/lang/String;
 	CLASS class_89
