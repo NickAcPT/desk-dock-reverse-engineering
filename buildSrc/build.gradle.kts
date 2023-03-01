@@ -11,6 +11,8 @@ repositories {
 }
 
 dependencies {
+    implementation("org.ow2.asm:asm-tree:9.3")
+
     implementation("net.fabricmc:stitch:0.6.2")
     implementation("net.fabricmc:mapping-io:0.3.0")
     implementation("net.fabricmc:tiny-remapper:0.8.6")

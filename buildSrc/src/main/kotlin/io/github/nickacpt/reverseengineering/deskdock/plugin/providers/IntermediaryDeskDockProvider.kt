@@ -15,7 +15,7 @@ object IntermediaryDeskDockProvider : DeskDockArtifactProvider() {
 
     override fun provideArtifact(project: Project, newDependency: DependencyInfo): Path {
         val intermediaryFilePath = IntermediaryMappingProvider.provide(project)
-        val originalJarPath = StrippedOriginalDeskDockProvider.provide(project)
+        val originalJarPath = ProcessedOriginalDeskDockProvider.provide(project)
 
         val intermediary = MappingUtils.loadMappings(intermediaryFilePath)
 
