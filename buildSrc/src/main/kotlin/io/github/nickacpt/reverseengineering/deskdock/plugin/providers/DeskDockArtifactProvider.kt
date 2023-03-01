@@ -5,6 +5,7 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.De
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
 import org.gradle.api.Project
 import java.nio.file.Path
+import kotlin.io.path.exists
 
 abstract class DeskDockArtifactProvider {
     open val name: String get() = Constants.DESKDOCK_ARTIFACT
@@ -21,6 +22,11 @@ abstract class DeskDockArtifactProvider {
             artifact = name,
             classifier = classifier
         )
+
+        val artifactPath = repo.getPath(newDependency)
+        if (artifactPath.exists()) {
+            return artifactPath
+        }
 
         if (addToProject) {
             val config = project.configurations.maybeCreate("amogus")

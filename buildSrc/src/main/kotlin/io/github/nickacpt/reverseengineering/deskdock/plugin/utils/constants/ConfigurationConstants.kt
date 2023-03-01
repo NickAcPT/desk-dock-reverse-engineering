@@ -5,7 +5,9 @@ object Constants {
     const val DESKDOCK_EXTENSION_NAME = "workspace"
 
     const val DESKDOCK_CONFIGURATION_NAME = "deskdock"
+    const val ENIGMA_DEPENDENCIES_CONFIGURATION_NAME = "enigmaDep"
     const val ENIGMA_CONFIGURATION_NAME = "enigma"
+
     const val DESKDOCK_GROUP = "com.floriandraschbacher"
     const val DESKDOCK_ARTIFACT = "deskdock"
 

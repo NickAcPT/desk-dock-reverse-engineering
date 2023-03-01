@@ -7,6 +7,7 @@ import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.JavaExec
 import org.gradle.process.CommandLineArgumentProvider
 import java.nio.file.Path
+import kotlin.io.path.div
 
 abstract class LaunchEnigmaTask : JavaExec() {
     @get:InputFile
@@ -15,9 +16,13 @@ abstract class LaunchEnigmaTask : JavaExec() {
     @get:InputDirectory
     abstract var mappingsPath: Path
 
+    @get:InputDirectory
+    abstract var workDirPath: Path
+
     fun initClassPath() {
         val engima = project.workspace.enigmaDependencyInfo
         classpath = project.files(engima.resolve())
+        workingDir = workDirPath.toFile()
     }
 
     init {
@@ -30,7 +35,10 @@ abstract class LaunchEnigmaTask : JavaExec() {
                 inputJarPath.toAbsolutePath().toString(),
 
                 "--mappings",
-                mappingsPath.toAbsolutePath().toString()
+                mappingsPath.toAbsolutePath().toString(),
+
+                "--profile",
+                (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
             )
         })
     }

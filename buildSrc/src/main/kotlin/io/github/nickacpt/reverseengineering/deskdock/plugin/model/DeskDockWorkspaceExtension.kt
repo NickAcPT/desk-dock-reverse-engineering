@@ -18,7 +18,12 @@ open class DeskDockWorkspaceExtension {
     internal fun Project.initWorkspace() {
         // Create configuration
         configurations.create(Constants.DESKDOCK_CONFIGURATION_NAME)
-        configurations.create(Constants.ENIGMA_CONFIGURATION_NAME)
+
+        // Setup Enigma and extra dependencies
+        val enigmaConfiguration = configurations.create(Constants.ENIGMA_CONFIGURATION_NAME)
+        val enigmaDependenciesConfiguration = configurations.create(Constants.ENIGMA_DEPENDENCIES_CONFIGURATION_NAME)
+
+        enigmaConfiguration.extendsFrom(enigmaDependenciesConfiguration)
 
         // Create virtual maven repository for storing artifacts
         repository = getVirtualMavenRepository(Constants.DESKDOCK_MAVEN_REPOSITORY)

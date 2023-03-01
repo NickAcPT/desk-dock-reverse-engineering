@@ -11,6 +11,7 @@ import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.maven
 import org.gradle.kotlin.dsl.repositories
+import kotlin.io.path.div
 
 class DeskDockReverseEngineeringPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -39,6 +40,7 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
             val intermediaryJar = IntermediaryDeskDockProvider.provide(this)
 
             engimaTask.apply {
+                workDirPath = project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME
                 inputJarPath = intermediaryJar
                 mappingsPath = target.workspace.type.getMappingsDirectory(target)
                 initClassPath()
