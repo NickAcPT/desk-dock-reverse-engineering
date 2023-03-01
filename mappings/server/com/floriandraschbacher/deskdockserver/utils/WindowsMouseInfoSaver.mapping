@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_92 com/floriandraschbacher/deskdockserver/utils/WindowsMouseInfoSaver
+	METHOD method_266 restoreMouseInfo ()Z
+	METHOD method_267 saveMouseInfo ()Z

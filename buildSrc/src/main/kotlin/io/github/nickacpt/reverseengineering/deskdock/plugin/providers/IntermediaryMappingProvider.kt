@@ -22,8 +22,8 @@ object IntermediaryMappingProvider {
         val intermediaryDirPath = project.rootDir.toPath() / Constants.INTERMEDIARY_FOLDER_NAME / type.toString()
         intermediaryDirPath.createDirectories()
 
-        val originalJarPath = OriginalDeskDockProvider.provide(project)
-        val hash = HashUtils.getFileHash(originalJarPath)
+        val originalJarPath = StrippedOriginalDeskDockProvider.provide(project)
+        val hash = HashUtils.getFileHash(OriginalDeskDockProvider.provide(project))
 
         val intermediaryFilePath = intermediaryDirPath / intermediaryName(hash)
 

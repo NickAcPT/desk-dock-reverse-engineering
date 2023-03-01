@@ -10,5 +10,10 @@ dependencies {
 }
 
 workspace {
-    intermediaryObfuscationPattern = "."
+    intermediaryObfuscationPattern = ".+"
+
+    strippedPackages = listOf(
+        "com/github/kwhat/jnativehook",
+        "com/intellij/uiDesigner"
+    )
 }

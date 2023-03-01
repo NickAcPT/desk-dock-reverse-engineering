@@ -7,8 +7,8 @@ import org.gradle.api.Project
 import java.nio.file.Path
 import kotlin.io.path.copyTo
 
-object StrippedIntermediaryDeskDockProvider : DeskDockArtifactProvider() {
-    override val classifier: String = "intermediary-stripped"
+object StrippedOriginalDeskDockProvider : DeskDockArtifactProvider() {
+    override val classifier: String = "original-stripped"
 
     override fun provideArtifact(project: Project, newDependency: DependencyInfo): Path {
         val workspace = project.workspace

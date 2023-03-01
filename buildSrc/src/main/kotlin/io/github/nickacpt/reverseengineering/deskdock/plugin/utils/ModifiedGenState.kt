@@ -514,7 +514,7 @@ class ModifiedGenState {
         }
 
         fun isUnmappedMethodName(name: String): Boolean {
-            return name[0] != '<'
+            return name[0] != '<'&& name != "toString" && name != "hashCode"
         }
     }
 }
