@@ -1,0 +1,2 @@
+CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
+	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;

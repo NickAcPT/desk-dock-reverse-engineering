@@ -1,0 +1,13 @@
+CLASS com/floriandraschbacher/deskdock/server/class_149 com/floriandraschbacher/deskdock/server/utils/platform/PlatformUtils
+	FIELD field_389 osName Ljava/lang/String;
+	METHOD method_453 isWin ()Z
+	METHOD method_454 killProcess (Ljava/lang/String;)V
+		ARG 0 process
+	METHOD method_455 isMac ()Z
+	METHOD method_456 isArm ()Z
+	METHOD method_457 isLinux ()Z
+	METHOD method_458 platformDirectory ()Ljava/io/File;
+	METHOD method_459 newLine ()Ljava/lang/String;
+	METHOD method_460 fileSeparator ()Ljava/lang/String;
+	METHOD method_461 is64Bit ()Z
+	METHOD method_462 osName ()Ljava/lang/String;

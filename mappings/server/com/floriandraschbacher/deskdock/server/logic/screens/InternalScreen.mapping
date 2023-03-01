@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_84 com/floriandraschbacher/deskdock/server/logic/screens/InternalScreen
+	FIELD field_183 device Ljava/awt/GraphicsDevice;
+	FIELD field_184 configuration Ljava/awt/GraphicsConfiguration;
+	FIELD field_185 robot Ljava/awt/Robot;
+	METHOD <init> (Ljava/awt/GraphicsDevice;)V
+		ARG 1 device
+	METHOD method_251 getConfiguration ()Ljava/awt/GraphicsConfiguration;
+	METHOD method_252 robot ()Ljava/awt/Robot;

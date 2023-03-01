@@ -1,0 +1,27 @@
+CLASS com/floriandraschbacher/deskdock/server/class_41 com/floriandraschbacher/deskdock/server/ui/calibration/CalibrationDialog
+	FIELD field_90 screen Lcom/floriandraschbacher/deskdock/server/class_84;
+	FIELD field_91 results Ljava/util/List;
+	FIELD field_92 information Lcom/floriandraschbacher/deskdock/server/class_40;
+	FIELD field_93 moved Z
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_84;)V
+		ARG 1 screen
+	METHOD method_100 calibrateNow ()Ljava/util/List;
+	METHOD method_101 information (Lcom/floriandraschbacher/deskdock/server/class_41;)Lcom/floriandraschbacher/deskdock/server/class_40;
+		ARG 0 dialog
+	METHOD method_102 mouseEvent (Lcom/floriandraschbacher/deskdock/server/class_41;Ljava/awt/event/MouseEvent;)V
+		ARG 0 dialog
+		ARG 1 mouseEvent
+		ARG 5 result
+		ARG 6 dialog
+	METHOD method_103 moved (Lcom/floriandraschbacher/deskdock/server/class_41;Z)Z
+		ARG 0 dialog
+		ARG 1 value
+	METHOD method_104 cleanup ()V
+	METHOD method_105 globalCenter ()Ljava/awt/Point;
+	METHOD method_106 localCenter ()Ljava/awt/Point;
+	CLASS class_42 CalibrationResult
+		FIELD field_94 xError I
+		FIELD field_95 yError I
+		METHOD <init> (II)V
+			ARG 1 xError
+			ARG 2 yError

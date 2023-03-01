@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_43 com/floriandraschbacher/deskdock/server/ui/calibration/MouseMotionListener
+	FIELD field_96 dialog Lcom/floriandraschbacher/deskdock/server/class_41;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_41;)V
+		ARG 1 dialog
+	METHOD method_107 mouseDragged (Ljava/awt/event/MouseEvent;)V
+		ARG 1 mouseEvent
+	METHOD method_108 mouseMoved (Ljava/awt/event/MouseEvent;)V
+		ARG 1 mouseEvent

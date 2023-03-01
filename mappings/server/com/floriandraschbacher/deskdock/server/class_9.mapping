@@ -1,4 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_9
+	METHOD method_15 adbExecutablePath (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 adbPath
+	METHOD method_34 executableName ()Ljava/lang/String;
+	METHOD method_36 primary ()Lcom/floriandraschbacher/deskdock/server/class_93;
 	METHOD method_38 isDebuggingEnalbed ()Z
 	CLASS class_10
 		FIELD field_11 CLIPBOARD_FORMAT_HTML Lcom/floriandraschbacher/deskdock/server/class_9$class_10;

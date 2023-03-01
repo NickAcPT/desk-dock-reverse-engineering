@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_91 com/floriandraschbacher/deskdock/server/utils/platform/MacOSCursorHider
+	METHOD method_265 setCursorHidden (Z)V
+		ARG 1 hidden

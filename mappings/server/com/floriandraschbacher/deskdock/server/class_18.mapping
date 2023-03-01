@@ -1,0 +1,7 @@
+CLASS com/floriandraschbacher/deskdock/server/class_18
+	METHOD method_71 (Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;
+		ARG 15 screen
+	METHOD method_72 findScreen (Ljava/util/List;Lcom/floriandraschbacher/deskdock/server/class_186;)Lcom/floriandraschbacher/deskdock/server/class_93;
+		ARG 0 screens
+		ARG 1 serializedScreen
+		ARG 4 screensIterator

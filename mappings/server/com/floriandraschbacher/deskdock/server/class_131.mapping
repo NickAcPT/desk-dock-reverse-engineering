@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_131
+	METHOD method_397 (Ljava/awt/Graphics;)V
+		ARG 1 graphics

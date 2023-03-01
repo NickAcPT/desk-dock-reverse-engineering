@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_178 com/floriandraschbacher/deskdock/server/utils/LoggingUncaughtExceptionHandler
+	METHOD method_536 uncaughtException (Ljava/lang/Thread;Ljava/lang/Throwable;)V
+		ARG 1 thread
+		ARG 2 throwable

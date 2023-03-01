@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_40 com/floriandraschbacher/deskdock/server/ui/calibration/CalibrationInformation
+	FIELD field_89 move I
+	METHOD method_98 drawString (Ljava/awt/Graphics;Ljava/lang/String;Ljava/awt/Rectangle;Ljava/awt/Font;)V
+		ARG 0 graphics
+		ARG 1 string
+		ARG 2 bounds
+		ARG 3 font
+	METHOD method_99 paint (Ljava/awt/Graphics;)V
+		ARG 1 graphics
