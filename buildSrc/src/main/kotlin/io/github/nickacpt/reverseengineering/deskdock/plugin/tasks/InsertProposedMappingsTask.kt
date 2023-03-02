@@ -3,24 +3,25 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.tasks
 import org.gradle.process.CommandLineArgumentProvider
 import kotlin.io.path.div
 
-abstract class LaunchEnigmaTask : EnigmaTask() {
-
+abstract class InsertProposedMappingsTask : EnigmaCommandTask() {
     init {
-        mainClass.set("cuchaz.enigma.gui.Main")
-
         argumentProviders.add(CommandLineArgumentProvider {
             listOf(
-                    "--jar",
+                    "insert-proposed-mappings",
+
+                    // input jar
                     inputJarPath.toAbsolutePath().toString(),
 
-                    "--mappings",
+                    // source and target
+                    mappingsPath.toAbsolutePath().toString(),
                     mappingsPath.toAbsolutePath().toString(),
 
-                    "--profile",
+                    // format
+                    "enigma",
+
                     (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
             )
         })
 
     }
-
 }

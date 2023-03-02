@@ -4,6 +4,7 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.model.DeskDockWorks
 import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.IntermediaryDeskDockProvider
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.AutomateMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.DumpNamesFromIntermediaryMappingsTask
+import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.InsertProposedMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.LaunchEnigmaTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
@@ -31,7 +32,10 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
             target.initWorkspace()
         }
 
-        val engimaTask = target.tasks.create<LaunchEnigmaTask>("launchEnigma")
+        val enigmaTasks = listOf(
+                target.tasks.create<LaunchEnigmaTask>("launchEnigma"),
+                target.tasks.create<InsertProposedMappingsTask>("insertProposedMappings")
+        )
         target.tasks.create<DumpNamesFromIntermediaryMappingsTask>("dumpIntermediaryNames")
         target.tasks.create<AutomateMappingsTask>("automateMappings")
 
@@ -43,11 +47,11 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
             // First, provide the original deskdock jar
             val intermediaryJar = IntermediaryDeskDockProvider.provide(this)
 
-            engimaTask.apply {
-                workDirPath = project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME
-                inputJarPath = intermediaryJar
-                mappingsPath = target.workspace.type.getMappingsDirectory(target)
-                initClassPath()
+            enigmaTasks.forEach {
+                it.workDirPath = project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME
+                it.inputJarPath = intermediaryJar
+                it.mappingsPath = target.workspace.type.getMappingsDirectory(target)
+                it.initClassPath()
             }
         }
     }
