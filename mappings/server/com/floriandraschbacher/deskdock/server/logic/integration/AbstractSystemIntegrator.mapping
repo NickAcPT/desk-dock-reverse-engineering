@@ -12,6 +12,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/
 			ARG 1 connection
 		METHOD method_544 (Lcom/floriandraschbacher/deskdock/server/class_169;IC)V
 			ARG 1 connection
+			ARG 3 character
 		METHOD method_545 (Lcom/floriandraschbacher/deskdock/server/class_169;II)V
 			ARG 1 connection
 		METHOD method_546 (Lcom/floriandraschbacher/deskdock/server/class_169;IIII)V

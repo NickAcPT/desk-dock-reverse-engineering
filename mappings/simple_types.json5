@@ -70,5 +70,12 @@
   },
   "com/floriandraschbacher/deskdock/server/class_81": "preferenceManager",
   "com/floriandraschbacher/deskdock/server/class_153": "transferDataEntry",
-  "com/floriandraschbacher/deskdock/server/class_135": "transferData"
+  "com/floriandraschbacher/deskdock/server/class_135": "transferData",
+  "com/floriandraschbacher/deskdock/server/class_50": {
+    local_name: "io",
+    fallback: [
+      "packetIo"
+    ]
+  }
+
 }

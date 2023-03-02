@@ -82,6 +82,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 	METHOD method_38 isDebuggingEnalbed ()Z
 	METHOD method_39 locateDefaultAndroidSdk ()Ljava/lang/String;
 	METHOD method_40 locateAndroidSdk ()Ljava/lang/String;
+	METHOD method_41 findAndroidStudioPath ()Ljava/lang/String;
+	METHOD method_8 mapKey (I)I
 	CLASS class_10 ClipboardFormat
 		FIELD field_10 id I
 		FIELD field_11 CLIPBOARD_FORMAT_HTML Lcom/floriandraschbacher/deskdock/server/class_9$class_10;

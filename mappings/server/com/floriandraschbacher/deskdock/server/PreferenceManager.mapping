@@ -4,6 +4,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_81 com/floriandraschbacher/d
 	FIELD field_179 changeListeners Ljava/util/List;
 	METHOD method_233 instance ()Lcom/floriandraschbacher/deskdock/server/class_81;
 	METHOD method_234 upgradePreferences (I)V
+		ARG 1 version
 	METHOD method_235 addChangeListener (Lcom/floriandraschbacher/deskdock/server/class_81$class_82;)V
 		ARG 1 listener
 	METHOD method_236 getPreference (Ljava/lang/String;)Ljava/lang/String;

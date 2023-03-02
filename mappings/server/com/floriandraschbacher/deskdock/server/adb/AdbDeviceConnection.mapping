@@ -16,6 +16,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_169 com/floriandraschbacher/
 		METHOD method_526 packetReceived (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
 			ARG 1 connection
 			ARG 2 packet
+			ARG 5 transporter
+			ARG 7 connection
 	CLASS class_171 LostConnectionListener
 		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 			ARG 1 connection

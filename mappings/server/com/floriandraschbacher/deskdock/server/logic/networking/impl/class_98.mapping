@@ -1,4 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_98 com/floriandraschbacher/deskdock/server/logic/networking/impl/class_98
-	FIELD field_227 ip Ljava/lang/String;
-	METHOD method_306 parse ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
-		ARG 0 bytes

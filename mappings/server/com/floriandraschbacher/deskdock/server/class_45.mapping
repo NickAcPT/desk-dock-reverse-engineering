@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_45
+	FIELD field_100 entries Ljava/util/Queue;
 	FIELD field_101 logic Lcom/floriandraschbacher/deskdock/server/class_165;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_165;)V
 		ARG 1 logic
