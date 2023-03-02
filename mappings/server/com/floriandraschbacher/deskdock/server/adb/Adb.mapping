@@ -20,10 +20,16 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 1 device
 		ARG 2 port
 		ARG 3 unknown
+	METHOD method_21 (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Ljava/lang/String;
+		ARG 1 device
 	METHOD method_22 grantPermission (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;Ljava/lang/String;)Z
 		ARG 1 device
 		ARG 2 pkg
 		ARG 3 permission
+	METHOD method_23 (Lcom/floriandraschbacher/deskdock/server/class_181;ZIZZ)Z
+		ARG 1 device
+	METHOD method_24 (Lcom/floriandraschbacher/deskdock/server/class_181;ZLjava/lang/String;Ljava/lang/String;)V
+		ARG 1 device
 	METHOD method_25 executeShell (Lcom/floriandraschbacher/deskdock/server/class_181;[Ljava/lang/String;ZZZZZZ)Ljava/lang/String;
 		ARG 1 device
 		ARG 2 args
@@ -54,6 +60,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 	METHOD method_30 decodeCharacter (II)I
 		ARG 0 value
 		ARG 1 index
+	METHOD method_31 (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Z
+		ARG 1 device
 	METHOD method_32 locateAdb ()Ljava/lang/String;
 	METHOD method_34 executableName ()Ljava/lang/String;
 	METHOD method_36 primary ()Lcom/floriandraschbacher/deskdock/server/class_93;

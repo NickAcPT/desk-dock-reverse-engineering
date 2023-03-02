@@ -41,6 +41,7 @@ abstract class LaunchEnigmaTask : JavaExec() {
                 (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
             )
         })
+
     }
 
 }

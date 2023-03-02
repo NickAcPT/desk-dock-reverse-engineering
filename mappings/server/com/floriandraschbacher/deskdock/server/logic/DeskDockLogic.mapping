@@ -10,3 +10,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 	METHOD method_512 systemIntegrator (Lcom/floriandraschbacher/deskdock/server/class_179;)V
 		ARG 1 newIntegrator
 	METHOD method_515 findDevice (Ljava/lang/String;)Lcom/floriandraschbacher/deskdock/server/class_169;
+	METHOD method_92 (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
+		ARG 3 device
+	CLASS class_167
+		METHOD method_519 (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 3 device

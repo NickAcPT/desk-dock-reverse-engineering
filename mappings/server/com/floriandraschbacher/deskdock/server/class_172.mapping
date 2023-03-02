@@ -1,4 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_172
+	METHOD method_528 (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;)Z
+		ARG 2 device
 	METHOD method_529 (Lcom/floriandraschbacher/deskdock/server/class_97;I)V
 		ARG 1 transporter
 		ARG 2 unknown

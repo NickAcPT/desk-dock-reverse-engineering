@@ -1,2 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_154
+	FIELD field_398 device Lcom/floriandraschbacher/deskdock/server/class_181;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/io/File;)V
+		ARG 2 device
 	METHOD method_484 run ()V

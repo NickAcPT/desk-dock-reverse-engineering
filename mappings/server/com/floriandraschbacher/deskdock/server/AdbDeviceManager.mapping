@@ -6,3 +6,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/d
 	METHOD method_90 tryConnect (Lcom/floriandraschbacher/deskdock/server/class_181;I)V
 		ARG 1 device
 		ARG 2 retryCount
+	CLASS class_38
+		METHOD method_92 (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 3 device
