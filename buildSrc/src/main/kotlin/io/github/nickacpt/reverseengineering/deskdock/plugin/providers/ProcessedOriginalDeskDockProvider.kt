@@ -8,6 +8,8 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.mappings.AsmU
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.mappings.ZipUtils
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
 import org.gradle.api.Project
+import org.objectweb.asm.Opcodes
+import org.objectweb.asm.Type
 import java.nio.file.Path
 import kotlin.io.path.copyTo
 
@@ -23,10 +25,29 @@ object ProcessedOriginalDeskDockProvider : DeskDockArtifactProvider() {
             // Decrypt strings
             decryptStrings(workspace, it)
 
+            // Add missing parameters
+            addMissingParameters(it)
+
             // Strip requested packages
             workspace.strippedPackages.forEach { pkg ->
                 ZipUtils.stripPackage(it, pkg)
             }
+        }
+    }
+
+    private fun addMissingParameters(it: Path) {
+        AsmUtils.updateJarClasses(it) { clazz ->
+            clazz.methods.map { m ->
+                if (m.parameters == null) {
+                    Type.getArgumentTypes(m.desc).forEachIndexed { i, _ ->
+                        m.visitParameter("arg${i + 1}", Opcodes.ACC_MANDATED)
+                    }
+
+                    true
+                } else {
+                    false
+                }
+            }.any { it }
         }
     }
 

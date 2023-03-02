@@ -31,7 +31,7 @@ object AsmUtils {
                 val (reader, node) = classNodeFromPath(path)
 
                 if (updater(node)) {
-                    val writer = object : ClassWriter(reader, COMPUTE_MAXS or COMPUTE_FRAMES) {
+                    val writer = object : ClassWriter(reader, COMPUTE_MAXS) {
                         override fun getClassLoader(): ClassLoader {
                             return writerClassLoader
                         }

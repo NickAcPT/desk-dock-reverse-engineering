@@ -13,7 +13,10 @@
         "id": "enigma:specialized_bridge_method_indexer"
       },
       {
-        "id": "quiltmc:jar_index"
+        "id": "quiltmc:jar_index",
+        "args": {
+          "simple_type_field_names_path": "simple_types.json5"
+        }
       }
     ],
     "obfuscation_test": {
