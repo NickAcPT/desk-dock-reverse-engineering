@@ -26,7 +26,8 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
         val state = cfrState!!
         decryptorTree = state.getClassFileMaybePath(strategy.realClassName)
 
-        val decryptorClassNode = context["/${strategy.realClassName}.class"] ?: throw Exception("Invalid decryptor class")
+        val decryptorClassNode = context["/${strategy.realClassName}.class"]
+                ?: throw Exception("Invalid decryptor class")
         val decryptorMethodNode = decryptorClassNode.methods.firstOrNull { it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
                 ?: throw Exception("Invalid decryptor method")
 
