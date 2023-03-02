@@ -9,5 +9,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/d
 		ARG 1 device
 	CLASS class_13
 		FIELD field_21 device Lcom/floriandraschbacher/deskdock/server/class_85;
+		FIELD field_24 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_12;Lcom/floriandraschbacher/deskdock/server/class_85;)V
 			ARG 2 device

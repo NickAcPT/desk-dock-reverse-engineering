@@ -4,5 +4,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_45
 		ARG 1 logic
 	METHOD method_116 failedToSupport (Lcom/floriandraschbacher/deskdock/server/class_100;)V
 		ARG 1 packet
-	METHOD method_118 (Lcom/floriandraschbacher/deskdock/server/class_153;)V
+	METHOD method_117 (Lcom/floriandraschbacher/deskdock/server/class_135;)V
 		ARG 1 transferData
+	METHOD method_118 (Lcom/floriandraschbacher/deskdock/server/class_153;)V
+		ARG 1 transferDataEntry

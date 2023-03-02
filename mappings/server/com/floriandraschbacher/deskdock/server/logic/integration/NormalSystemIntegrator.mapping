@@ -1,5 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_106 com/floriandraschbacher/deskdock/server/logic/integration/NormalSystemIntegrator
 	FIELD field_247 switchShortcut Lcom/floriandraschbacher/deskdock/server/class_143$class_144;
+	FIELD field_250 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
+	METHOD method_140 (Lcom/floriandraschbacher/deskdock/server/class_135;)V
+		ARG 1 transferData
 	METHOD method_317 (Lcom/floriandraschbacher/deskdock/server/class_106;Lcom/floriandraschbacher/deskdock/server/class_93;)V
 		ARG 1 screen
 	METHOD method_318 (Ljava/awt/Point;)Ljava/awt/Point;

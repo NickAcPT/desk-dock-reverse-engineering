@@ -1,3 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_49
+	FIELD field_109 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_135;)V
+		ARG 1 transferData
 	METHOD method_125 read (Lcom/floriandraschbacher/deskdock/server/class_150;)Lcom/floriandraschbacher/deskdock/server/class_49;
 		ARG 0 reader

@@ -69,5 +69,6 @@
     ]
   },
   "com/floriandraschbacher/deskdock/server/class_81": "preferenceManager",
-  "com/floriandraschbacher/deskdock/server/class_153": "transferData"
+  "com/floriandraschbacher/deskdock/server/class_153": "transferDataEntry",
+  "com/floriandraschbacher/deskdock/server/class_135": "transferData"
 }
