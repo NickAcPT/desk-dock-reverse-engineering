@@ -21,7 +21,7 @@ abstract class DumpNamesFromIntermediaryMappingsTask : DeskDockTaskBase() {
         val intermediary = MappingUtils.loadMappings(intermediaryFilePath) as MappingTree
 
         val outTree =
-            MappingUtils.loadMappings(project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME / project.workspace.type.toString())
+                MappingUtils.loadMappings(project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME / project.workspace.type.toString())
 
         intermediary.classes.forEach { clazz ->
             val clazzIntermediaryName = clazz.getName(0)
@@ -59,8 +59,8 @@ abstract class DumpNamesFromIntermediaryMappingsTask : DeskDockTaskBase() {
         }
 
         val writer = MappingWriter.create(
-            project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME / project.workspace.type.toString(),
-            MappingFormat.ENIGMA
+                project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME / project.workspace.type.toString(),
+                MappingFormat.ENIGMA
         )
 
         writer.use {

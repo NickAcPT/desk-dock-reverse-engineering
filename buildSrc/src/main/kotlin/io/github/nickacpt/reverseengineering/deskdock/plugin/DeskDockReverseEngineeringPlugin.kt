@@ -2,6 +2,7 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.DeskDockWorkspaceExtension
 import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.IntermediaryDeskDockProvider
+import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.AutomateMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.DumpNamesFromIntermediaryMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.LaunchEnigmaTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
@@ -32,6 +33,7 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
 
         val engimaTask = target.tasks.create<LaunchEnigmaTask>("launchEnigma")
         target.tasks.create<DumpNamesFromIntermediaryMappingsTask>("dumpIntermediaryNames")
+        target.tasks.create<AutomateMappingsTask>("automateMappings")
 
         target.afterEvaluate {
             with(extension) {

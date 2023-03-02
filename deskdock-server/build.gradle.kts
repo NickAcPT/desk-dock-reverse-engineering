@@ -12,6 +12,7 @@ dependencies {
 
     enigma("org.quiltmc:enigma-swing:1.7.0-SNAPSHOT")
     enigmaDep("net.fabricmc:name-proposal:0.1.4")
+    enigmaDep("org.quiltmc:quilt-enigma-plugin:1.2.1")
 }
 
 workspace {
