@@ -1,3 +1,5 @@
+import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy.DirectlyInvoke
+
 plugins {
     id("desk-dock-reverse-engineering-plugin")
 }
@@ -19,7 +21,12 @@ workspace {
     intermediaryObfuscationPattern = ".+"
 
     strippedPackages = listOf(
-        "com/github/kwhat/jnativehook",
-        "com/intellij/uiDesigner"
+            "com/github/kwhat/jnativehook",
+            "com/intellij/uiDesigner"
     )
+
+    stringDecryptionStrategy = DirectlyInvoke(project,
+            "com/floriandraschbacher/deskdock/server/class_9",
+            "method_26",
+            "([I)Ljava/lang/String;")
 }

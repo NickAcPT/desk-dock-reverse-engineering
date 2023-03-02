@@ -1,5 +1,6 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.utils.mappings
 
+import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.directinvocation.ClassNodesClassLoader
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.tree.ClassNode
@@ -21,6 +22,8 @@ object AsmUtils {
     }
 
     fun updateJarClasses(path: Path, updater: (ClassNode) -> Boolean) {
+        val writerClassLoader = ClassNodesClassLoader(viewJarAsNodes(path))
+
         FileSystems.newFileSystem(path).use { fs ->
             fs.getPath("/").walk().forEach { path ->
                 if (path.extension != "class") return@forEach
@@ -28,7 +31,11 @@ object AsmUtils {
                 val (reader, node) = classNodeFromPath(path)
 
                 if (updater(node)) {
-                    val writer = ClassWriter(reader, ClassWriter.COMPUTE_MAXS)
+                    val writer = object : ClassWriter(reader, COMPUTE_MAXS or COMPUTE_FRAMES) {
+                        override fun getClassLoader(): ClassLoader {
+                            return writerClassLoader
+                        }
+                    }
                     node.accept(writer)
 
                     path.writeBytes(writer.toByteArray())

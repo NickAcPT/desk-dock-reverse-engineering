@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation("org.ow2.asm:asm-tree:9.3")
+    implementation("org.ow2.asm:asm-util:9.3")
     implementation("org.benf:cfr:0.152")
 
     implementation("net.fabricmc:stitch:0.6.2")

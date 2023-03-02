@@ -1,11 +1,13 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.model
 
+import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.DependencyInfo
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.dependency.DependencyInfoUtils
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.maven.VirtualMavenRepository
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.maven.getVirtualMavenRepository
 import org.gradle.api.Project
+import org.gradle.api.plugins.JavaPlugin
 
 open class DeskDockWorkspaceExtension {
     internal lateinit var deskDockDependencyInfo: DependencyInfo
@@ -15,6 +17,7 @@ open class DeskDockWorkspaceExtension {
 
     var intermediaryObfuscationPattern: String? = null
     var strippedPackages: List<String> = emptyList()
+    var stringDecryptionStrategy: StringDecryptionStategy = StringDecryptionStategy.None
 
     internal fun Project.initWorkspace() {
         // Create configuration
@@ -25,6 +28,10 @@ open class DeskDockWorkspaceExtension {
         val enigmaDependenciesConfiguration = configurations.create(Constants.ENIGMA_DEPENDENCIES_CONFIGURATION_NAME)
 
         enigmaConfiguration.extendsFrom(enigmaDependenciesConfiguration)
+
+        configurations.getByName(JavaPlugin.RUNTIME_ONLY_CONFIGURATION_NAME).extendsFrom(
+                enigmaConfiguration
+        )
 
         // Create virtual maven repository for storing artifacts
         repository = getVirtualMavenRepository(Constants.DESKDOCK_MAVEN_REPOSITORY)
@@ -48,7 +55,7 @@ open class DeskDockWorkspaceExtension {
 
     private fun Project.initDeskDockDependencyInfo() {
         deskDockDependencyInfo =
-            DependencyInfoUtils.getProjectDependency(this, Constants.DESKDOCK_CONFIGURATION_NAME)
+                DependencyInfoUtils.getProjectDependency(this, Constants.DESKDOCK_CONFIGURATION_NAME)
 
         check(deskDockDependencyInfo.group == Constants.DESKDOCK_GROUP) { "Expected deskdock group to be ${Constants.DESKDOCK_GROUP}." }
         check(deskDockDependencyInfo.classifier != Constants.DESKDOCK_ARTIFACT) { "Expected deskdock group to be ${Constants.DESKDOCK_ARTIFACT}." }

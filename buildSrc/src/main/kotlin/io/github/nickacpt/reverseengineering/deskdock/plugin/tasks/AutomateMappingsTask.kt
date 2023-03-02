@@ -44,7 +44,7 @@ abstract class AutomateMappingsTask : DeskDockTaskBase() {
 
             override fun getPossiblyRenamedPath(path: String): String = path
 
-            override fun getClassFileContent(path: String): Pair<ByteArray, String>? {
+            override fun getClassFileContent(path: String): Pair<ByteArray, String> {
                 val classNode = nodes["/${path}"]!!
                 return Pair(ClassWriter(0).let { classNode.accept(it); it.toByteArray() }, path)
             }
@@ -122,33 +122,6 @@ abstract class AutomateMappingsTask : DeskDockTaskBase() {
         }
 
         analysis.transform(object : ExpressionRewriterTransformer(rewriter) {}, StructuredScope())
-    }
-
-    sealed interface EncryptedStringData {
-        val intArrayValues: IntArray
-
-        object None : EncryptedStringData {
-            override val intArrayValues: IntArray = IntArray(0)
-        }
-
-        data class InputArrayValue(override val intArrayValues: IntArray) : EncryptedStringData {
-            override fun equals(other: Any?): Boolean {
-                if (this === other) return true
-                if (javaClass != other?.javaClass) return false
-
-                other as InputArrayValue
-
-                return intArrayValues.contentEquals(other.intArrayValues)
-            }
-
-            override fun hashCode(): Int {
-                return intArrayValues.contentHashCode()
-            }
-        }
-
-        data class InputArraySet(val array: InputArrayValue) : EncryptedStringData by array
-
-        data class DecryptionMethodCall(val input: InputArrayValue) : EncryptedStringData by input
     }
 
 }
