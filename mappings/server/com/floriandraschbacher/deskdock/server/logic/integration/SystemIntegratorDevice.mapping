@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_85 com/floriandraschbacher/deskdock/server/SystemIntegratorDevice
+CLASS com/floriandraschbacher/deskdock/server/class_85 com/floriandraschbacher/deskdock/server/logic/integration/SystemIntegratorDevice
 	FIELD field_186 dimension Ljava/awt/Dimension;
 	FIELD field_189 connection Lcom/floriandraschbacher/deskdock/server/class_169;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/awt/Dimension;II)V
@@ -9,3 +9,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_85 com/floriandraschbacher/d
 	METHOD method_253 name ()Ljava/lang/String;
 	METHOD method_254 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
+	METHOD method_255 name2 ()Ljava/lang/String;

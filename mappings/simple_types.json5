@@ -67,5 +67,7 @@
     fallback: [
       "adbPacketHandler"
     ]
-  }
+  },
+  "com/floriandraschbacher/deskdock/server/class_81": "preferenceManager",
+  "com/floriandraschbacher/deskdock/server/class_153": "transferData"
 }

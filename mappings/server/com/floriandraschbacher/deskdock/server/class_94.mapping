@@ -18,3 +18,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_94
 		ARG 1 device
 	METHOD method_290 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
+	METHOD method_291 newExternalScreen ()Lcom/floriandraschbacher/deskdock/server/class_86;

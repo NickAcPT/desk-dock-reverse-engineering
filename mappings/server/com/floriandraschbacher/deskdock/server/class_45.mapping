@@ -2,3 +2,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_45
 	FIELD field_101 logic Lcom/floriandraschbacher/deskdock/server/class_165;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_165;)V
 		ARG 1 logic
+	METHOD method_116 failedToSupport (Lcom/floriandraschbacher/deskdock/server/class_100;)V
+		ARG 1 packet

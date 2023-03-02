@@ -1,26 +1,30 @@
 CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/deskdock/server/logic/DeskDockLogic
-	FIELD field_411 devices Ljava/util/Map;
+	FIELD field_411 connectedDevicesMap Ljava/util/Map;
 	FIELD field_412 systemIntegrator Lcom/floriandraschbacher/deskdock/server/class_179;
 	FIELD field_413 deviceManager Lcom/floriandraschbacher/deskdock/server/class_37;
 	FIELD field_416 adb Lcom/floriandraschbacher/deskdock/server/class_9;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
 		ARG 1 adb
 		ARG 4 synergyEnabled
+	METHOD method_508 devices ()Ljava/util/List;
 	METHOD method_509 (Lcom/floriandraschbacher/deskdock/server/class_103;Ljava/lang/String;)V
 		ARG 1 packet
 	METHOD method_511 (Ljava/lang/String;Ljava/lang/String;)V
 		ARG 2 deviceName
 	METHOD method_512 systemIntegrator (Lcom/floriandraschbacher/deskdock/server/class_179;)V
 		ARG 1 newIntegrator
-	METHOD method_513 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_101;)V
+	METHOD method_513 sendHandshakeReply (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_101;)V
 		ARG 1 connection
 		ARG 2 handshakePacket
+		ARG 4 transporter
+		ARG 6 packet
 	METHOD method_514 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
 		ARG 1 connection
 		ARG 2 packet
 	METHOD method_515 findDevice (Ljava/lang/String;)Lcom/floriandraschbacher/deskdock/server/class_169;
 	METHOD method_516 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 		ARG 1 connection
+		ARG 4 connection
 	METHOD method_526 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
 		ARG 1 connection
 		ARG 2 packet
@@ -51,6 +55,14 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 	METHOD method_94 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_101;)V
 		ARG 1 connection
 		ARG 2 handshakePacket
-	CLASS class_167
-		METHOD method_519 (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
+	CLASS class_167 StatusMenuAbstraction
+		METHOD method_518 updateDetectedDevices (I)V
+			ARG 1 count
+		METHOD method_519 updateConnectedDevices (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 1 count
+			ARG 2 connected
 			ARG 3 device
+		METHOD method_520 showWarning (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
+			ARG 1 title
+			ARG 2 message
+			ARG 3 runnable

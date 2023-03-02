@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/deskdock/server/logic/adb/tasks/AdbClientReadingTask
+CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/deskdock/server/adb/tasks/AdbClientReadingTask
 	FIELD field_245 packetHandler Lcom/floriandraschbacher/deskdock/server/class_104$class_105;
 	FIELD field_246 transporter Lcom/floriandraschbacher/deskdock/server/class_97;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V

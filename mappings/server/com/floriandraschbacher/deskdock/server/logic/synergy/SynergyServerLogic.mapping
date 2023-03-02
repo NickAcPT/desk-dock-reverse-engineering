@@ -1,6 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_191 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyServerLogic
 	METHOD method_573 connected ()V
 	METHOD method_575 enter (II)V
+		ARG 1 x
+		ARG 2 y
 	METHOD method_579 onError (Ljava/lang/Exception;)V
 	METHOD method_580 clipboard (Ljava/lang/String;)V
 		ARG 1 text

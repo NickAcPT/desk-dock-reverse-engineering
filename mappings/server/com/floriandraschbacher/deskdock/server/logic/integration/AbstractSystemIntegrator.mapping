@@ -3,9 +3,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/
 	METHOD method_538 addDevice (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
 	METHOD method_539 unload ()V
-	METHOD method_540 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+	METHOD method_540 deviceRemoved (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
-	METHOD method_542 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+	METHOD method_542 deviceAdded (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
 	CLASS class_180
 		METHOD method_543 (Lcom/floriandraschbacher/deskdock/server/class_169;I)V

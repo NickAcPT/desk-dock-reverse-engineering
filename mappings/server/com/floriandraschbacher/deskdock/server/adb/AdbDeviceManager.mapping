@@ -22,3 +22,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/d
 		METHOD method_94 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_101;)V
 			ARG 1 connection
 			ARG 2 handshakePacket
+			ARG 7 connection
+			ARG 8 handshake

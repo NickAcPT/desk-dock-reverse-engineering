@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_153
+CLASS com/floriandraschbacher/deskdock/server/class_153 com/floriandraschbacher/deskdock/server/logic/networking/model/TransferData
 	FIELD field_393 fullPath Ljava/lang/String;
 	FIELD field_394 mimeType Ljava/lang/String;
 	FIELD field_395 fileName Ljava/lang/String;
@@ -15,3 +15,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_153
 	METHOD method_480 fileName ()Ljava/lang/String;
 	METHOD method_481 path ()Ljava/lang/String;
 	METHOD method_482 size ()J
+	METHOD method_483 write ()[B

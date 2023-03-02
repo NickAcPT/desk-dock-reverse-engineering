@@ -1,3 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_135
+	FIELD field_367 data Ljava/util/List;
 	METHOD method_422 isValidCharacter (C)Z
 		ARG 0 character
+	METHOD method_423 (Lcom/floriandraschbacher/deskdock/server/class_153;)V
+		ARG 1 data
