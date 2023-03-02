@@ -48,5 +48,24 @@
       "deviceConnection",
       "adbDeviceConnection"
     ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_37$class_38": "connectionStatusUpdateListener",
+  "com/floriandraschbacher/deskdock/server/class_169$class_170": {
+    local_name: "packetListener",
+    fallback: [
+      "adbPacketListener"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_169$class_171": {
+    local_name: "lostConnectionListener",
+    fallback: [
+      "adbLostConnectionListener"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_104$class_105": {
+    local_name: "packetHandler",
+    fallback: [
+      "adbPacketHandler"
+    ]
   }
 }

@@ -1,5 +1,6 @@
-CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/deskdock/server/AdbDeviceManager
+CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/deskdock/server/adb/AdbDeviceManager
 	FIELD field_82 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_83 connectionStatusUpdateListener Lcom/floriandraschbacher/deskdock/server/class_37$class_38;
 	FIELD field_86 connected Ljava/util/List;
 	FIELD field_87 detected Ljava/util/List;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
@@ -9,7 +10,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/d
 	METHOD method_90 tryConnect (Lcom/floriandraschbacher/deskdock/server/class_181;I)V
 		ARG 1 device
 		ARG 2 retryCount
-	CLASS class_38
+	CLASS class_38 ConnectionStatusUpdateListener
 		METHOD method_91 updateDetectedDeviceCount (I)V
 			ARG 1 connectedCount
 		METHOD method_92 deviceConnectionStatus (IZLcom/floriandraschbacher/deskdock/server/class_181;)V

@@ -1,6 +1,9 @@
 CLASS com/floriandraschbacher/deskdock/server/class_169 com/floriandraschbacher/deskdock/server/adb/AdbDeviceConnection
+	FIELD field_421 packetListener Lcom/floriandraschbacher/deskdock/server/class_169$class_170;
+	FIELD field_422 lostConnectionListener Lcom/floriandraschbacher/deskdock/server/class_169$class_171;
 	FIELD field_423 transporter Lcom/floriandraschbacher/deskdock/server/class_97;
 	FIELD field_424 clientReadingTask Lcom/floriandraschbacher/deskdock/server/class_104;
+	FIELD field_425 packetHandler Lcom/floriandraschbacher/deskdock/server/class_104$class_105;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
 		ARG 1 transporter
 	METHOD method_522 disconnect ()V
@@ -9,10 +12,10 @@ CLASS com/floriandraschbacher/deskdock/server/class_169 com/floriandraschbacher/
 	METHOD method_524 sendRawPacket ([B)Z
 		ARG 1 bytes
 	METHOD method_525 adbDevice ()Lcom/floriandraschbacher/deskdock/server/class_181;
-	CLASS class_170
-		METHOD method_526 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
+	CLASS class_170 PacketListener
+		METHOD method_526 packetReceived (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
 			ARG 1 connection
 			ARG 2 packet
-	CLASS class_171
+	CLASS class_171 LostConnectionListener
 		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 			ARG 1 connection
