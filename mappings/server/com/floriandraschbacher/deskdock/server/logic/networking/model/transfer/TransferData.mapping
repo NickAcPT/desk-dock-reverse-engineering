@@ -1,0 +1,10 @@
+CLASS com/floriandraschbacher/deskdock/server/class_135 com/floriandraschbacher/deskdock/server/logic/networking/model/transfer/TransferData
+	FIELD field_367 data Ljava/util/List;
+	METHOD <init> (Ljava/util/List;)V
+		ARG 1 data
+	METHOD method_421 data ()Ljava/util/List;
+	METHOD method_422 isValidCharacter (C)Z
+		ARG 0 character
+	METHOD method_423 addData (Lcom/floriandraschbacher/deskdock/server/class_153;)V
+		ARG 1 data
+	METHOD method_424 write ()[B

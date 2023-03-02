@@ -1,0 +1,10 @@
+CLASS com/floriandraschbacher/deskdock/server/class_46
+	FIELD field_104 transferData Lcom/floriandraschbacher/deskdock/server/class_153;
+	FIELD field_106 targetFile Ljava/io/File;
+	FIELD field_107 fileStream Ljava/io/OutputStream;
+	METHOD <init> (Ljava/io/File;Lcom/floriandraschbacher/deskdock/server/class_153;)V
+		ARG 1 targetDir
+		ARG 2 transferData
+	METHOD method_121 deleteFile ()V
+	CLASS class_47
+		METHOD method_123 notifyError (Lcom/floriandraschbacher/deskdock/server/class_46;I)V

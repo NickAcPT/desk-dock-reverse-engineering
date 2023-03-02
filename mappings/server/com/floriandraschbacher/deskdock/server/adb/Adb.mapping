@@ -4,6 +4,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 0 screen
 	METHOD method_11 startTask (Lcom/floriandraschbacher/deskdock/server/class_96;)V
 		ARG 0 task
+	METHOD method_12 (Lcom/floriandraschbacher/deskdock/server/class_135;Ljava/io/File;Ljava/io/File;)V
+		ARG 0 transfer
+		ARG 1 data
+		ARG 2 file
+		ARG 6 data
 	METHOD method_13 makeDarkIcon (Ljava/awt/Image;III)Ljava/awt/image/BufferedImage;
 		ARG 0 image
 		ARG 1 width
@@ -12,9 +17,15 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 8 img
 		ARG 10 g
 		ARG 12 raster
+	METHOD method_14 recurseListing (Ljava/io/File;)Ljava/util/List;
+		ARG 0 file
+		ARG 5 files
 	METHOD method_15 adbExecutablePath (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 adbPath
 	METHOD method_16 connectWirelessly (Ljava/lang/String;IZZ)Z
+	METHOD method_17 (Ljava/util/List;)Lcom/floriandraschbacher/deskdock/server/class_135;
+		ARG 0 files
+		ARG 6 f
 	METHOD method_19 removeForward (Lcom/floriandraschbacher/deskdock/server/class_181;I)Z
 		ARG 1 device
 		ARG 2 port
