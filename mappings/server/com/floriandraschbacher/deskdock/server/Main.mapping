@@ -16,3 +16,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_90 com/floriandraschbacher/d
 		ARG 0 args
 		ARG 12 argsArray
 		ARG 13 adbPathPreferences
+		ARG 14 logic

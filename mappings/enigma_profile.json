@@ -5,24 +5,15 @@
         "id": "enigma:specialized_method_name_proposer"
       },
       {
-        "id": "enigma:enum_name_proposer"
-      },
-      {
-        "id": "nameproposal:name_proposal"
-      },
-      {
         "id": "quiltmc:name_proposal"
       }
     ],
     "jar_indexer": [
       {
-        "id": "enigma:enum_initializer_indexer"
-      },
-      {
         "id": "enigma:specialized_bridge_method_indexer"
       },
       {
-        "id": "nameproposal:jar_indexer"
+        "id": "quiltmc:jar_index"
       }
     ],
     "obfuscation_test": {
