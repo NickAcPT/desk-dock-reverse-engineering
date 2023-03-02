@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_169
+	CLASS class_171
+		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V

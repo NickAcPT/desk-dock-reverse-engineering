@@ -2,3 +2,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_172
 	METHOD method_529 (Lcom/floriandraschbacher/deskdock/server/class_97;I)V
 		ARG 1 transporter
 		ARG 2 unknown
+	CLASS class_173
+		METHOD method_530 handshakeSuccess (Lcom/floriandraschbacher/deskdock/server/class_97;Lcom/floriandraschbacher/deskdock/server/class_101;Ljava/lang/String;)V
+			ARG 1 transporter
+			ARG 2 packet

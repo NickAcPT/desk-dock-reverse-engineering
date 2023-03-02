@@ -1,0 +1,6 @@
+CLASS com/floriandraschbacher/deskdock/server/class_182
+	CLASS class_183
+		METHOD method_558 detectedDevice (Lcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 1 device
+		METHOD method_559 (Lcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 1 device

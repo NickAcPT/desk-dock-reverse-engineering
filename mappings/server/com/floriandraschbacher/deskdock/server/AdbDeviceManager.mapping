@@ -1,0 +1,8 @@
+CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/deskdock/server/AdbDeviceManager
+	FIELD field_82 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_86 connected Ljava/util/List;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
+		ARG 1 adb
+	METHOD method_90 tryConnect (Lcom/floriandraschbacher/deskdock/server/class_181;I)V
+		ARG 1 device
+		ARG 2 retryCount
