@@ -1,5 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_65
+	FIELD field_144 screen Lcom/floriandraschbacher/deskdock/server/class_84;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_84;)V
+		ARG 1 screen
 		ARG 3 blankCursorImage
 		ARG 4 blankCursor
 	METHOD method_155 addMouseListener (Ljava/awt/event/MouseListener;)V

@@ -1,2 +1,10 @@
 CLASS com/floriandraschbacher/deskdock/server/class_106 com/floriandraschbacher/deskdock/server/logic/integration/NormalSystemIntegrator
 	FIELD field_247 switchShortcut Lcom/floriandraschbacher/deskdock/server/class_143$class_144;
+	METHOD method_317 (Lcom/floriandraschbacher/deskdock/server/class_106;Lcom/floriandraschbacher/deskdock/server/class_93;)V
+		ARG 1 screen
+	METHOD method_538 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_540 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_542 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device

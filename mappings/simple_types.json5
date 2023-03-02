@@ -1,3 +1,33 @@
 {
-  "com/floriandraschbacher/deskdock/server/class_181": "device"
+  "com/floriandraschbacher/deskdock/server/class_181": {
+    local_name: "device",
+    fallback: [
+      "adbDevice"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_97": "transporter",
+  "com/floriandraschbacher/deskdock/server/class_85": {
+    local_name: "device",
+    fallback: [
+      "systemIntegratorDevice"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_84": {
+    local_name: "screen",
+    fallback: [
+      "internalScreen"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_93": {
+    local_name: "screen",
+    fallback: [
+      "abstractScreen"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_86": {
+    local_name: "screen",
+    fallback: [
+      "externalScreen"
+    ]
+  }
 }

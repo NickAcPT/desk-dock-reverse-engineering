@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/deskdock/server/logic/tasks/ClientReadingTask
+	FIELD field_246 transporter Lcom/floriandraschbacher/deskdock/server/class_97;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
 		ARG 1 transporter
 	CLASS class_105

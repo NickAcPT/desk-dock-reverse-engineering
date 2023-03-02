@@ -2,4 +2,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/d
 	CLASS class_88
 		METHOD toString toString ()Ljava/lang/String;
 	CLASS class_89
+		FIELD field_199 screen Lcom/floriandraschbacher/deskdock/server/class_93;
+		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_93;III)V
+			ARG 1 screen
 		METHOD method_257 equals (Ljava/lang/Object;)Z

@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_61
+	METHOD method_144 (Lcom/floriandraschbacher/deskdock/server/class_93;)V
+		ARG 1 screen
+	METHOD method_149 (Lcom/floriandraschbacher/deskdock/server/class_93;III)V
+		ARG 1 screen

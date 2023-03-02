@@ -1,5 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/deskdock/server/adb/Adb
 	FIELD field_6 adbExecutablePath Ljava/lang/String;
+	METHOD method_10 (Lcom/floriandraschbacher/deskdock/server/class_84;Ljava/awt/Point;)V
+		ARG 0 screen
 	METHOD method_11 startTask (Lcom/floriandraschbacher/deskdock/server/class_96;)V
 		ARG 0 task
 	METHOD method_13 makeDarkIcon (Ljava/awt/Image;III)Ljava/awt/image/BufferedImage;

@@ -10,3 +10,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_94
 		ARG 3 deltaX
 		ARG 4 deltaY
 		ARG 11 screen
+	METHOD method_284 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_288 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_290 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device

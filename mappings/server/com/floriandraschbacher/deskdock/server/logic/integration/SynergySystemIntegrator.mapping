@@ -1,4 +1,12 @@
 CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/deskdock/server/logic/integration/SynergySystemIntegrator
+	METHOD method_46 (Lcom/floriandraschbacher/deskdock/server/class_85;)Lcom/floriandraschbacher/deskdock/server/class_12$class_13;
+		ARG 1 device
+	METHOD method_538 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_540 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
+	METHOD method_542 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+		ARG 1 device
 	CLASS class_13
 		FIELD field_21 device Lcom/floriandraschbacher/deskdock/server/class_85;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_12;Lcom/floriandraschbacher/deskdock/server/class_85;)V
