@@ -1,6 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_85 com/floriandraschbacher/deskdock/server/SystemIntegratorDevice
 	FIELD field_186 dimension Ljava/awt/Dimension;
+	FIELD field_189 connection Lcom/floriandraschbacher/deskdock/server/class_169;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/awt/Dimension;II)V
+		ARG 1 connection
 		ARG 2 dimension
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device

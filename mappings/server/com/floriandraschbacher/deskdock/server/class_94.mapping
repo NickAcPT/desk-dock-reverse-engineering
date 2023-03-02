@@ -12,6 +12,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_94
 		ARG 11 screen
 	METHOD method_284 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
+	METHOD method_285 (Lcom/floriandraschbacher/deskdock/server/class_169;)Lcom/floriandraschbacher/deskdock/server/class_85;
+		ARG 1 connection
 	METHOD method_288 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
 	METHOD method_290 (Lcom/floriandraschbacher/deskdock/server/class_85;)V

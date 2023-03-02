@@ -7,3 +7,24 @@ CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/
 		ARG 1 device
 	METHOD method_542 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
+	CLASS class_180
+		METHOD method_543 (Lcom/floriandraschbacher/deskdock/server/class_169;I)V
+			ARG 1 connection
+		METHOD method_544 (Lcom/floriandraschbacher/deskdock/server/class_169;IC)V
+			ARG 1 connection
+		METHOD method_545 (Lcom/floriandraschbacher/deskdock/server/class_169;II)V
+			ARG 1 connection
+		METHOD method_546 (Lcom/floriandraschbacher/deskdock/server/class_169;IIII)V
+			ARG 1 connection
+		METHOD method_547 (Lcom/floriandraschbacher/deskdock/server/class_169;IIIZ)V
+			ARG 1 connection
+		METHOD method_548 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
+			ARG 1 connection
+		METHOD method_549 (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/lang/String;Z)V
+			ARG 1 connection
+		METHOD method_552 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
+			ARG 1 connection
+		METHOD method_553 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
+			ARG 1 connection
+		METHOD method_554 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
+			ARG 1 connection

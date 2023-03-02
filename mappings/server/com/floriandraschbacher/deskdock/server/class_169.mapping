@@ -1,6 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_169
-	FIELD field_423 transporter Lcom/floriandraschbacher/deskdock/server/class_97;
-	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
-		ARG 1 transporter
-	CLASS class_171
-		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V

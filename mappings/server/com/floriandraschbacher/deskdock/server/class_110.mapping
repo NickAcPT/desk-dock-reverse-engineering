@@ -1,5 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_110
 	FIELD field_278 currentProfile Lcom/floriandraschbacher/deskdock/server/class_83;
+	FIELD field_279 logic Lcom/floriandraschbacher/deskdock/server/class_165;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_165;)V
+		ARG 1 logic
 	METHOD method_334 showSettings (Lcom/floriandraschbacher/deskdock/server/class_165;)V
 		ARG 0 logic
 	METHOD method_341 dispose ()V

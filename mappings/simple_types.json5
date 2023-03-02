@@ -29,5 +29,24 @@
     fallback: [
       "externalScreen"
     ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_165": "logic",
+  "com/floriandraschbacher/deskdock/server/class_37": "deviceManager",
+  "com/floriandraschbacher/deskdock/server/class_103": {
+    local_name: "packet",
+    fallback: [
+      "dataPacket",
+      "networkPacket"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_101": "handshakePacket",
+  "com/floriandraschbacher/deskdock/server/class_87": "synergyClientInfo",
+  "com/floriandraschbacher/deskdock/server/class_104": "clientReadingTask",
+  "com/floriandraschbacher/deskdock/server/class_169": {
+    local_name: "connection",
+    fallback: [
+      "deviceConnection",
+      "adbDeviceConnection"
+    ]
   }
 }

@@ -1,0 +1,18 @@
+CLASS com/floriandraschbacher/deskdock/server/class_169 com/floriandraschbacher/deskdock/server/adb/AdbDeviceConnection
+	FIELD field_423 transporter Lcom/floriandraschbacher/deskdock/server/class_97;
+	FIELD field_424 clientReadingTask Lcom/floriandraschbacher/deskdock/server/class_104;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
+		ARG 1 transporter
+	METHOD method_522 disconnect ()V
+	METHOD method_523 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_103;)Z
+		ARG 1 packet
+	METHOD method_524 sendRawPacket ([B)Z
+		ARG 1 bytes
+	METHOD method_525 adbDevice ()Lcom/floriandraschbacher/deskdock/server/class_181;
+	CLASS class_170
+		METHOD method_526 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
+			ARG 1 connection
+			ARG 2 packet
+	CLASS class_171
+		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V
+			ARG 1 connection

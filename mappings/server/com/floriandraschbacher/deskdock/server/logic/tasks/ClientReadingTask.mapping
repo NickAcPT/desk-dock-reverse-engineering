@@ -3,5 +3,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_97;)V
 		ARG 1 transporter
 	CLASS class_105
-		METHOD method_314 ([B)V
+		METHOD method_314 handleReceivedPacket ([B)V
+			ARG 1 bytes
 			ARG 3 packet
