@@ -70,6 +70,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 10 str
 		ARG 11 scanner
 		ARG 12 scanner
+	METHOD method_28 deviceList ()Ljava/util/List;
 	METHOD method_30 decodeCharacter (II)I
 		ARG 0 value
 		ARG 1 index

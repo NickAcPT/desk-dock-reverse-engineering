@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_57 com/floriandraschbacher/deskdock/server/logic/networking/io/SimpleBooleanPacketIO
+	FIELD field_123 value Z
+	METHOD <init> (Z)V
+		ARG 1 value

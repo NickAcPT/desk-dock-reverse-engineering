@@ -1,2 +1,10 @@
 CLASS com/floriandraschbacher/deskdock/server/class_100 com/floriandraschbacher/deskdock/server/logic/networking/impl/SupplyPacket
+	FIELD field_234 STATE_SUCCESS I
+	FIELD field_235 STATE_FAILURE I
 	FIELD field_236 source Ljava/lang/String;
+	FIELD field_237 directory Ljava/lang/String;
+	FIELD field_238 name Ljava/lang/String;
+	FIELD field_239 state I
+	METHOD method_308 read ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
+		ARG 0 bytes
+		ARG 4 bytes

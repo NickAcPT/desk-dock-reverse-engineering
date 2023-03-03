@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_102 com/floriandraschbacher/deskdock/server/logic/networking/impl/class_102
+CLASS com/floriandraschbacher/deskdock/server/class_102 com/floriandraschbacher/deskdock/server/logic/networking/impl
 	FIELD field_244 io Lcom/floriandraschbacher/deskdock/server/class_50;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_50;)V
 		ARG 1 io

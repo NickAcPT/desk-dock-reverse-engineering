@@ -1,0 +1,15 @@
+CLASS com/floriandraschbacher/deskdock/server/class_182 com/floriandraschbacher/deskdock/server/AdbDeviceManager2
+	FIELD field_432 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_433 connectionTask Lcom/floriandraschbacher/deskdock/server/class_182$class_184;
+	FIELD field_434 detectedDevices Ljava/util/List;
+	FIELD field_435 connectedDevices Ljava/util/List;
+	FIELD field_436 listener Lcom/floriandraschbacher/deskdock/server/class_182$class_183;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_182$class_183;)V
+		ARG 1 adb
+		ARG 2 listener
+	CLASS class_183 ConnectionListener
+		METHOD method_558 detectedDevice (Lcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 1 device
+		METHOD method_559 undetectedDevice (Lcom/floriandraschbacher/deskdock/server/class_181;)V
+			ARG 1 device
+	CLASS class_184 ConnectionTask

@@ -9,3 +9,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_172
 			ARG 1 transporter
 			ARG 2 packet
 			ARG 3 unknown
+			ARG 6 con

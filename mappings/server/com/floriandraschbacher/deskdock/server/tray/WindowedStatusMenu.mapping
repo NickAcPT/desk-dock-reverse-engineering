@@ -1,1 +1,9 @@
 CLASS com/floriandraschbacher/deskdock/server/class_126 com/floriandraschbacher/deskdock/server/tray/WindowedStatusMenu
+	FIELD field_333 frame Ljavax/swing/JFrame;
+	FIELD field_334 detectedDevicesBtn Ljavax/swing/JButton;
+	FIELD field_335 connectedDevicesBtn Ljavax/swing/JButton;
+	FIELD field_336 settingsBtn Ljavax/swing/JButton;
+	FIELD field_337 updateAvailableBtn Ljavax/swing/JButton;
+	FIELD field_338 quitBtn Ljavax/swing/JButton;
+	FIELD field_339 outerPanel Ljavax/swing/JPanel;
+	METHOD method_372 updateButtons ()V

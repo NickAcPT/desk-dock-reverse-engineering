@@ -1,12 +1,16 @@
 CLASS com/floriandraschbacher/deskdock/server/class_85 com/floriandraschbacher/deskdock/server/logic/integration/SystemIntegratorDevice
 	FIELD field_186 dimension Ljava/awt/Dimension;
+	FIELD field_187 scaleX I
+	FIELD field_188 scaleY I
 	FIELD field_189 connection Lcom/floriandraschbacher/deskdock/server/class_169;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/awt/Dimension;II)V
 		ARG 1 connection
 		ARG 2 dimension
+		ARG 3 scaleX
+		ARG 4 scaleY
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
 	METHOD method_253 name ()Ljava/lang/String;
-	METHOD method_254 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+	METHOD method_254 updateFrom (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
 	METHOD method_255 name2 ()Ljava/lang/String;

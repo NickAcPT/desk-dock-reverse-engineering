@@ -1,1 +1,11 @@
 CLASS com/floriandraschbacher/deskdock/server/class_101 com/floriandraschbacher/deskdock/server/logic/networking/impl/HandshakePacket
+	FIELD field_240 width I
+	FIELD field_241 height I
+	FIELD field_242 scaleX I
+	FIELD field_243 scaleY I
+	METHOD <init> (IIII)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 scaleX
+		ARG 4 scaleY
+	METHOD method_309 read ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
