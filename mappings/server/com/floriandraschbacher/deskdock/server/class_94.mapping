@@ -1,6 +1,10 @@
 CLASS com/floriandraschbacher/deskdock/server/class_94
+	FIELD field_212 deviceMap Ljava/util/Map;
 	FIELD field_213 screens Ljava/util/List;
+	FIELD field_214 deltaOffsetX I
+	FIELD field_215 deltaOffsetY I
 	FIELD field_216 newScreen Lcom/floriandraschbacher/deskdock/server/class_93;
+	METHOD method_281 updateScreens ()V
 	METHOD method_282 findScreenAtCoords (II)Lcom/floriandraschbacher/deskdock/server/class_93;
 		ARG 1 x
 		ARG 2 y
@@ -10,9 +14,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_94
 		ARG 3 deltaX
 		ARG 4 deltaY
 		ARG 11 screen
-	METHOD method_284 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
+	METHOD method_284 add (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
-	METHOD method_285 (Lcom/floriandraschbacher/deskdock/server/class_169;)Lcom/floriandraschbacher/deskdock/server/class_85;
+	METHOD method_285 getByName (Lcom/floriandraschbacher/deskdock/server/class_169;)Lcom/floriandraschbacher/deskdock/server/class_85;
 		ARG 1 connection
 	METHOD method_288 (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
