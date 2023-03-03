@@ -8,6 +8,7 @@ import org.benf.cfr.reader.bytecode.analysis.structured.StructuredScope
 import org.benf.cfr.reader.entities.ClassFile
 import org.benf.cfr.reader.state.DCCommonState
 import org.benf.cfr.reader.util.getopt.OptionsImpl
+import org.codehaus.janino.ExpressionEvaluator
 import org.objectweb.asm.Opcodes.POP
 import org.objectweb.asm.tree.*
 import java.lang.invoke.MethodHandle
@@ -57,8 +58,13 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
         val methodCalls = method.instructions.filter { it is MethodInsnNode && it.owner == strategy.realClassName && it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
         if (methodCalls.isEmpty()) return false
 
-        val materializedOutputs = visitor.materializedInputs.map { input ->
-            decryptorMethodHandle.invoke((input as Array<*>).map { it as Int }.toIntArray())
+        val evaluator = ExpressionEvaluator()
+        val expressions = visitor.matchedExpressions.map { it?.toString() ?: "new int[0]" }.toTypedArray()
+
+        evaluator.cook(expressions)
+
+        val materializedOutputs = expressions.mapIndexed { i, _ ->
+            decryptorMethodHandle.invoke(evaluator.evaluate(i))
         }
 
         val replacements = methodCalls.mapIndexed { i, insn ->

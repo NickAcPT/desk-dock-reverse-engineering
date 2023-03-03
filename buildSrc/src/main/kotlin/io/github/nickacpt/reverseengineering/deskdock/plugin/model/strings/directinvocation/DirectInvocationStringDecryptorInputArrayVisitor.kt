@@ -5,7 +5,9 @@ import org.benf.cfr.reader.bytecode.analysis.loc.BytecodeLoc
 import org.benf.cfr.reader.bytecode.analysis.parse.Expression
 import org.benf.cfr.reader.bytecode.analysis.parse.LValue
 import org.benf.cfr.reader.bytecode.analysis.parse.StatementContainer
-import org.benf.cfr.reader.bytecode.analysis.parse.expression.*
+import org.benf.cfr.reader.bytecode.analysis.parse.expression.AbstractNewArray
+import org.benf.cfr.reader.bytecode.analysis.parse.expression.CastExpression
+import org.benf.cfr.reader.bytecode.analysis.parse.expression.LValueExpression
 import org.benf.cfr.reader.bytecode.analysis.parse.rewriters.AbstractExpressionRewriter
 import org.benf.cfr.reader.bytecode.analysis.parse.rewriters.ExpressionRewriterFlags
 import org.benf.cfr.reader.bytecode.analysis.parse.utils.SSAIdentifiers
@@ -17,17 +19,8 @@ import org.benf.cfr.reader.state.DCCommonState
 
 data class DirectInvocationStringDecryptorInputArrayVisitor(val strategy: StringDecryptionStategy.DirectlyInvoke, val decryptorTree: ClassFile, val state: DCCommonState): AbstractExpressionRewriter() {
     private val stringType: JavaRefTypeInstance = state.classCache.getRefClassFor("java/lang/String")
-    val materializedInputs = mutableListOf<Any?>()
+    val matchedExpressions = mutableListOf<Expression?>()
     private val arrayAssignmentCache = mutableMapOf<LValue, AbstractNewArray>()
-
-    private fun materializeExpression(expr: Expression): Any? {
-        if (expr is Literal) {
-            return expr.value.value
-        } else if (expr is NewAnonymousArray) {
-            return expr.values.map(this::materializeExpression).toTypedArray()
-        }
-        return null
-    }
 
     override fun rewriteExpression(expression: Expression, ssaIdentifiers: SSAIdentifiers<*>?, statementContainer: StatementContainer<*>?, flags: ExpressionRewriterFlags?): Expression {
         val wildcard = WildcardMatch()
@@ -46,9 +39,9 @@ data class DirectInvocationStringDecryptorInputArrayVisitor(val strategy: String
                 simplifyExpression(arrayExpression.match)
             }
 
-            materializedInputs.add(materializeExpression(actualExpression))
+            matchedExpressions.add(actualExpression)
         } else if (wildcard.match(stringDecryptorWithoutArgsMethod, expression)) {
-            materializedInputs.add(emptyArray<Int>())
+            matchedExpressions.add(null)
         }
 
         return super.rewriteExpression(expression, ssaIdentifiers, statementContainer, flags)
