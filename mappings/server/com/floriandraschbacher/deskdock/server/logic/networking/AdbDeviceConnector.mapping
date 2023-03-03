@@ -1,0 +1,16 @@
+CLASS com/floriandraschbacher/deskdock/server/class_172 com/floriandraschbacher/deskdock/server/logic/networking/AdbDeviceConnector
+	FIELD field_426 deviceNotifier Lcom/floriandraschbacher/deskdock/server/class_172$class_173;
+	METHOD method_528 connect (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;)Z
+		ARG 1 adb
+		ARG 2 device
+		ARG 11 name
+		ARG 12 config
+	METHOD method_529 connectTransporter (Lcom/floriandraschbacher/deskdock/server/class_97;I)V
+		ARG 1 transporter
+		ARG 2 unknown
+	CLASS class_173 HandshakeSuccessListener
+		METHOD method_530 handshakeSuccess (Lcom/floriandraschbacher/deskdock/server/class_97;Lcom/floriandraschbacher/deskdock/server/class_101;Ljava/lang/String;)V
+			ARG 1 transporter
+			ARG 2 packet
+			ARG 3 unknown
+			ARG 6 con

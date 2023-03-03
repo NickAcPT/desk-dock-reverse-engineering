@@ -1,7 +1,8 @@
-CLASS com/floriandraschbacher/deskdock/server/class_102 com/floriandraschbacher/deskdock/server/logic/networking/impl
+CLASS com/floriandraschbacher/deskdock/server/class_102 com/floriandraschbacher/deskdock/server/logic/networking/PacketParser
 	FIELD field_244 io Lcom/floriandraschbacher/deskdock/server/class_50;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_50;)V
 		ARG 1 io
 	METHOD method_310 parsePacket ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
 		ARG 0 data
 		ARG 4 reader
+		ARG 8 io

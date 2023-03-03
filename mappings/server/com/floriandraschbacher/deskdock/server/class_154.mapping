@@ -1,5 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_154
+	FIELD field_397 adb Lcom/floriandraschbacher/deskdock/server/class_9;
 	FIELD field_398 device Lcom/floriandraschbacher/deskdock/server/class_181;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/io/File;)V
+		ARG 1 adb
 		ARG 2 device
 	METHOD method_484 run ()V

@@ -40,6 +40,7 @@
     ]
   },
   "com/floriandraschbacher/deskdock/server/class_101": "handshakePacket",
+  "com/floriandraschbacher/deskdock/server/class_9": "adb",
   "com/floriandraschbacher/deskdock/server/class_87": "synergyClientInfo",
   "com/floriandraschbacher/deskdock/server/class_104": "clientReadingTask",
   "com/floriandraschbacher/deskdock/server/class_169": {

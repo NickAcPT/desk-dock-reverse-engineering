@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_101 com/floriandraschbacher/deskdock/server/logic/networking/impl/HandshakePacket
+CLASS com/floriandraschbacher/deskdock/server/class_101 com/floriandraschbacher/deskdock/server/logic/networking/impl/ConfigPacket
 	FIELD field_240 width I
 	FIELD field_241 height I
 	FIELD field_242 scaleX I
