@@ -33,7 +33,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 1 device
 		ARG 2 port
 		ARG 3 unknown
-	METHOD method_21 (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Ljava/lang/String;
+	METHOD method_21 executeShell (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 device
 	METHOD method_22 grantPermission (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;Ljava/lang/String;)Z
 		ARG 1 device

@@ -1,4 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_18
+	METHOD method_66 decodeCharacter (II)I
+		ARG 0 value
+		ARG 1 index
 	METHOD method_67 startService (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Z
 		ARG 1 device
 	METHOD method_71 (Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;
@@ -8,3 +11,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_18
 		ARG 0 screens
 		ARG 1 serializedScreen
 		ARG 4 screensIterator
+	METHOD method_74 decryptString ([I)Ljava/lang/String;
+		ARG 0 str
