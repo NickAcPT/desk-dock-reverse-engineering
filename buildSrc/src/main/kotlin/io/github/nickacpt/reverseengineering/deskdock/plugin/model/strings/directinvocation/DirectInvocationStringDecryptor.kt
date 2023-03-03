@@ -2,6 +2,7 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.dire
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy.DirectlyInvoke
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptor
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.asm.AsmMaterializationUtils
 import org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.transformers.ExpressionRewriterTransformer
 import org.benf.cfr.reader.bytecode.analysis.structured.StructuredScope
 import org.benf.cfr.reader.entities.ClassFile
@@ -62,18 +63,13 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
 
         val replacements = methodCalls.mapIndexed { i, insn ->
             val output = materializedOutputs[i] as? String ?: return@mapIndexed false
-            val previous = insn.previous
 
-            // First, insert a Load Constant instruction with this output
-            method.instructions.insertBefore(insn, LdcInsnNode(output))
-
-            // Then we remove the method call
-            method.instructions.remove(insn)
-
-            // And if we're doing a load on a local variable to load an array, pop the loaded variable
-            if (previous is VarInsnNode) {
-                method.instructions.insert(previous, InsnNode(POP))
-            }
+            // Pop the decrypt method call result
+            // And lastly insert a Load Constant instruction with this output
+            val pop = InsnNode(POP)
+            val ldc = LdcInsnNode(output)
+            method.instructions.insert(insn, pop)
+            method.instructions.insert(pop, ldc)
 
             return@mapIndexed true
         }

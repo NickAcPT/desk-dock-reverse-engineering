@@ -1,5 +1,6 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.directinvocation
 
+import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.asm.AsmMaterializationUtils
 import org.objectweb.asm.tree.ClassNode
 import java.net.URLClassLoader
 

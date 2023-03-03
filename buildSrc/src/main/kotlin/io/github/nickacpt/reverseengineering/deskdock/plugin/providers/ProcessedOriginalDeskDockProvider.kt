@@ -59,7 +59,7 @@ object ProcessedOriginalDeskDockProvider : DeskDockArtifactProvider() {
         @Suppress("UNCHECKED_CAST")
         val decryptor = (strategy.decryptor as StringDecryptor<StringDecryptionStategy>)
 
-        val originalNodes = AsmUtils.viewJarAsNodes(it)
+        val originalNodes = AsmUtils.viewJarAsNodes(it, true)
         decryptor.prepareNodes(originalNodes, strategy)
 
         AsmUtils.updateJarClasses(it) { clazz ->

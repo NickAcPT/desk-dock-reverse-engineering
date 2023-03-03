@@ -1,3 +1,4 @@
+import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy.DirectlyInvoke
 
 plugins {
@@ -26,8 +27,14 @@ workspace {
             "com/intellij/uiDesigner"
     )
 
-    stringDecryptionStrategy = DirectlyInvoke(project,
-            "com/floriandraschbacher/deskdock/server/class_9",
-            "method_26",
-            "([I)Ljava/lang/String;")
+    stringDecryptionStrategy = StringDecryptionStategy.MultipleInvoke(listOf(
+            DirectlyInvoke(project,
+                    "com/floriandraschbacher/deskdock/server/class_9",
+                    "method_26",
+                    "([I)Ljava/lang/String;"),
+            DirectlyInvoke(project,
+                    "com/floriandraschbacher/deskdock/server/class_18",
+                    "method_74",
+                    "([I)Ljava/lang/String;"),
+    ))
 }

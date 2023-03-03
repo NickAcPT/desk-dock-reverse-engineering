@@ -1,5 +1,6 @@
-package io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.directinvocation
+package io.github.nickacpt.reverseengineering.deskdock.plugin.utils.asm
 
+import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.directinvocation.ClassNodesClassLoader
 import org.objectweb.asm.ClassWriter
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Type
