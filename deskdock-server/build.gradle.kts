@@ -17,6 +17,14 @@ dependencies {
     enigmaDep("org.quiltmc:enigma-cli:1.7.0-SNAPSHOT")
     enigmaDep("net.fabricmc:name-proposal:0.1.4")
     enigmaDep("org.quiltmc:quilt-enigma-plugin:1.2.1")
+
+    enigmaDep(project(":deskdock-enigma"))
+}
+
+tasks {
+    launchEnigma {
+        dependsOn(project(":deskdock-enigma").tasks.jar)
+    }
 }
 
 workspace {

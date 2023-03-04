@@ -6,6 +6,9 @@
       },
       {
         "id": "quiltmc:name_proposal"
+      },
+      {
+        "id": "deskdock:name_proposer"
       }
     ],
     "jar_indexer": [
@@ -17,6 +20,9 @@
         "args": {
           "simple_type_field_names_path": "simple_types.json5"
         }
+      },
+      {
+        "id": "deskdock:jar_index"
       }
     ],
     "obfuscation_test": {
