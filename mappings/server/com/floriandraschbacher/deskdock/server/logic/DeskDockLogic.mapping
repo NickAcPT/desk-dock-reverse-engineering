@@ -25,38 +25,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 	METHOD method_516 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 		ARG 1 connection
 		ARG 4 connection
-	METHOD method_526 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
-		ARG 1 connection
-		ARG 2 packet
-	METHOD method_543 (Lcom/floriandraschbacher/deskdock/server/class_169;I)V
-		ARG 1 connection
-	METHOD method_544 (Lcom/floriandraschbacher/deskdock/server/class_169;IC)V
-		ARG 1 connection
-	METHOD method_545 (Lcom/floriandraschbacher/deskdock/server/class_169;II)V
-		ARG 1 connection
-	METHOD method_546 (Lcom/floriandraschbacher/deskdock/server/class_169;IIII)V
-		ARG 1 connection
-	METHOD method_547 (Lcom/floriandraschbacher/deskdock/server/class_169;IIIZ)V
-		ARG 1 connection
-	METHOD method_548 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
-		ARG 1 connection
-		ARG 2 transferData
-	METHOD method_549 (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/lang/String;Z)V
-		ARG 1 connection
-	METHOD method_552 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
-		ARG 1 connection
-	METHOD method_553 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
-		ARG 1 connection
-		ARG 2 transferData
-	METHOD method_554 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
-		ARG 1 connection
-	METHOD method_92 (IZLcom/floriandraschbacher/deskdock/server/class_181;)V
-		ARG 3 device
-	METHOD method_93 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
-		ARG 1 connection
-	METHOD method_94 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_101;)V
-		ARG 1 connection
-		ARG 2 handshakePacket
 	CLASS class_167 StatusMenuAbstraction
 		METHOD method_518 updateDetectedDevices (I)V
 			ARG 1 count

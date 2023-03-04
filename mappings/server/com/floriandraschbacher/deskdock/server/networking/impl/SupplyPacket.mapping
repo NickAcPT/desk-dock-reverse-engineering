@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_100 com/floriandraschbacher/deskdock/server/logic/networking/impl/SupplyPacket
+CLASS com/floriandraschbacher/deskdock/server/class_100 com/floriandraschbacher/deskdock/server/networking/impl/SupplyPacket
 	FIELD field_234 STATE_SUCCESS I
 	FIELD field_235 STATE_FAILURE I
 	FIELD field_236 source Ljava/lang/String;

@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_150 com/floriandraschbacher/deskdock/server/logic/networking/PacketReader
+CLASS com/floriandraschbacher/deskdock/server/class_150 com/floriandraschbacher/deskdock/server/networking/PacketReader
 	FIELD field_390 bytes [B
 	FIELD field_391 readBytes I
 	METHOD <init> ([BI)V

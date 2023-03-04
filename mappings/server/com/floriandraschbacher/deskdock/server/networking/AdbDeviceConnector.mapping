@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_172 com/floriandraschbacher/deskdock/server/logic/networking/AdbDeviceConnector
+CLASS com/floriandraschbacher/deskdock/server/class_172 com/floriandraschbacher/deskdock/server/networking/AdbDeviceConnector
 	FIELD field_426 deviceNotifier Lcom/floriandraschbacher/deskdock/server/class_172$class_173;
 	METHOD method_528 connect (Lcom/floriandraschbacher/deskdock/server/class_9;Lcom/floriandraschbacher/deskdock/server/class_181;)Z
 		ARG 1 adb

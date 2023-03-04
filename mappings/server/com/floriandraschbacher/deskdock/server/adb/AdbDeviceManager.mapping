@@ -5,8 +5,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/d
 	FIELD field_87 detected Ljava/util/List;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
 		ARG 1 adb
-	METHOD method_527 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
-		ARG 1 connection
 	METHOD method_90 tryConnect (Lcom/floriandraschbacher/deskdock/server/class_181;I)V
 		ARG 1 device
 		ARG 2 retryCount

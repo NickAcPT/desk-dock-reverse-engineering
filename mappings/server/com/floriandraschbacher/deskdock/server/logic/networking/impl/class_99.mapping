@@ -1,4 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_99 com/floriandraschbacher/deskdock/server/logic/networking/impl/class_99
-	METHOD method_307 ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
-		ARG 0 bytes
-		ARG 9 bytes

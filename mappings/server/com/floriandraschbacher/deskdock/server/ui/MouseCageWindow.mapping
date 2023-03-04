@@ -1,7 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
-	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_84;)V
-		ARG 1 screen
 	METHOD method_190 getInputMethodRequests ()Ljava/awt/im/InputMethodRequests;
 	METHOD toString toString ()Ljava/lang/String;

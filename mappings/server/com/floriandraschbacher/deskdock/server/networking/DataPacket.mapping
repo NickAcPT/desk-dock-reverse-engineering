@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_103 com/floriandraschbacher/deskdock/server/logic/networking/DataPacket
+CLASS com/floriandraschbacher/deskdock/server/class_103 com/floriandraschbacher/deskdock/server/networking/DataPacket
 	METHOD method_311 write ()[B
 	METHOD method_312 packetType ()I
 	METHOD method_313 parsePacket ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
