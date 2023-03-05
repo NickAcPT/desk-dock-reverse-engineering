@@ -1,5 +1,10 @@
 CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
+	METHOD method_179 keyTyped (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;)V
+	METHOD method_180 keyClicked (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;Z)V
+	METHOD method_181 mouseMove (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;)V
+	METHOD method_182 mouseClick (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;Z)V
+	METHOD method_183 mouseWheel (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseWheelEvent;)V
 	METHOD method_190 getInputMethodRequests ()Ljava/awt/im/InputMethodRequests;
 	METHOD toString toString ()Ljava/lang/String;

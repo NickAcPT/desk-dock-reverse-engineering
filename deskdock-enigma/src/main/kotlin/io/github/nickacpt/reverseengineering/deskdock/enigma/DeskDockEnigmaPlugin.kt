@@ -9,7 +9,7 @@ import io.github.nickacpt.reverseengineering.deskdock.enigma.services.DeskDockNa
 class DeskDockEnigmaPlugin : EnigmaPlugin {
     override fun init(ctx: EnigmaPluginContext) {
         ctx.registerDeskDockService("jar_index", JarIndexerService.TYPE) {
-            DeskDockJarIndexerService()
+            DeskDockJarIndexerService
         }
 
         ctx.registerDeskDockService("name_proposer", NameProposalService.TYPE) {

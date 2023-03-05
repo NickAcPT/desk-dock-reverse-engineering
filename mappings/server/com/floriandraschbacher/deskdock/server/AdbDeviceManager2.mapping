@@ -13,3 +13,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_182 com/floriandraschbacher/
 		METHOD method_559 undetectedDevice (Lcom/floriandraschbacher/deskdock/server/class_181;)V
 			ARG 1 device
 	CLASS class_184 ConnectionTask
+		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_182;B)V
+			ARG 2 unknown

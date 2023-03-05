@@ -77,6 +77,13 @@
     fallback: [
       "packetIo"
     ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_172": {
+    local_name: "connector",
+    fallback: [
+      "deviceConnector",
+      "adbDeviceConnector"
+    ]
   }
 
 }

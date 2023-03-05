@@ -18,7 +18,7 @@ data class ClassNodeViewCfrClassSource(val nodes: Map<String, ClassNode>) : Clas
     override fun getPossiblyRenamedPath(path: String): String = path
 
     override fun getClassFileContent(path: String): Pair<ByteArray, String>? {
-        val clazz = nodes["/$path"] ?: return null
+        val clazz = nodes[path.removeSuffix(".class")] ?: return null
 
         return Pair(ClassWriter(0).let { clazz.accept(it); it.toByteArray() }, path)
     }

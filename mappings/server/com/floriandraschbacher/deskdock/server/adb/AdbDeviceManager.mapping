@@ -1,6 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_37 com/floriandraschbacher/deskdock/server/adb/AdbDeviceManager
 	FIELD field_82 adb Lcom/floriandraschbacher/deskdock/server/class_9;
 	FIELD field_83 connectionStatusUpdateListener Lcom/floriandraschbacher/deskdock/server/class_37$class_38;
+	FIELD field_84 connector Lcom/floriandraschbacher/deskdock/server/class_172;
+	FIELD field_85 manager2 Lcom/floriandraschbacher/deskdock/server/class_182;
 	FIELD field_86 connected Ljava/util/List;
 	FIELD field_87 detected Ljava/util/List;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
