@@ -1,12 +1,19 @@
 CLASS com/floriandraschbacher/deskdock/server/class_131
 	METHOD method_389 getPreferredSize ()Ljava/awt/Dimension;
 	METHOD method_390 mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_391 mouseDragged (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_392 mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_393 mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_394 mouseMoved (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_395 mousePressed (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_396 mouseReleased (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_397 paintComponent (Ljava/awt/Graphics;)V
 		ARG 1 graphics
 	METHOD method_398 setBounds (IIII)V

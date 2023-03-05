@@ -1,2 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_76
+	FIELD field_173 window Lcom/floriandraschbacher/deskdock/server/class_70;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
+		ARG 1 window
 	METHOD method_204 run ()V

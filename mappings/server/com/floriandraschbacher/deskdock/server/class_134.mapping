@@ -1,3 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_134
-	METHOD method_419 logScreens ()V
-	METHOD method_420 isTranslucencySupported (Ljava/awt/GraphicsDevice$WindowTranslucency;)Z

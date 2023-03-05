@@ -1,6 +1,11 @@
 CLASS com/floriandraschbacher/deskdock/server/class_118
 	METHOD method_356 mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_357 mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_358 mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_359 mousePressed (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
 	METHOD method_360 mouseReleased (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event

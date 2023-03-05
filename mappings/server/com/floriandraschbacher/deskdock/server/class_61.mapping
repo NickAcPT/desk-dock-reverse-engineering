@@ -1,3 +1,4 @@
 CLASS com/floriandraschbacher/deskdock/server/class_61
+	FIELD field_130 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD method_144 (Lcom/floriandraschbacher/deskdock/server/class_93;)V
 		ARG 1 screen

@@ -1,0 +1,14 @@
+CLASS com/floriandraschbacher/deskdock/server/class_66 com/floriandraschbacher/deskdock/server/ui/MouseClickListener
+	FIELD field_145 dialog Lcom/floriandraschbacher/deskdock/server/class_65;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_65;)V
+		ARG 1 dialog
+	METHOD method_164 mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD method_165 mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD method_166 mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD method_167 mousePressed (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD method_168 mouseReleased (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event

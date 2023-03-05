@@ -1,0 +1,31 @@
+CLASS com/floriandraschbacher/deskdock/server/class_65 com/floriandraschbacher/deskdock/server/ui/ClickListenerDialog
+	FIELD field_140 mouseDown Z
+	FIELD field_141 mouseListener Ljava/awt/event/MouseListener;
+	FIELD field_142 windowListeners Ljava/util/List;
+	FIELD field_143 lastClickMs J
+	FIELD field_144 screen Lcom/floriandraschbacher/deskdock/server/class_84;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_84;)V
+		ARG 1 screen
+		ARG 3 blankCursorImage
+		ARG 4 blankCursor
+	METHOD method_152 doClick ()V
+	METHOD method_153 (Lcom/floriandraschbacher/deskdock/server/class_65;)Z
+		ARG 0 dialog
+	METHOD method_154 mouseDown (Lcom/floriandraschbacher/deskdock/server/class_65;Z)Z
+		ARG 0 dialog
+		ARG 1 value
+	METHOD method_155 addMouseListener (Ljava/awt/event/MouseListener;)V
+		ARG 1 mouseListener
+	METHOD method_156 addWindowListener (Ljava/awt/event/WindowListener;)V
+		ARG 1 listener
+	METHOD method_157 coordinates ()Ljava/awt/Point;
+	METHOD method_158 mouseDown (Lcom/floriandraschbacher/deskdock/server/class_65;)Z
+		ARG 0 dialog
+	METHOD method_159 globalCoordinates ()Ljava/awt/Point;
+	METHOD method_160 (Lcom/floriandraschbacher/deskdock/server/class_65;)Ljava/awt/event/MouseListener;
+		ARG 0 dialog
+	METHOD method_161 localCoordinates ()Ljava/awt/Point;
+	METHOD method_162 windowListeners (Lcom/floriandraschbacher/deskdock/server/class_65;)Ljava/util/List;
+		ARG 0 dialog
+	METHOD method_163 removeWindowListener (Ljava/awt/event/WindowListener;)V
+		ARG 1 listener

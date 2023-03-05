@@ -1,8 +1,18 @@
-CLASS com/floriandraschbacher/deskdock/server/class_67
+CLASS com/floriandraschbacher/deskdock/server/class_67 com/floriandraschbacher/deskdock/server/ui/WindowListenerImpl
+	FIELD field_146 dialog Lcom/floriandraschbacher/deskdock/server/class_65;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_65;)V
+		ARG 1 dialog
 	METHOD method_169 windowActivated (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_170 windowClosed (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_171 windowClosing (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_172 windowDeactivated (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_173 windowDeiconified (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_174 windowIconified (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_175 windowOpened (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event

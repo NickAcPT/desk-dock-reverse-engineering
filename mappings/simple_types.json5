@@ -84,6 +84,18 @@
       "deviceConnector",
       "adbDeviceConnector"
     ]
-  }
-
+  },
+  "com/floriandraschbacher/deskdock/server/class_70": "window",
+  "java/awt/event/MouseEvent": "event",
+  "java/awt/event/WindowEvent": "event",
+  "java/awt/event/MouseListener": "mouseListener",
+  "java/awt/event/WindowListener": "listener",
+  "com/floriandraschbacher/deskdock/server/class_65": {
+    local_name: "dialog",
+    fallback: [
+      "listenerDialog",
+      "clickListenerDialog"
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_68": "clickTask"
 }

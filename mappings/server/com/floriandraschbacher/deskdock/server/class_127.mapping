@@ -1,8 +1,15 @@
 CLASS com/floriandraschbacher/deskdock/server/class_127
 	METHOD method_373 windowActivated (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_374 windowClosed (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_375 windowClosing (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_376 windowDeactivated (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_377 windowDeiconified (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_378 windowIconified (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event
 	METHOD method_379 windowOpened (Ljava/awt/event/WindowEvent;)V
+		ARG 1 event

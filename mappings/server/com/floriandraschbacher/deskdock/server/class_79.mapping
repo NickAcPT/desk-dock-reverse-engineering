@@ -1,4 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_79
+	FIELD field_176 window Lcom/floriandraschbacher/deskdock/server/class_70;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
+		ARG 1 window
 	METHOD method_208 cancelLatestCommittedText ([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
 	METHOD method_209 getCommittedText (II[Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
 	METHOD method_210 getCommittedTextLength ()I

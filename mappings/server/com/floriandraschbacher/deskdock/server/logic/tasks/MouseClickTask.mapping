@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_68 com/floriandraschbacher/deskdock/server/logic/tasks/MouseClickTask
+	FIELD field_147 dialog Lcom/floriandraschbacher/deskdock/server/class_65;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_65;)V
+		ARG 1 dialog
+	METHOD method_176 run ()V

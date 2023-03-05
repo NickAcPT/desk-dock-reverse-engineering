@@ -1,10 +1,39 @@
 CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
+	METHOD method_177 (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
+		ARG 0 window
+	METHOD method_178 (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
+		ARG 0 window
 	METHOD method_179 keyTyped (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;)V
+		ARG 0 window
 	METHOD method_180 keyClicked (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;Z)V
+		ARG 0 window
 	METHOD method_181 mouseMove (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;)V
+		ARG 0 window
+		ARG 1 event
 	METHOD method_182 mouseClick (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;Z)V
+		ARG 0 window
+		ARG 1 event
+		ARG 2 down
 	METHOD method_183 mouseWheel (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseWheelEvent;)V
+		ARG 0 window
+	METHOD method_184 (Lcom/floriandraschbacher/deskdock/server/class_70;Z)Z
+		ARG 0 window
+	METHOD method_185 (Lcom/floriandraschbacher/deskdock/server/class_70;)Z
+		ARG 0 window
+	METHOD method_186 screen (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_84;
+		ARG 0 window
+	METHOD method_188 (Lcom/floriandraschbacher/deskdock/server/class_70;)[Lcom/floriandraschbacher/deskdock/server/class_96;
+		ARG 0 window
+	METHOD method_189 hideCursor ()V
 	METHOD method_190 getInputMethodRequests ()Ljava/awt/im/InputMethodRequests;
 	METHOD toString toString ()Ljava/lang/String;
+	CLASS class_71
+		FIELD field_168 window Lcom/floriandraschbacher/deskdock/server/class_70;
+		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
+			ARG 1 window
+		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;B)V
+			ARG 1 window
+		METHOD method_229 (Ljava/awt/event/WindowEvent;)V
+			ARG 1 event
