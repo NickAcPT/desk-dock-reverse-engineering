@@ -1,3 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_30
-	METHOD method_83 (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
-		ARG 0 buf
