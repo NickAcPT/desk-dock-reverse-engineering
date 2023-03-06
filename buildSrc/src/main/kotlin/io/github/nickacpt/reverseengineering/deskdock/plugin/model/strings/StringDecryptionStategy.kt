@@ -28,7 +28,12 @@ sealed class StringDecryptionStategy {
 
     }
 
-    data class DirectlyInvoke(val project: Project, val decryptorClass: String, val decryptorMethod: String, val decryptorDesc: String) : StringDecryptionStategy() {
+    data class DirectlyInvoke(
+        val project: Project,
+        val decryptorClass: String,
+        val decryptorMethod: String,
+        val decryptorDesc: String
+    ) : StringDecryptionStategy() {
         private val intermediaryNs = 0
 
         private val intermediaryMappings by lazy {
@@ -55,7 +60,8 @@ sealed class StringDecryptionStategy {
     }
 
     @Suppress("UNCHECKED_CAST")
-    data class MultipleInvoke(val invocations: List<DirectlyInvoke>) : StringDecryptionStategy(), StringDecryptor<MultipleInvoke> {
+    data class MultipleInvoke(val invocations: List<DirectlyInvoke>) : StringDecryptionStategy(),
+        StringDecryptor<MultipleInvoke> {
         override val decryptor: StringDecryptor<*>
             get() = this
 

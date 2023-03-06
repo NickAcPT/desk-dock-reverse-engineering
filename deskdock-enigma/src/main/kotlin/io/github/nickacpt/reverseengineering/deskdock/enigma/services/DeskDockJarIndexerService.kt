@@ -4,14 +4,8 @@ import cuchaz.enigma.analysis.index.JarIndex
 import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.classprovider.ClassProvider
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.AbstractDeskDockIndexer
-import io.github.nickacpt.reverseengineering.deskdock.enigma.index.GetterSetterDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
 import io.github.nickacpt.reverseengineering.deskdock.enigma.utils.cfr.ClassNodeViewCfrClassSource
-import org.benf.cfr.reader.bytecode.analysis.loc.BytecodeLoc
-import org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.util.MiscStatementTools
-import org.benf.cfr.reader.bytecode.analysis.parse.expression.LValueExpression
-import org.benf.cfr.reader.bytecode.analysis.parse.wildcard.WildcardMatch
-import org.benf.cfr.reader.bytecode.analysis.structured.statement.StructuredReturn
 import org.benf.cfr.reader.state.DCCommonState
 import org.benf.cfr.reader.util.getopt.OptionsImpl
 
@@ -19,7 +13,6 @@ object DeskDockJarIndexerService : JarIndexerService {
     private val cfrOptions = OptionsImpl(emptyMap())
 
     private val indexers = listOf<AbstractDeskDockIndexer<*>>(
-            GetterSetterDeskDockIndexer()
     )
 
     private val gigaIndexResult = mutableMapOf<IndexEntryKey, MutableList<Any>>()
@@ -56,18 +49,6 @@ object DeskDockJarIndexerService : JarIndexerService {
 
                 // Now index the methods
                 results += cfrClazz.methods.map { cfrMethod ->
-
-                    if (cfrMethod.name == "method_160") {
-                        val w = WildcardMatch()
-
-                        val expr = w.getLValueWildCard("returnField")
-                        val ret = StructuredReturn(BytecodeLoc.NONE, LValueExpression(expr), null)
-
-                        MiscStatementTools.linearise(cfrMethod.analysis).map {
-                            w.match(ret, it)
-                        }
-                    }
-
                     val methodNode = clazzNode.methods.first { it.name == cfrMethod.name && cfrMethod.methodPrototype.originalDescriptor == it.desc }
                     val methodIndexEntry = IndexEntryKey.MethodIndexEntry(clazzIndexEntry, cfrMethod.name, cfrMethod.methodPrototype.originalDescriptor)
 

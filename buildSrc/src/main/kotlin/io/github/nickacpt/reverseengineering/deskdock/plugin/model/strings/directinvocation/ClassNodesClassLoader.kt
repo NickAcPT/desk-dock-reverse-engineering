@@ -4,7 +4,8 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.asm.AsmMateri
 import org.objectweb.asm.tree.ClassNode
 import java.net.URLClassLoader
 
-data class ClassNodesClassLoader(val nodes: Map<String, ClassNode>) : URLClassLoader(emptyArray(), getSystemClassLoader()) {
+data class ClassNodesClassLoader(val nodes: Map<String, ClassNode>) :
+    URLClassLoader(emptyArray(), getSystemClassLoader()) {
 
     override fun loadClass(name: String, resolve: Boolean): Class<*> {
         return nodes["/$name.class"]?.let { defineNode(it) } ?: super.loadClass(name, resolve)

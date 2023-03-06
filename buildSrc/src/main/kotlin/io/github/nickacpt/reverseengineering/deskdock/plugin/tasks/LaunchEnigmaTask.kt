@@ -10,14 +10,14 @@ abstract class LaunchEnigmaTask : EnigmaTask() {
 
         argumentProviders.add(CommandLineArgumentProvider {
             listOf(
-                    "--jar",
-                    inputJarPath.toAbsolutePath().toString(),
+                "--jar",
+                inputJarPath.toAbsolutePath().toString(),
 
-                    "--mappings",
-                    mappingsPath.toAbsolutePath().toString(),
+                "--mappings",
+                mappingsPath.toAbsolutePath().toString(),
 
-                    "--profile",
-                    (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
+                "--profile",
+                (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
             )
         })
 

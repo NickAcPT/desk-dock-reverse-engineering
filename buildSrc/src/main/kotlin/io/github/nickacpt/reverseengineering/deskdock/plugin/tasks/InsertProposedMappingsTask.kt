@@ -7,19 +7,19 @@ abstract class InsertProposedMappingsTask : EnigmaCommandTask() {
     init {
         argumentProviders.add(CommandLineArgumentProvider {
             listOf(
-                    "insert-proposed-mappings",
+                "insert-proposed-mappings",
 
-                    // input jar
-                    inputJarPath.toAbsolutePath().toString(),
+                // input jar
+                inputJarPath.toAbsolutePath().toString(),
 
-                    // source and target
-                    mappingsPath.toAbsolutePath().toString(),
-                    mappingsPath.toAbsolutePath().toString(),
+                // source and target
+                mappingsPath.toAbsolutePath().toString(),
+                mappingsPath.toAbsolutePath().toString(),
 
-                    // format
-                    "enigma",
+                // format
+                "enigma",
 
-                    (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
+                (workDirPath / "enigma_profile.json").toAbsolutePath().toString()
             )
         })
 

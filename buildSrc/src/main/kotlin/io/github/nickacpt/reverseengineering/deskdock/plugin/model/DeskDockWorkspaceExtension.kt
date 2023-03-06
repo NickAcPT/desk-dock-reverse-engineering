@@ -30,7 +30,7 @@ open class DeskDockWorkspaceExtension {
         enigmaConfiguration.extendsFrom(enigmaDependenciesConfiguration)
 
         configurations.getByName(JavaPlugin.RUNTIME_ONLY_CONFIGURATION_NAME).extendsFrom(
-                enigmaConfiguration
+            enigmaConfiguration
         )
 
         // Create virtual maven repository for storing artifacts
@@ -55,7 +55,7 @@ open class DeskDockWorkspaceExtension {
 
     private fun Project.initDeskDockDependencyInfo() {
         deskDockDependencyInfo =
-                DependencyInfoUtils.getProjectDependency(this, Constants.DESKDOCK_CONFIGURATION_NAME)
+            DependencyInfoUtils.getProjectDependency(this, Constants.DESKDOCK_CONFIGURATION_NAME)
 
         check(deskDockDependencyInfo.group == Constants.DESKDOCK_GROUP) { "Expected deskdock group to be ${Constants.DESKDOCK_GROUP}." }
         check(deskDockDependencyInfo.classifier != Constants.DESKDOCK_ARTIFACT) { "Expected deskdock group to be ${Constants.DESKDOCK_ARTIFACT}." }

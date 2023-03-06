@@ -29,11 +29,13 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
         decryptorTree = state.getClassFileMaybePath(strategy.realClassName)
 
         val decryptorClassNode = context["/${strategy.realClassName}.class"]
-                ?: throw Exception("Invalid decryptor class")
-        val decryptorMethodNode = decryptorClassNode.methods.firstOrNull { it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
+            ?: throw Exception("Invalid decryptor class")
+        val decryptorMethodNode =
+            decryptorClassNode.methods.firstOrNull { it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
                 ?: throw Exception("Invalid decryptor method")
 
-        decryptorMethodHandle = AsmMaterializationUtils.materializeMethodNode(decryptorClassNode, decryptorMethodNode, context)
+        decryptorMethodHandle =
+            AsmMaterializationUtils.materializeMethodNode(decryptorClassNode, decryptorMethodNode, context)
     }
 
     override fun prepareClass(nodes: Map<String, ClassNode>, clazz: ClassNode, strategy: DirectlyInvoke) {
@@ -46,7 +48,8 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
         val state = cfrState ?: return false
         val decryptorTree = decryptorTree ?: return false
 
-        val cfrMethod = tree.methods.firstOrNull { it.name == method.name && it.methodPrototype.originalDescriptor == method.desc }
+        val cfrMethod =
+            tree.methods.firstOrNull { it.name == method.name && it.methodPrototype.originalDescriptor == method.desc }
                 ?: throw Exception("Missing method?! $method")
 
         val analysis = runCatching { cfrMethod.analysis }.getOrNull() ?: return false
@@ -55,7 +58,8 @@ class DirectInvocationStringDecryptor : StringDecryptor<DirectlyInvoke> {
 
         analysis.transform(object : ExpressionRewriterTransformer(visitor) {}, StructuredScope())
 
-        val methodCalls = method.instructions.filter { it is MethodInsnNode && it.owner == strategy.realClassName && it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
+        val methodCalls =
+            method.instructions.filter { it is MethodInsnNode && it.owner == strategy.realClassName && it.name == strategy.realMethodName && it.desc == strategy.realMethodDesc }
         if (methodCalls.isEmpty()) return false
 
         val evaluator = ExpressionEvaluator()

@@ -13,7 +13,8 @@ import java.lang.invoke.MethodHandles
 
 object AsmMaterializationUtils {
 
-    fun toBytes(node: ClassNode): ByteArray = ClassWriter(ClassWriter.COMPUTE_MAXS).also { node.accept(it) }.toByteArray()
+    fun toBytes(node: ClassNode): ByteArray =
+        ClassWriter(ClassWriter.COMPUTE_MAXS).also { node.accept(it) }.toByteArray()
 
     fun materializeMethodNode(owner: ClassNode, method: MethodNode, context: Map<String, ClassNode>): MethodHandle {
         val classLoader = ClassNodesClassLoader(context)
@@ -38,7 +39,8 @@ object AsmMaterializationUtils {
         invoker.returnValue()
 
         val clazz = classLoader.defineNode(cn)
-        val materializedMethod = clazz.methods.first { it.name == method.name && Type.getMethodDescriptor(it) == method.desc }
+        val materializedMethod =
+            clazz.methods.first { it.name == method.name && Type.getMethodDescriptor(it) == method.desc }
 
         return MethodHandles.lookup().unreflect(materializedMethod)
     }

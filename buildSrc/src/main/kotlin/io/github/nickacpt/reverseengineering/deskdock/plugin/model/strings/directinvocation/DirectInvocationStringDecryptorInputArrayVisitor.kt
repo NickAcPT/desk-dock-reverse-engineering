@@ -17,27 +17,48 @@ import org.benf.cfr.reader.bytecode.analysis.types.JavaRefTypeInstance
 import org.benf.cfr.reader.entities.ClassFile
 import org.benf.cfr.reader.state.DCCommonState
 
-data class DirectInvocationStringDecryptorInputArrayVisitor(val strategy: StringDecryptionStategy.DirectlyInvoke, val decryptorTree: ClassFile, val state: DCCommonState): AbstractExpressionRewriter() {
+data class DirectInvocationStringDecryptorInputArrayVisitor(
+    val strategy: StringDecryptionStategy.DirectlyInvoke,
+    val decryptorTree: ClassFile,
+    val state: DCCommonState
+) : AbstractExpressionRewriter() {
     private val stringType: JavaRefTypeInstance = state.classCache.getRefClassFor("java/lang/String")
     val matchedExpressions = mutableListOf<Expression?>()
     private val arrayAssignmentCache = mutableMapOf<LValue, AbstractNewArray>()
 
-    override fun rewriteExpression(expression: Expression, ssaIdentifiers: SSAIdentifiers<*>?, statementContainer: StatementContainer<*>?, flags: ExpressionRewriterFlags?): Expression {
+    override fun rewriteExpression(
+        expression: Expression,
+        ssaIdentifiers: SSAIdentifiers<*>?,
+        statementContainer: StatementContainer<*>?,
+        flags: ExpressionRewriterFlags?
+    ): Expression {
         val wildcard = WildcardMatch()
         val arrayExpression = wildcard.getExpressionWildCard("arrayValues")
-        val stringDecryptorWithArgsMethod = wildcard.getStaticFunction("stringDecryptorWithArgs", decryptorTree.classType, stringType, strategy.realMethodName, arrayExpression)
-        val stringDecryptorWithoutArgsMethod = wildcard.getStaticFunction("stringDecryptorWithoutArgsMethod", decryptorTree.classType, stringType, strategy.realMethodName)
+        val stringDecryptorWithArgsMethod = wildcard.getStaticFunction(
+            "stringDecryptorWithArgs",
+            decryptorTree.classType,
+            stringType,
+            strategy.realMethodName,
+            arrayExpression
+        )
+        val stringDecryptorWithoutArgsMethod = wildcard.getStaticFunction(
+            "stringDecryptorWithoutArgsMethod",
+            decryptorTree.classType,
+            stringType,
+            strategy.realMethodName
+        )
 
         if (wildcard.match(stringDecryptorWithArgsMethod, expression)) {
             val localValue = wildcard.getLValueWildCard("localVar")
 
             // We have a local variable from the lvar map
-            val actualExpression = if (wildcard.match(LValueExpression(localValue), simplifyExpression(arrayExpression.match))) {
-                arrayAssignmentCache[localValue.match]
+            val actualExpression =
+                if (wildcard.match(LValueExpression(localValue), simplifyExpression(arrayExpression.match))) {
+                    arrayAssignmentCache[localValue.match]
                         ?: return super.rewriteExpression(expression, ssaIdentifiers, statementContainer, flags)
-            } else {
-                simplifyExpression(arrayExpression.match)
-            }
+                } else {
+                    simplifyExpression(arrayExpression.match)
+                }
 
             matchedExpressions.add(actualExpression)
         } else if (wildcard.match(stringDecryptorWithoutArgsMethod, expression)) {

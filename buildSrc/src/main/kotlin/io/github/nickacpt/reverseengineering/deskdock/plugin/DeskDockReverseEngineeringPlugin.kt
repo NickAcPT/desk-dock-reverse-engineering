@@ -33,8 +33,8 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
         }
 
         val enigmaTasks = listOf(
-                target.tasks.create<LaunchEnigmaTask>("launchEnigma"),
-                target.tasks.create<InsertProposedMappingsTask>("insertProposedMappings")
+            target.tasks.create<LaunchEnigmaTask>("launchEnigma"),
+            target.tasks.create<InsertProposedMappingsTask>("insertProposedMappings")
         )
         target.tasks.create<DumpNamesFromIntermediaryMappingsTask>("dumpIntermediaryNames")
         target.tasks.create<AutomateMappingsTask>("automateMappings")
