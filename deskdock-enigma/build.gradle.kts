@@ -13,7 +13,7 @@ dependencies {
 
     implementation("org.ow2.asm:asm-tree:9.3")
     implementation("org.ow2.asm:asm-util:9.3")
-    implementation("org.benf:cfr:0.152")
+    implementation("org.quiltmc:cfr:0.0.6")
 
     implementation("org.codehaus.janino:janino:3.1.9")
 }

@@ -5,6 +5,7 @@ import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.classprovider.ClassProvider
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.AbstractDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.GetterSetterDeskDockIndexer
+import io.github.nickacpt.reverseengineering.deskdock.enigma.index.SingleCallDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
 import io.github.nickacpt.reverseengineering.deskdock.enigma.utils.cfr.ClassNodeViewCfrClassSource
 import org.benf.cfr.reader.state.DCCommonState
@@ -19,7 +20,8 @@ object DeskDockJarIndexerService : JarIndexerService {
     private val cfrOptions = OptionsImpl(emptyMap())
 
     private val indexers = listOf<AbstractDeskDockIndexer<*>>(
-        GetterSetterDeskDockIndexer()
+        GetterSetterDeskDockIndexer(),
+        SingleCallDeskDockIndexer()
     )
 
     private val gigaIndexResult = mutableMapOf<IndexEntryKey, MutableList<IndexResult>>()
@@ -49,10 +51,6 @@ object DeskDockJarIndexerService : JarIndexerService {
 
                 // We have to index the class
                 results += indexer.indexClass(clazzNode, cfrClazz)
-
-                if (clazzNode.name == "com/floriandraschbacher/deskdock/server/class_65") {
-                    println()
-                }
 
                 // Now index the methods
                 results += cfrClazz.methods.map { cfrMethod ->

@@ -7,8 +7,10 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 		ARG 1 adb
 		ARG 4 synergyEnabled
 	METHOD method_508 devices ()Ljava/util/List;
-	METHOD method_509 (Lcom/floriandraschbacher/deskdock/server/class_103;Ljava/lang/String;)V
+	METHOD method_509 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_103;Ljava/lang/String;)V
 		ARG 1 packet
+		ARG 2 name
+		ARG 3 device
 	METHOD method_511 (Ljava/lang/String;Ljava/lang/String;)V
 		ARG 2 deviceName
 	METHOD method_512 systemIntegrator (Lcom/floriandraschbacher/deskdock/server/class_179;)V
@@ -22,6 +24,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 		ARG 1 connection
 		ARG 2 packet
 	METHOD method_515 findDevice (Ljava/lang/String;)Lcom/floriandraschbacher/deskdock/server/class_169;
+		ARG 1 name
+		ARG 2 device
 	METHOD method_516 (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 		ARG 1 connection
 		ARG 4 connection
@@ -36,3 +40,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 			ARG 1 title
 			ARG 2 message
 			ARG 3 runnable
+	CLASS class_168
+		METHOD method_521 onConfigChanged ()V
