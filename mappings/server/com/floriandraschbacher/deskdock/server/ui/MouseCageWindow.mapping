@@ -1,5 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
+	FIELD field_156 switchDelay I
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
 	FIELD field_166 waitingForDataImport Z
 	METHOD method_177 (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_70$class_72;

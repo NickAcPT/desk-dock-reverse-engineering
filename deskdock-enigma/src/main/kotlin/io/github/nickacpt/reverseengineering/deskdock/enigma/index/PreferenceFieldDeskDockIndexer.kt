@@ -5,9 +5,11 @@ import cuchaz.enigma.translation.representation.entry.Entry
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
 import org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement
 import org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.util.MiscStatementTools
+import org.benf.cfr.reader.bytecode.analysis.parse.Expression
 import org.benf.cfr.reader.bytecode.analysis.parse.expression.AbstractFunctionInvokation
 import org.benf.cfr.reader.bytecode.analysis.parse.expression.Literal
 import org.benf.cfr.reader.bytecode.analysis.parse.lvalue.AbstractFieldVariable
+import org.benf.cfr.reader.bytecode.analysis.parse.statement.ExpressionStatement
 import org.benf.cfr.reader.bytecode.analysis.structured.statement.StructuredAssignment
 import org.benf.cfr.reader.entities.ClassFile
 import org.benf.cfr.reader.entities.Method
@@ -34,7 +36,7 @@ class PreferenceFieldDeskDockIndexer : AbstractDeskDockIndexer<String>() {
             val assignment = statement as? StructuredAssignment ?: return@mapNotNull null
 
             val field = assignment.lvalue as? AbstractFieldVariable ?: return@mapNotNull null
-            val value = assignment.rvalue as? AbstractFunctionInvokation ?: return@mapNotNull null
+            val value = getFunctionInvocation(assignment.rvalue) ?: return@mapNotNull null
 
             if (value.methodPrototype.owner.rawName != "com.floriandraschbacher.deskdock.server.class_81") {
                 return@mapNotNull null
@@ -52,6 +54,22 @@ class PreferenceFieldDeskDockIndexer : AbstractDeskDockIndexer<String>() {
 
             IndexEntryKey.FieldIndexEntry(methodEntry.owner, field.fieldName, field.descriptor) to properName
         }.toMap()
+    }
+
+    private fun getFunctionInvocation(
+        expr: Expression?
+    ): AbstractFunctionInvokation? {
+        return when (expr) {
+            is AbstractFunctionInvokation -> {
+                expr
+            }
+            is ExpressionStatement -> {
+                getFunctionInvocation(expr.expression)
+            }
+            else -> {
+                null
+            }
+        }
     }
 
     override fun proposeName(
