@@ -1,2 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_39 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyPacket
+	FIELD field_88 synergyString Ljava/lang/String;
+	METHOD method_95 size ()I
+	METHOD method_96 writeToBuffer (Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+		ARG 1 buf
 	METHOD method_97 toSynergyString ()Ljava/lang/String;

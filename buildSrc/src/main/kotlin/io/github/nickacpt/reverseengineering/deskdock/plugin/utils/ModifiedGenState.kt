@@ -19,7 +19,6 @@ import net.fabricmc.mappings.EntryTriple
 import net.fabricmc.mappings.MappingsProvider
 import net.fabricmc.stitch.commands.GenMap
 import net.fabricmc.stitch.representation.*
-import net.fabricmc.stitch.util.MatcherUtil
 import net.fabricmc.stitch.util.StitchUtil
 import org.objectweb.asm.Opcodes
 import java.io.*
@@ -43,13 +42,6 @@ class ModifiedGenState {
     private val scanner = Scanner(System.`in`)
     private var targetNamespace = "net/minecraft/"
     private val obfuscatedPatterns: MutableList<Pattern> = ArrayList()
-    fun setWriteAll(writeAll: Boolean) {
-        this.writeAll = writeAll
-    }
-
-    fun disableInteractive() {
-        interactive = false
-    }
 
     fun next(entry: AbstractJarEntry, name: String): String {
         return name + "_" + values.computeIfAbsent(entry) { e: AbstractJarEntry? ->
@@ -64,21 +56,9 @@ class ModifiedGenState {
             namespace
     }
 
-    fun clearObfuscatedPatterns() {
-        obfuscatedPatterns.clear()
-    }
-
     @Throws(PatternSyntaxException::class)
     fun addObfuscatedPattern(regex: String?) {
         obfuscatedPatterns.add(Pattern.compile(regex))
-    }
-
-    fun setCounter(key: String, value: Int) {
-        counters[key] = value
-    }
-
-    fun getCounters(): Map<String, Int> {
-        return Collections.unmodifiableMap(counters)
     }
 
     @Throws(IOException::class)
@@ -152,16 +132,16 @@ class ModifiedGenState {
         val builder = StringBuilder(classEntry.fullyQualifiedName)
         val strings: MutableList<String> = ArrayList()
         var scs = getPropagation(storage, classEntry.getSuperClass(storage))
-        if (!scs.isEmpty()) {
+        if (scs.isNotEmpty()) {
             strings.add(scs)
         }
         for (ce in classEntry.getInterfaces(storage)) {
             scs = getPropagation(storage, ce)
-            if (!scs.isEmpty()) {
+            if (scs.isNotEmpty()) {
                 strings.add(scs)
             }
         }
-        if (!strings.isEmpty()) {
+        if (strings.isNotEmpty()) {
             builder.append("<-")
             if (strings.size == 1) {
                 builder.append(strings[0])
@@ -215,7 +195,7 @@ class ModifiedGenState {
             if (newToIntermediary != null) {
                 findEntry = newToIntermediary!!.getMethod(cc.fullyQualifiedName, m.name, m.descriptor)
                 if (findEntry != null) {
-                    names.computeIfAbsent(findEntry.name) { s: String? -> TreeSet() }
+                    names.computeIfAbsent(findEntry.name) { TreeSet() }
                         .add(getNamesListEntry(storageNew, cc) + suffix)
                 }
             }
@@ -225,7 +205,7 @@ class ModifiedGenState {
                     val newToOldEntry: EntryTriple = findEntry
                     findEntry = oldToIntermediary!!.getMethod(newToOldEntry)
                     if (findEntry != null) {
-                        names.computeIfAbsent(findEntry.name) { s: String? -> TreeSet() }
+                        names.computeIfAbsent(findEntry.name) { TreeSet() }
                             .add(getNamesListEntry(storageNew, cc) + suffix)
                     } else {
                         // more involved...
@@ -404,52 +384,6 @@ class ModifiedGenState {
         }
         for (cc in c.innerClasses) {
             addClass(writer, cc, storageOld, storage, "$translatedPrefix$cname$")
-        }
-    }
-
-    @Throws(IOException::class)
-    fun prepareRewrite(oldMappings: File) {
-        oldToIntermediary = GenMap()
-        newToOld = GenMap.Dummy()
-
-        // TODO: only read once
-        readCounters(oldMappings)
-        FileInputStream(oldMappings).use { inputStream ->
-            oldToIntermediary!!.load(
-                MappingsProvider.readTinyMappings(inputStream),
-                "official",
-                "intermediary"
-            )
-        }
-    }
-
-    @Throws(IOException::class)
-    fun prepareUpdate(oldMappings: File, matches: File?) {
-        oldToIntermediary = GenMap()
-        newToOld = GenMap()
-
-        // TODO: only read once
-        readCounters(oldMappings)
-        FileInputStream(oldMappings).use { inputStream ->
-            oldToIntermediary!!.load(
-                MappingsProvider.readTinyMappings(inputStream),
-                "official",
-                "intermediary"
-            )
-        }
-        FileReader(matches).use { fileReader ->
-            BufferedReader(fileReader).use { reader ->
-                MatcherUtil.read(
-                    reader,
-                    true,
-                    { from: String?, to: String? -> newToOld!!.addClass(from, to) },
-                    { from: EntryTriple?, to: EntryTriple? ->
-                        newToOld!!.addField(
-                            from,
-                            to
-                        )
-                    }) { from: EntryTriple?, to: EntryTriple? -> newToOld!!.addMethod(from, to) }
-            }
         }
     }
 

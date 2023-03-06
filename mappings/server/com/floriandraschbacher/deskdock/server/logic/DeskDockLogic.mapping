@@ -18,7 +18,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 		ARG 2 handshakePacket
 		ARG 4 transporter
 		ARG 6 packet
-	METHOD method_514 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
+	METHOD method_514 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_103;)V
 		ARG 1 connection
 		ARG 2 packet
 	METHOD method_515 findDevice (Ljava/lang/String;)Lcom/floriandraschbacher/deskdock/server/class_169;

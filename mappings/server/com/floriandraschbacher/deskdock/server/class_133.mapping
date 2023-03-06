@@ -1,2 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_133
+	METHOD method_402 x (I)V
+		ARG 1 x
+	METHOD method_412 y (I)V
+		ARG 1 y
 	METHOD method_417 equals (Ljava/lang/Object;)Z

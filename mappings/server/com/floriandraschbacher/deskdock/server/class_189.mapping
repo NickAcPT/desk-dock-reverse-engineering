@@ -4,4 +4,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_189
 	METHOD method_561 cleanDisconnect ()V
 	METHOD method_562 writePacket (Lcom/floriandraschbacher/deskdock/server/class_39;Ljava/io/OutputStream;)V
 		ARG 0 packet
+		ARG 1 out
+		ARG 5 packet
 	METHOD method_563 resetOptions ()V

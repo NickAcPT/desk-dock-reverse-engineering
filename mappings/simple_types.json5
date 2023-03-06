@@ -97,5 +97,6 @@
       "clickListenerDialog"
     ]
   },
-  "com/floriandraschbacher/deskdock/server/class_68": "clickTask"
+  "com/floriandraschbacher/deskdock/server/class_68": "clickTask",
+  "java/nio/ByteBuffer": "buf"
 }

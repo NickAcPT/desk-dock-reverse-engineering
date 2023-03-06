@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_49
+CLASS com/floriandraschbacher/deskdock/server/class_49 com/floriandraschbacher/deskdock/server/networking/io/TransferPacketIO
 	FIELD field_109 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_135;)V
 		ARG 1 transferData

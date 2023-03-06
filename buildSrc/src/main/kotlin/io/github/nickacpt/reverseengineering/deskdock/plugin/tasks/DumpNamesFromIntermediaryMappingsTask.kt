@@ -25,7 +25,6 @@ abstract class DumpNamesFromIntermediaryMappingsTask : DeskDockTaskBase() {
 
         intermediary.classes.forEach { clazz ->
             val clazzIntermediaryName = clazz.getName(0)
-            val clazzName = clazz.getName(intermediary.srcNamespace)
             var visitedClass = false
 
             (clazz.methods + clazz.fields).forEach members@{
