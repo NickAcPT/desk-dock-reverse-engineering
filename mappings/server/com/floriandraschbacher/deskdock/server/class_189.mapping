@@ -1,9 +1,16 @@
 CLASS com/floriandraschbacher/deskdock/server/class_189
 	FIELD field_449 logic Lcom/floriandraschbacher/deskdock/server/class_191;
+	FIELD field_450 socket Ljava/net/Socket;
+	FIELD field_451 out Ljava/io/OutputStream;
+	FIELD field_452 in Ljava/io/InputStream;
 	FIELD field_458 options Ljava/util/Map;
+	FIELD field_459 disconnected Z
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_191;)V
+		ARG 1 serverLogic
 	METHOD method_561 cleanDisconnect ()V
 	METHOD method_562 writePacket (Lcom/floriandraschbacher/deskdock/server/class_39;Ljava/io/OutputStream;)V
 		ARG 0 packet
 		ARG 1 out
 		ARG 5 packet
 	METHOD method_563 resetOptions ()V
+	METHOD method_564 sendClientInfo ()V

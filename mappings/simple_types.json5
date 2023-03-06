@@ -98,5 +98,14 @@
     ]
   },
   "com/floriandraschbacher/deskdock/server/class_68": "clickTask",
-  "java/nio/ByteBuffer": "buf"
+  "java/nio/ByteBuffer": "buf",
+  "com/floriandraschbacher/deskdock/server/class_191": {
+    local_name: "serverLogic",
+    fallback: [
+      "synergyServerLogic"
+    ]
+  },
+  "java/net/Socket": "socket",
+  "java/io/OutputStream": "out",
+  "java/io/InputStream": "in",
 }

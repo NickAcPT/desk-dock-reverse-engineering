@@ -1,8 +1,17 @@
 CLASS com/floriandraschbacher/deskdock/server/class_190
+	METHOD method_565 checkClientTrusted ([Ljava/security/cert/X509Certificate;)V
 	METHOD method_566 checkClientTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+		ARG 1 cert
 	METHOD method_567 checkClientTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/net/Socket;)V
+		ARG 1 cert
+		ARG 3 socket
 	METHOD method_568 checkClientTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljavax/net/ssl/SSLEngine;)V
+		ARG 1 cert
 	METHOD method_569 checkServerTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+		ARG 1 cert
 	METHOD method_570 checkServerTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/net/Socket;)V
+		ARG 1 cert
+		ARG 3 socket
 	METHOD method_571 checkServerTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljavax/net/ssl/SSLEngine;)V
+		ARG 1 cert
 	METHOD method_572 getAcceptedIssuers ()[Ljava/security/cert/X509Certificate;
