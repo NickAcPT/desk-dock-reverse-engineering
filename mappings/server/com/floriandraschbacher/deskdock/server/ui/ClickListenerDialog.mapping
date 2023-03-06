@@ -22,7 +22,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_65 com/floriandraschbacher/d
 	METHOD method_158 mouseDown (Lcom/floriandraschbacher/deskdock/server/class_65;)Z
 		ARG 0 dialog
 	METHOD method_159 globalCoordinates ()Ljava/awt/Point;
-	METHOD method_160 (Lcom/floriandraschbacher/deskdock/server/class_65;)Ljava/awt/event/MouseListener;
+	METHOD method_160 mouseListener (Lcom/floriandraschbacher/deskdock/server/class_65;)Ljava/awt/event/MouseListener;
 		ARG 0 dialog
 	METHOD method_161 localCoordinates ()Ljava/awt/Point;
 	METHOD method_162 windowListeners (Lcom/floriandraschbacher/deskdock/server/class_65;)Ljava/util/List;

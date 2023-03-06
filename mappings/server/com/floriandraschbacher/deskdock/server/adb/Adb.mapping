@@ -99,6 +99,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 	METHOD method_39 locateDefaultAndroidSdk ()Ljava/lang/String;
 	METHOD method_40 locateAndroidSdk ()Ljava/lang/String;
 	METHOD method_41 findAndroidStudioPath ()Ljava/lang/String;
+	METHOD method_7 daemonNotRunning ()Z
 	METHOD method_8 mapKey (I)I
 		ARG 0 code
 	CLASS class_10 ClipboardFormat
