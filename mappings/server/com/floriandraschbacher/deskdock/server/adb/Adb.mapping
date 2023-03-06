@@ -1,14 +1,15 @@
 CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/deskdock/server/adb/Adb
 	FIELD field_6 adbExecutablePath Ljava/lang/String;
+	FIELD field_8 daemonNotRunning Z
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 path
 	METHOD method_10 (Lcom/floriandraschbacher/deskdock/server/class_84;Ljava/awt/Point;)V
 		ARG 0 screen
 	METHOD method_11 startTask (Lcom/floriandraschbacher/deskdock/server/class_96;)V
 		ARG 0 task
-	METHOD method_12 (Lcom/floriandraschbacher/deskdock/server/class_135;Ljava/io/File;Ljava/io/File;)V
+	METHOD method_12 addTransferData (Lcom/floriandraschbacher/deskdock/server/class_135;Ljava/io/File;Ljava/io/File;)V
 		ARG 0 transfer
-		ARG 1 data
+		ARG 1 directory
 		ARG 2 file
 		ARG 6 data
 	METHOD method_13 makeDarkIcon (Ljava/awt/Image;III)Ljava/awt/image/BufferedImage;
@@ -26,9 +27,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 0 adbPath
 	METHOD method_16 connectWirelessly (Ljava/lang/String;IZZ)Z
 		ARG 1 ip
-	METHOD method_17 (Ljava/util/List;)Lcom/floriandraschbacher/deskdock/server/class_135;
+	METHOD method_17 getTransferDataFor (Ljava/util/List;)Lcom/floriandraschbacher/deskdock/server/class_135;
 		ARG 0 files
 		ARG 6 f
+	METHOD method_18 (Ljava/util/List;I)Ljava/util/List;
+		ARG 0 screens
 	METHOD method_19 removeForward (Lcom/floriandraschbacher/deskdock/server/class_181;I)Z
 		ARG 1 device
 		ARG 2 port
@@ -39,6 +42,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 7 device
 	METHOD method_21 executeShell (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 device
+		ARG 2 command
 	METHOD method_22 grantPermission (Lcom/floriandraschbacher/deskdock/server/class_181;Ljava/lang/String;Ljava/lang/String;)Z
 		ARG 1 device
 		ARG 2 pkg
@@ -84,14 +88,19 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 1 device
 		ARG 2 phc
 	METHOD method_32 locateAdb ()Ljava/lang/String;
+	METHOD method_33 isMacVersion (I)Z
+		ARG 0 version
+		ARG 2 split
 	METHOD method_34 executableName ()Ljava/lang/String;
+	METHOD method_35 virtualDesktop ()Z
 	METHOD method_36 primary ()Lcom/floriandraschbacher/deskdock/server/class_93;
-	METHOD method_37 fullRectangle ()Ljava/awt/Rectangle;
+	METHOD method_37 totalBounds ()Ljava/awt/Rectangle;
 	METHOD method_38 isDebuggingEnalbed ()Z
 	METHOD method_39 locateDefaultAndroidSdk ()Ljava/lang/String;
 	METHOD method_40 locateAndroidSdk ()Ljava/lang/String;
 	METHOD method_41 findAndroidStudioPath ()Ljava/lang/String;
 	METHOD method_8 mapKey (I)I
+		ARG 0 code
 	CLASS class_10 ClipboardFormat
 		FIELD field_10 id I
 		FIELD field_11 CLIPBOARD_FORMAT_HTML Lcom/floriandraschbacher/deskdock/server/class_9$class_10;

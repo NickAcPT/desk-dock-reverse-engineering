@@ -7,7 +7,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_151 com/floriandraschbacher/
 		ARG 1 screen
 		ARG 2 point
 		ARG 4 robot
-	METHOD method_471 dpi ()I
+	METHOD method_471 resolution ()I
 	METHOD method_472 release (Lcom/floriandraschbacher/deskdock/server/class_93;)V
 		ARG 1 screen
 	METHOD method_473 performClick (Lcom/floriandraschbacher/deskdock/server/class_93;Ljava/awt/Point;)V
