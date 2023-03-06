@@ -1,6 +1,7 @@
 package io.github.nickacpt.reverseengineering.deskdock.enigma.index
 
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
+import org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement
 import org.benf.cfr.reader.bytecode.analysis.parse.Expression
 import org.benf.cfr.reader.bytecode.analysis.parse.StatementContainer
 import org.benf.cfr.reader.bytecode.analysis.parse.rewriters.AbstractExpressionRewriter
@@ -21,27 +22,17 @@ class MethodPatternDeskDockIndexer<T : Any>(val patterns: WildcardMatch.() -> Li
         }
     }
 
-    override fun indexMethod(clazz: ClassNode,
-                             method: MethodNode,
-                             cfrClazz: ClassFile,
-                             cfrMethod: Method,
-                             ownerEntry: IndexEntryKey.ClassIndexEntry,
-                             methodEntry: IndexEntryKey.MethodIndexEntry): Map<IndexEntryKey, T>? {
+    override fun indexMethod(
+        clazz: ClassNode,
+        method: MethodNode,
+        cfrClazz: ClassFile,
+        cfrMethod: Method,
+        analysis: Op04StructuredStatement?,
+        ownerEntry: IndexEntryKey.ClassIndexEntry,
+        methodEntry: IndexEntryKey.MethodIndexEntry
+    ): Map<IndexEntryKey, T>? {
         val wildcardMatch = WildcardMatch()
 
-        return super.indexMethod(clazz, method, cfrClazz, cfrMethod, ownerEntry, methodEntry)
-    }
-}
-
-class GetterSetterDeskDockIndexer : AbstractDeskDockIndexer<GetterSetterDeskDockIndexer.MethodTypeData>() {
-    data class MethodTypeData(val field: String, val isGetter: Boolean)
-
-    override fun indexMethod(clazz: ClassNode,
-                             method: MethodNode,
-                             cfrClazz: ClassFile,
-                             cfrMethod: Method,
-                             ownerEntry: IndexEntryKey.ClassIndexEntry,
-                             methodEntry: IndexEntryKey.MethodIndexEntry): Map<IndexEntryKey, MethodTypeData>? {
-        return super.indexMethod(clazz, method, cfrClazz, cfrMethod, ownerEntry, methodEntry)
+        return super.indexMethod(clazz, method, cfrClazz, cfrMethod, analysis, ownerEntry, methodEntry)
     }
 }

@@ -1,5 +1,6 @@
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.strings.StringDecryptionStategy.DirectlyInvoke
+import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.EnigmaTask
 
 plugins {
     id("desk-dock-reverse-engineering-plugin")
@@ -22,7 +23,7 @@ dependencies {
 }
 
 tasks {
-    launchEnigma {
+    withType<EnigmaTask> {
         dependsOn(project(":deskdock-enigma").tasks.jar)
     }
 }
