@@ -5,6 +5,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_100 com/floriandraschbacher/
 	FIELD field_237 directory Ljava/lang/String;
 	FIELD field_238 name Ljava/lang/String;
 	FIELD field_239 state I
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+		ARG 1 source
+		ARG 2 directory
+		ARG 3 name
+		ARG 4 state
 	METHOD method_308 read ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
 		ARG 0 bytes
 		ARG 4 bytes

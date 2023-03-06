@@ -6,6 +6,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_159 com/floriandraschbacher/
 		ARG 0 url
 		ARG 5 is
 	METHOD method_497 save (Ljava/util/List;)V
+		ARG 1 profileList
 		ARG 5 manager
 	METHOD method_499 instance ()Lcom/floriandraschbacher/deskdock/server/class_159;
 	METHOD method_500 profiles ()Ljava/util/List;

@@ -1,4 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_18
+	METHOD <init> (II)V
+		ARG 1 xError
+		ARG 2 yError
 	METHOD method_66 decodeCharacter (II)I
 		ARG 0 value
 		ARG 1 index

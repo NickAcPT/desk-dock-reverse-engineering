@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/deskdock/server/logic/DeskDockLogic
+	FIELD field_409 statusMenuAbstraction Lcom/floriandraschbacher/deskdock/server/class_165$class_167;
 	FIELD field_411 connectedDevicesMap Ljava/util/Map;
 	FIELD field_412 systemIntegrator Lcom/floriandraschbacher/deskdock/server/class_179;
 	FIELD field_413 deviceManager Lcom/floriandraschbacher/deskdock/server/class_37;
