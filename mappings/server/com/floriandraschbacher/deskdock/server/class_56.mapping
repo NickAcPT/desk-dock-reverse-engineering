@@ -1,0 +1,6 @@
+CLASS com/floriandraschbacher/deskdock/server/class_56
+	METHOD <init> (IIII)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 scaleX
+		ARG 4 scaleY

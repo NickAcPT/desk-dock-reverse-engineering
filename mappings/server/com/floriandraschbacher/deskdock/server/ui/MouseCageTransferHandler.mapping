@@ -1,6 +1,10 @@
-CLASS com/floriandraschbacher/deskdock/server/class_73
+CLASS com/floriandraschbacher/deskdock/server/class_73 com/floriandraschbacher/deskdock/server/ui/MouseCageTransferHandler
 	FIELD field_169 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 		ARG 1 window
 	METHOD method_200 canImport (Ljavax/swing/TransferHandler$TransferSupport;)Z
+		ARG 1 support
 	METHOD method_201 importData (Ljavax/swing/TransferHandler$TransferSupport;)Z
+		ARG 1 support
+		ARG 3 data
+		ARG 4 data

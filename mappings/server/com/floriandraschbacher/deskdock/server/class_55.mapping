@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_55
+	METHOD <init> (II)V
+		ARG 1 xError
+		ARG 2 yError

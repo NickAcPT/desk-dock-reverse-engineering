@@ -1,6 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
+	FIELD field_166 waitingForDataImport Z
 	METHOD method_177 (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
 		ARG 0 window
 	METHOD method_178 (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
@@ -18,9 +19,10 @@ CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/d
 		ARG 2 down
 	METHOD method_183 mouseWheel (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseWheelEvent;)V
 		ARG 0 window
-	METHOD method_184 (Lcom/floriandraschbacher/deskdock/server/class_70;Z)Z
+	METHOD method_184 waitingForDataImport (Lcom/floriandraschbacher/deskdock/server/class_70;Z)Z
 		ARG 0 window
-	METHOD method_185 (Lcom/floriandraschbacher/deskdock/server/class_70;)Z
+		ARG 1 waitingForDataImport
+	METHOD method_185 waitingForDataImport (Lcom/floriandraschbacher/deskdock/server/class_70;)Z
 		ARG 0 window
 	METHOD method_186 screen (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_84;
 		ARG 0 window
@@ -37,3 +39,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/d
 			ARG 1 window
 		METHOD method_229 (Ljava/awt/event/WindowEvent;)V
 			ARG 1 event
+	CLASS class_72
+		METHOD method_196 dropFiles (Ljava/util/List;)V
+			ARG 1 files
+		METHOD method_198 dropString (Ljava/lang/String;)V
