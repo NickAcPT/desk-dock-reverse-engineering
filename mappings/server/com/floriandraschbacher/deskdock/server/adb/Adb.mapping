@@ -3,8 +3,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 	FIELD field_8 daemonNotRunning Z
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 path
-	METHOD method_10 (Lcom/floriandraschbacher/deskdock/server/class_84;Ljava/awt/Point;)V
+	METHOD method_10 moveCursor (Lcom/floriandraschbacher/deskdock/server/class_84;Ljava/awt/Point;)V
 		ARG 0 screen
+		ARG 1 point
 	METHOD method_11 startTask (Lcom/floriandraschbacher/deskdock/server/class_96;)V
 		ARG 0 task
 	METHOD method_12 addTransferData (Lcom/floriandraschbacher/deskdock/server/class_135;Ljava/io/File;Ljava/io/File;)V

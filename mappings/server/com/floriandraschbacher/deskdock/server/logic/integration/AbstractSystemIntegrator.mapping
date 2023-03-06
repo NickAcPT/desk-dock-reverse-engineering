@@ -19,7 +19,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/
 			ARG 1 connection
 		METHOD method_547 (Lcom/floriandraschbacher/deskdock/server/class_169;IIIZ)V
 			ARG 1 connection
-		METHOD method_548 (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
+		METHOD method_548 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
 			ARG 1 connection
 			ARG 2 transferData
 		METHOD method_549 (Lcom/floriandraschbacher/deskdock/server/class_169;Ljava/lang/String;Z)V
