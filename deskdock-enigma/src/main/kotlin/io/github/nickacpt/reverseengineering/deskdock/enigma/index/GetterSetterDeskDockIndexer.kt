@@ -11,7 +11,8 @@ import org.benf.cfr.reader.bytecode.analysis.structured.StructuredStatement
 import org.benf.cfr.reader.bytecode.analysis.structured.statement.StructuredAssignment
 import org.benf.cfr.reader.bytecode.analysis.structured.statement.StructuredReturn
 
-class GetterSetterDeskDockIndexer : AbstractSingleStatementDeskDockIndexer<GetterSetterDeskDockIndexer.FieldAccessData>() {
+class GetterSetterDeskDockIndexer :
+    AbstractSingleStatementDeskDockIndexer<GetterSetterDeskDockIndexer.FieldAccessData>() {
     data class FieldAccessData(val fieldOwner: String, val fieldName: String, val isGetter: Boolean)
 
     private fun setterFieldResult(output: StructuredStatement): FieldAccessData? {

@@ -13,8 +13,8 @@ import org.benf.cfr.reader.util.MiscUtils
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.MethodNode
 
-abstract class AbstractSingleStatementDeskDockIndexer<T : Any> :
-    AbstractDeskDockIndexer<T>() {
+abstract class AbstractSingleStatementDeskDockIndexer<T : Any> : AbstractDeskDockIndexer<T>() {
+
     override fun indexMethod(
         clazz: ClassNode,
         method: MethodNode,

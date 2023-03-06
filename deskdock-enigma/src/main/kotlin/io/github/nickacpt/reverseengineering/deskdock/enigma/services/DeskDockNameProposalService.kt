@@ -47,6 +47,7 @@ class DeskDockNameProposalService : NameProposalService {
             if (obfEntry.isArgument) {
                 IndexEntryKey.MethodParameterIndexEntry(
                     enigmaEntryToIndexEntry(obfEntry.parent!!) as IndexEntryKey.MethodIndexEntry,
+                    obfEntry.index,
                     obfEntry.name
                 )
             } else {

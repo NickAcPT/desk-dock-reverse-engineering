@@ -1,7 +1,11 @@
 package io.github.nickacpt.reverseengineering.deskdock.enigma.index
 
+import cuchaz.enigma.analysis.index.EntryIndex
+import cuchaz.enigma.translation.TranslateResult
 import cuchaz.enigma.translation.mapping.EntryRemapper
 import cuchaz.enigma.translation.representation.entry.Entry
+import cuchaz.enigma.translation.representation.entry.LocalVariableEntry
+import cuchaz.enigma.translation.representation.entry.MethodEntry
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
 import org.benf.cfr.reader.bytecode.analysis.opgraph.Op04StructuredStatement
 import org.benf.cfr.reader.entities.ClassFile
@@ -28,5 +32,26 @@ abstract class AbstractDeskDockIndexer<T : Any> {
         indexEntry: IndexEntryKey,
         entry: T
     ): String? = null
+
+}
+
+object CfrUtils {
+    fun getParameters(
+        method: MethodEntry,
+        index: EntryIndex,
+        remapper: EntryRemapper
+    ): List<TranslateResult<LocalVariableEntry>> {
+        var p = if (index.getMethodAccess(method)!!.isStatic) 0 else 1
+        val result = mutableListOf<TranslateResult<LocalVariableEntry>>()
+
+        method.desc.argumentDescs.forEach { paramDesc ->
+            val param = LocalVariableEntry(method, p, "", true, null)
+            p += paramDesc.size
+
+            result.add(remapper.extendedDeobfuscate(param))
+        }
+
+        return result
+    }
 
 }

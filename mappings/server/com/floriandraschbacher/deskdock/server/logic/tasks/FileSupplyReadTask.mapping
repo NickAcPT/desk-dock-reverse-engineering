@@ -1,0 +1,15 @@
+CLASS com/floriandraschbacher/deskdock/server/class_141 com/floriandraschbacher/deskdock/server/logic/tasks/FileSupplyReadTask
+	FIELD field_375 listener Lcom/floriandraschbacher/deskdock/server/class_141$class_142;
+	FIELD field_376 input Ljava/io/File;
+	FIELD field_377 key Ljava/lang/String;
+	METHOD <init> (Ljava/io/File;Ljava/lang/String;)V
+		ARG 1 input
+		ARG 2 key
+	METHOD method_432 run ()V
+	CLASS class_142 FileReceiverListener
+		METHOD method_433 notifyError (Lcom/floriandraschbacher/deskdock/server/class_141;)V
+			ARG 1 task
+		METHOD method_434 notifyContentsUpdate (Lcom/floriandraschbacher/deskdock/server/class_141;[BZZ)V
+			ARG 1 task
+			ARG 2 bytes
+			ARG 4 full

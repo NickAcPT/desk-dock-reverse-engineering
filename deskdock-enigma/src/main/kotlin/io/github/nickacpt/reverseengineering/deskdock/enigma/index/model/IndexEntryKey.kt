@@ -39,5 +39,21 @@ sealed interface IndexEntryKey {
             return result
         }
     }
-    data class MethodParameterIndexEntry(val method: MethodIndexEntry, override val name: String) : IndexEntryKey
+    data class MethodParameterIndexEntry(val method: MethodIndexEntry, val index: Int, override val name: String) : IndexEntryKey {
+        override fun equals(other: Any?): Boolean {
+            if (this === other) return true
+            if (javaClass != other?.javaClass) return false
+
+            other as MethodParameterIndexEntry
+
+            if (method != other.method) return false
+            return index == other.index
+        }
+
+        override fun hashCode(): Int {
+            var result = method.hashCode()
+            result = 31 * result + index
+            return result
+        }
+    }
 }

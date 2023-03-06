@@ -4,6 +4,7 @@ import cuchaz.enigma.analysis.index.JarIndex
 import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.classprovider.ClassProvider
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.AbstractDeskDockIndexer
+import io.github.nickacpt.reverseengineering.deskdock.enigma.index.FieldParameterDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.GetterSetterDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.SingleCallDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
@@ -21,7 +22,8 @@ object DeskDockJarIndexerService : JarIndexerService {
 
     private val indexers = listOf<AbstractDeskDockIndexer<*>>(
         GetterSetterDeskDockIndexer(),
-        SingleCallDeskDockIndexer()
+        SingleCallDeskDockIndexer(),
+        FieldParameterDeskDockIndexer()
     )
 
     private val gigaIndexResult = mutableMapOf<IndexEntryKey, MutableList<IndexResult>>()

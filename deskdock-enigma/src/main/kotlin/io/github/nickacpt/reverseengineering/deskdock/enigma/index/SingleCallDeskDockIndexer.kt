@@ -1,7 +1,5 @@
 package io.github.nickacpt.reverseengineering.deskdock.enigma.index
 
-import cuchaz.enigma.analysis.index.EntryIndex
-import cuchaz.enigma.translation.TranslateResult
 import cuchaz.enigma.translation.mapping.EntryRemapper
 import cuchaz.enigma.translation.representation.entry.Entry
 import cuchaz.enigma.translation.representation.entry.LocalVariableEntry
@@ -34,7 +32,7 @@ class SingleCallDeskDockIndexer : AbstractSingleStatementDeskDockIndexer<SingleC
 
         if (enigmaEntry is LocalVariableEntry) {
             val targetParams =
-                getParameters(targetMethod, entryIndex, remapper).filter { it.isDeobfuscated }
+                CfrUtils.getParameters(targetMethod, entryIndex, remapper).filter { it.isDeobfuscated }
                     .takeIf { it.isNotEmpty() }
                     ?: return null
 
@@ -52,23 +50,5 @@ class SingleCallDeskDockIndexer : AbstractSingleStatementDeskDockIndexer<SingleC
         }
 
         return null
-    }
-
-    private fun getParameters(
-        method: MethodEntry,
-        index: EntryIndex,
-        remapper: EntryRemapper
-    ): List<TranslateResult<LocalVariableEntry>> {
-        var p = if (index.getMethodAccess(method)!!.isStatic) 0 else 1
-        val result = mutableListOf<TranslateResult<LocalVariableEntry>>()
-
-        method.desc.argumentDescs.forEach { paramDesc ->
-            val param = LocalVariableEntry(method, p, "", true, null)
-            p += paramDesc.size
-
-            result.add(remapper.extendedDeobfuscate(param))
-        }
-
-        return result
     }
 }
