@@ -6,4 +6,5 @@ sealed interface IndexEntryKey {
     data class ClassIndexEntry(override val name: String) : IndexEntryKey
     data class MethodIndexEntry(val owner: ClassIndexEntry, override val name: String, val desc: String) : IndexEntryKey
     data class FieldIndexEntry(val owner: ClassIndexEntry, override val name: String, val desc: String) : IndexEntryKey
+    data class MethodParameterIndexEntry(val method: MethodIndexEntry, override val name: String) : IndexEntryKey
 }
