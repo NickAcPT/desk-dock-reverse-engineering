@@ -4,7 +4,7 @@ import cuchaz.enigma.analysis.index.JarIndex
 import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.classprovider.ClassProvider
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.AbstractDeskDockIndexer
-import io.github.nickacpt.reverseengineering.deskdock.enigma.index.GetterDeskDockIndexer
+import io.github.nickacpt.reverseengineering.deskdock.enigma.index.GetterSetterDeskDockIndexer
 import io.github.nickacpt.reverseengineering.deskdock.enigma.index.model.IndexEntryKey
 import io.github.nickacpt.reverseengineering.deskdock.enigma.utils.cfr.ClassNodeViewCfrClassSource
 import org.benf.cfr.reader.state.DCCommonState
@@ -19,7 +19,7 @@ object DeskDockJarIndexerService : JarIndexerService {
     private val cfrOptions = OptionsImpl(emptyMap())
 
     private val indexers = listOf<AbstractDeskDockIndexer<*>>(
-        GetterDeskDockIndexer()
+        GetterSetterDeskDockIndexer()
     )
 
     private val gigaIndexResult = mutableMapOf<IndexEntryKey, MutableList<IndexResult>>()

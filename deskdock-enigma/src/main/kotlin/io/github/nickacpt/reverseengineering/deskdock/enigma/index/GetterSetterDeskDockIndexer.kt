@@ -19,7 +19,7 @@ import org.benf.cfr.reader.entities.Method
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.MethodNode
 
-class GetterDeskDockIndexer : AbstractDeskDockIndexer<GetterDeskDockIndexer.FieldAccessData>() {
+class GetterSetterDeskDockIndexer : AbstractDeskDockIndexer<GetterSetterDeskDockIndexer.FieldAccessData>() {
     data class FieldAccessData(val fieldOwner: String, val fieldName: String, val isGetter: Boolean)
 
     override fun indexMethod(
