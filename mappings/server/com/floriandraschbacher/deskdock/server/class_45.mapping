@@ -3,9 +3,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_45
 	FIELD field_101 logic Lcom/floriandraschbacher/deskdock/server/class_165;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_165;)V
 		ARG 1 logic
+	METHOD method_115 cleanup (Lcom/floriandraschbacher/deskdock/server/class_45;Lcom/floriandraschbacher/deskdock/server/class_46;Z)V
 	METHOD method_116 failedToSupport (Lcom/floriandraschbacher/deskdock/server/class_100;)V
 		ARG 1 packet
 	METHOD method_117 (Lcom/floriandraschbacher/deskdock/server/class_135;)V
 		ARG 1 transferData
 	METHOD method_118 (Lcom/floriandraschbacher/deskdock/server/class_153;)V
 		ARG 1 transferDataEntry
+	METHOD method_119 root (Ljava/lang/String;)Ljava/lang/String;

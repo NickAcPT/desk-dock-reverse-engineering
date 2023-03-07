@@ -1,4 +1,11 @@
 CLASS com/floriandraschbacher/deskdock/server/class_99 com/floriandraschbacher/deskdock/server/networking/impl/class_99
-	METHOD method_307 ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
+	FIELD field_230 key Ljava/lang/String;
+	FIELD field_232 complete Z
+	FIELD field_233 bytes [B
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ[B)V
+		ARG 3 key
+		ARG 5 complete
+		ARG 6 bytes
+	METHOD method_307 read ([B)Lcom/floriandraschbacher/deskdock/server/class_103;
 		ARG 0 bytes
 		ARG 9 bytes

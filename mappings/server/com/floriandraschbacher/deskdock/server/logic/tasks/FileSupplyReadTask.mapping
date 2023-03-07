@@ -12,4 +12,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_141 com/floriandraschbacher/
 		METHOD method_434 notifyContentsUpdate (Lcom/floriandraschbacher/deskdock/server/class_141;[BZZ)V
 			ARG 1 task
 			ARG 2 bytes
-			ARG 4 full
+			ARG 4 complete
+			ARG 6 packet

@@ -3,6 +3,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 	FIELD field_411 connectedDevicesMap Ljava/util/Map;
 	FIELD field_412 systemIntegrator Lcom/floriandraschbacher/deskdock/server/class_179;
 	FIELD field_413 deviceManager Lcom/floriandraschbacher/deskdock/server/class_37;
+	FIELD field_414 allowedPaths Ljava/util/Map;
 	FIELD field_415 filesMap Ljava/util/Map;
 	FIELD field_416 adb Lcom/floriandraschbacher/deskdock/server/class_9;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
@@ -13,7 +14,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 		ARG 1 packet
 		ARG 2 name
 		ARG 3 device
-	METHOD method_511 (Ljava/lang/String;Ljava/lang/String;)V
+	METHOD method_510 supplyFile (Ljava/lang/String;Lcom/floriandraschbacher/deskdock/server/class_165$class_166;)Z
+		ARG 1 name
+		ARG 4 parent
+	METHOD method_511 handleFileRequest (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 path
 		ARG 2 deviceName
 	METHOD method_512 systemIntegrator (Lcom/floriandraschbacher/deskdock/server/class_179;)V
 		ARG 1 newIntegrator
@@ -32,6 +37,12 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 		ARG 1 connection
 		ARG 4 connection
 	METHOD method_548 sendPacket (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
+	CLASS class_166 FileWriteUpdateListener
+		METHOD method_517 writeFile (Ljava/lang/String;[BZ)V
+			ARG 1 path
+			ARG 2 bytes
+			ARG 3 close
+			ARG 8 file
 	CLASS class_167 StatusMenuAbstraction
 		METHOD method_518 updateDetectedDevices (I)V
 			ARG 1 count
@@ -43,5 +54,5 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 			ARG 1 title
 			ARG 2 message
 			ARG 3 runnable
-	CLASS class_168
+	CLASS class_168 ConfigurationUpdateListener
 		METHOD method_521 onConfigChanged ()V

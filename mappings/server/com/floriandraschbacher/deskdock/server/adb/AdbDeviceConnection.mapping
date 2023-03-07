@@ -18,6 +18,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_169 com/floriandraschbacher/
 			ARG 2 packet
 			ARG 5 transporter
 			ARG 7 connection
+			ARG 14 packetIo
+			ARG 17 packet
+			ARG 20 packet
 	CLASS class_171 LostConnectionListener
 		METHOD method_527 connectionLost (Lcom/floriandraschbacher/deskdock/server/class_169;)V
 			ARG 1 connection

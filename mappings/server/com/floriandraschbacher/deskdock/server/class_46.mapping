@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_46
+	FIELD field_103 currentSize J
 	FIELD field_104 transferDataEntry Lcom/floriandraschbacher/deskdock/server/class_153;
 	FIELD field_106 targetFile Ljava/io/File;
 	FIELD field_107 fileStream Ljava/io/OutputStream;
@@ -7,4 +8,6 @@ CLASS com/floriandraschbacher/deskdock/server/class_46
 		ARG 2 transferDataEntry
 	METHOD method_121 deleteFile ()V
 	CLASS class_47
+		METHOD method_122 notifyClosed (Lcom/floriandraschbacher/deskdock/server/class_46;)V
 		METHOD method_123 notifyError (Lcom/floriandraschbacher/deskdock/server/class_46;I)V
+			ARG 2 code
