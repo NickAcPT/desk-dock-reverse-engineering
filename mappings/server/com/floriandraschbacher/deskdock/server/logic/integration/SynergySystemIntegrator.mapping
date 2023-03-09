@@ -3,10 +3,18 @@ CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/d
 	FIELD field_19 deviceMap Ljava/util/Map;
 	METHOD method_46 deviceByName (Lcom/floriandraschbacher/deskdock/server/class_85;)Lcom/floriandraschbacher/deskdock/server/class_12$class_13;
 		ARG 1 device
-	CLASS class_13
+	CLASS class_13 SynergyClient
 		FIELD field_21 device Lcom/floriandraschbacher/deskdock/server/class_85;
+		FIELD field_22 connection Lcom/floriandraschbacher/deskdock/server/class_189;
 		FIELD field_23 enterPoint Ljava/awt/Point;
 		FIELD field_24 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
+		FIELD field_27 readingTask Ljava/lang/Runnable;
 		FIELD field_29 serverLogic Lcom/floriandraschbacher/deskdock/server/class_191;
+		FIELD field_30 writingTask Ljava/lang/Runnable;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_12;Lcom/floriandraschbacher/deskdock/server/class_85;)V
 			ARG 2 device
+		METHOD method_59 scale (Lcom/floriandraschbacher/deskdock/server/class_12$class_13;FZ)F
+			ARG 0 client
+			ARG 1 value
+			ARG 2 scale
+			ARG 3 scale

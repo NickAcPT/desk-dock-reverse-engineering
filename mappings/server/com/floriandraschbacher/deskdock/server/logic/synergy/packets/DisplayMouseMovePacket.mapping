@@ -1,3 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_31 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayMouseMovePacket
+	FIELD field_73 x S
+	FIELD field_74 y S
 	METHOD method_84 parse (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
 		ARG 0 buf

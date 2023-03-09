@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_35 com/floriandraschbacher/deskdock/server/logic/synergy/packets/ScreensaverPacket
+	FIELD field_80 show Z
+	METHOD method_88 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
+		ARG 0 buf

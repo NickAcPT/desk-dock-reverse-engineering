@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_15 com/floriandraschbacher/deskdock/server/logic/synergy/tasks/SynergyHandshakeTask
+	FIELD field_32 client Lcom/floriandraschbacher/deskdock/server/class_12$class_13;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_12$class_13;)V
+		ARG 1 client
+	METHOD method_63 run ()V

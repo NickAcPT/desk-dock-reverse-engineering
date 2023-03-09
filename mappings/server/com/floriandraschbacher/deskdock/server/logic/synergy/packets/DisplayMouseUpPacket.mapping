@@ -1,3 +1,4 @@
 CLASS com/floriandraschbacher/deskdock/server/class_33 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayMouseUpPacket
+	FIELD field_77 button B
 	METHOD method_86 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
 		ARG 0 buf

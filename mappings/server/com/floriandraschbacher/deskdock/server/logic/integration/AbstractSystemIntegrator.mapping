@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/deskdock/server/logic/integration/AbstractSystemIntegrator
+	FIELD field_428 handler Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
 	METHOD method_537 load ()V
 	METHOD method_538 addDevice (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
@@ -7,18 +8,24 @@ CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/
 		ARG 1 device
 	METHOD method_542 deviceAdded (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device
-	CLASS class_180
-		METHOD method_543 (Lcom/floriandraschbacher/deskdock/server/class_169;I)V
+	CLASS class_180 Handler
+		METHOD method_543 keyUp (Lcom/floriandraschbacher/deskdock/server/class_169;I)V
 			ARG 1 connection
 		METHOD method_544 (Lcom/floriandraschbacher/deskdock/server/class_169;IC)V
 			ARG 1 connection
 			ARG 3 character
 		METHOD method_545 sendEnterPacket (Lcom/floriandraschbacher/deskdock/server/class_169;II)V
 			ARG 1 connection
-		METHOD method_546 (Lcom/floriandraschbacher/deskdock/server/class_169;IIII)V
+			ARG 2 x
+			ARG 3 y
+		METHOD method_546 scroll (Lcom/floriandraschbacher/deskdock/server/class_169;IIII)V
 			ARG 1 connection
-		METHOD method_547 (Lcom/floriandraschbacher/deskdock/server/class_169;IIIZ)V
+		METHOD method_547 mouseEvent (Lcom/floriandraschbacher/deskdock/server/class_169;IIIZ)V
 			ARG 1 connection
+			ARG 2 x
+			ARG 3 y
+			ARG 4 button
+			ARG 5 event
 		METHOD method_548 sendTransferDataPacket (Lcom/floriandraschbacher/deskdock/server/class_169;Lcom/floriandraschbacher/deskdock/server/class_135;)V
 			ARG 1 connection
 			ARG 2 transferData

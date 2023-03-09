@@ -1,3 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_34 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayMouseWheelPacket
+	FIELD field_78 xDelta S
+	FIELD field_79 yDelta S
 	METHOD method_87 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
 		ARG 0 buf

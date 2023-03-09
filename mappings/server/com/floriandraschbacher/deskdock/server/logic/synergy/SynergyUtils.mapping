@@ -1,4 +1,6 @@
-CLASS com/floriandraschbacher/deskdock/server/class_18
+CLASS com/floriandraschbacher/deskdock/server/class_18 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyUtils
+	FIELD field_36 xError I
+	FIELD field_37 yError I
 	METHOD <init> (II)V
 		ARG 1 xError
 		ARG 2 yError
@@ -9,10 +11,12 @@ CLASS com/floriandraschbacher/deskdock/server/class_18
 		ARG 0 adb
 		ARG 1 device
 		ARG 2 path
-	METHOD method_68 (Ljava/io/InputStream;[BI)[B
+	METHOD method_68 decodeString (Ljava/io/InputStream;[BI)[B
 		ARG 0 in
 		ARG 1 array
 		ARG 2 size
+	METHOD method_69 filesToList (Ljava/lang/String;)Ljava/util/List;
+		ARG 0 inputFiles
 	METHOD method_71 (Ljava/util/List;Ljava/util/List;Ljava/util/Map;)Ljava/util/List;
 		ARG 1 screens
 		ARG 15 screen
@@ -20,5 +24,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_18
 		ARG 0 screens
 		ARG 1 serializedScreen
 		ARG 4 screensIterator
+	METHOD method_73 decodeClipboard ([B)Ljava/lang/String;
+		ARG 0 bytes
 	METHOD method_74 decryptString ([I)Ljava/lang/String;
 		ARG 0 str

@@ -1,3 +1,4 @@
 CLASS com/floriandraschbacher/deskdock/server/class_22 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayDragInfoPacket
+	FIELD field_51 dragInfo Ljava/lang/String;
 	METHOD method_77 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
 		ARG 0 buf

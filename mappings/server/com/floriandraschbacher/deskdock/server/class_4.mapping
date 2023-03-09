@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_4
+	CLASS class_5 MouseData
+		FIELD field_4 button I
+		METHOD <init> (I)V
+			ARG 1 button
+	CLASS class_6 KeyData
+		FIELD field_5 key I
+		METHOD <init> (I)V
+			ARG 1 key
