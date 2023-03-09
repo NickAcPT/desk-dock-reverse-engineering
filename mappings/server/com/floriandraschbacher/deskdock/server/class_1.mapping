@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_1
+	CLASS class_3
+		METHOD method_6 sendStringPacket (Ljava/lang/String;)V
+			ARG 1 str
