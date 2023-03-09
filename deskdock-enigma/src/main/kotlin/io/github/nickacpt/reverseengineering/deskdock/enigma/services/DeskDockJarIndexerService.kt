@@ -21,7 +21,8 @@ object DeskDockJarIndexerService : JarIndexerService {
         GetterSetterDeskDockIndexer(),
         SingleCallDeskDockIndexer(),
         FieldParameterDeskDockIndexer(),
-        PreferenceFieldDeskDockIndexer()
+        PreferenceFieldDeskDockIndexer(),
+        MethodPatternDeskDockIndexer()
     )
 
     private val gigaIndexResult = mutableMapOf<IndexEntryKey, MutableList<IndexResult>>()

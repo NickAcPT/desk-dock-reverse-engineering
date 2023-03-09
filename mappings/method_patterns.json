@@ -15,7 +15,7 @@
     ],
     "parent": {
       "_comment": "SynergyPacket",
-      "name": "com/floriandraschbacher/deskdock/server/class_39"
+      "super": "com/floriandraschbacher/deskdock/server/class_39"
     }
   }
 ]

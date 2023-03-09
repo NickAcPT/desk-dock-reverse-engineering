@@ -17,14 +17,15 @@ abstract class AbstractDeskDockIndexer<T : Any> {
 
     open fun indexClass(clazz: ClassNode, cfrClazz: ClassFile): Map<IndexEntryKey, T>? = null
 
-    open fun indexMethod(clazz: ClassNode,
-                         method: MethodNode,
-                         cfrClazz: ClassFile,
-                         cfrMethod: Method,
-                         analysis: Op04StructuredStatement?,
-                         ownerEntry: IndexEntryKey.ClassIndexEntry,
-                         methodEntry: IndexEntryKey.MethodIndexEntry,
-                         ): Map<IndexEntryKey, T>? = null
+    open fun indexMethod(
+        clazz: ClassNode,
+        method: MethodNode,
+        cfrClazz: ClassFile,
+        cfrMethod: Method,
+        analysis: Op04StructuredStatement?,
+        ownerEntry: IndexEntryKey.ClassIndexEntry,
+        methodEntry: IndexEntryKey.MethodIndexEntry,
+    ): Map<IndexEntryKey, T>? = null
 
     open fun proposeName(
         enigmaEntry: Entry<*>,
@@ -37,6 +38,22 @@ abstract class AbstractDeskDockIndexer<T : Any> {
 
 object CfrUtils {
     fun getParameters(
+        method: MethodEntry,
+        index: EntryIndex,
+    ): List<LocalVariableEntry> {
+        var p = if (index.getMethodAccess(method)!!.isStatic) 0 else 1
+        val result = mutableListOf<LocalVariableEntry>()
+
+        method.desc.argumentDescs.forEach {
+            p += it.size
+
+            result.add(LocalVariableEntry(method, p, "", true, null))
+        }
+
+        return result
+    }
+
+    fun getDeobfuscatedParameters(
         method: MethodEntry,
         index: EntryIndex,
         remapper: EntryRemapper

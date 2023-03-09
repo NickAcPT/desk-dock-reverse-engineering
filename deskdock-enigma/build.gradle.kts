@@ -16,4 +16,6 @@ dependencies {
     implementation("org.quiltmc:cfr:0.0.6")
 
     implementation("org.codehaus.janino:janino:3.1.9")
+
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.+")
 }

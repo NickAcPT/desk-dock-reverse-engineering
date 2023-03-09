@@ -5,6 +5,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/d
 	FIELD field_194 height I
 	FIELD field_195 mouseX I
 	FIELD field_196 mouseY I
+	METHOD <init> (IIIIII)V
+		ARG 3 width
+		ARG 4 height
+		ARG 5 mouseX
+		ARG 6 mouseY
 	CLASS class_88
 		FIELD field_197 requestedInfoValue I
 		METHOD <init> (I)V

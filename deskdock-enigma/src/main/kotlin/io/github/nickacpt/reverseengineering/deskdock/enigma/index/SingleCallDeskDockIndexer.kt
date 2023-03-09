@@ -32,7 +32,7 @@ class SingleCallDeskDockIndexer : AbstractSingleStatementDeskDockIndexer<SingleC
 
         if (enigmaEntry is LocalVariableEntry) {
             val targetParams =
-                CfrUtils.getParameters(targetMethod, entryIndex, remapper).filter { it.isDeobfuscated }
+                CfrUtils.getDeobfuscatedParameters(targetMethod, entryIndex, remapper).filter { it.isDeobfuscated }
                     .takeIf { it.isNotEmpty() }
                     ?: return null
 
