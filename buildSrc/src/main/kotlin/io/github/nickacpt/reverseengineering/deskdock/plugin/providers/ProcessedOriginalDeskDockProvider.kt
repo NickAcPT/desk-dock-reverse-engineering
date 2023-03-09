@@ -8,8 +8,7 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.mappings.AsmU
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.mappings.ZipUtils
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
 import org.gradle.api.Project
-import org.objectweb.asm.Opcodes
-import org.objectweb.asm.Type
+import org.mcphackers.rdi.injector.RDInjector
 import java.nio.file.Path
 import kotlin.io.path.copyTo
 
@@ -26,7 +25,7 @@ object ProcessedOriginalDeskDockProvider : DeskDockArtifactProvider() {
             decryptStrings(workspace, it)
 
             // Add missing parameters
-            addMissingParameters(it)
+            injectRetroDebug(it)
 
             // Strip requested packages
             workspace.strippedPackages.forEach { pkg ->
@@ -35,20 +34,13 @@ object ProcessedOriginalDeskDockProvider : DeskDockArtifactProvider() {
         }
     }
 
-    private fun addMissingParameters(it: Path) {
-        AsmUtils.updateJarClasses(it) { clazz ->
-            clazz.methods.map { m ->
-                if (m.parameters == null) {
-                    Type.getArgumentTypes(m.desc).forEachIndexed { i, _ ->
-                        m.visitParameter("arg${i + 1}", Opcodes.ACC_MANDATED)
-                    }
+    private fun injectRetroDebug(it: Path) {
+        val rd = RDInjector(AsmUtils.viewJarAsNodes(it).values.toList()).fixAccess().fixInnerClasses()
+            .fixImplicitConstructors().fixParameterLVT()
+            .guessAnonymousInnerClasses().guessGenerics()
+            .stripLVT().restoreSourceFile()
 
-                    true
-                } else {
-                    false
-                }
-            }.any { it }
-        }
+        rd.write(it)
     }
 
     private fun decryptStrings(workspace: DeskDockWorkspaceExtension, it: Path) {

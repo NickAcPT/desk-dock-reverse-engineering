@@ -1,3 +1,3 @@
 CLASS com/floriandraschbacher/deskdock/server/class_20 com/floriandraschbacher/deskdock/server/logic/synergy/packets/class_20
-	METHOD method_75 (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
+	METHOD method_75 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
 		ARG 0 buf

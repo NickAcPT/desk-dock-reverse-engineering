@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_73 com/floriandraschbacher/deskdock/server/ui/MouseCageTransferHandler
+CLASS com/floriandraschbacher/deskdock/server/class_73 com/floriandraschbacher/deskdock/server/ui/mousecage/MouseCageTransferHandler
 	FIELD field_169 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 		ARG 1 window

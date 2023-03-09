@@ -1,6 +1,41 @@
 CLASS com/floriandraschbacher/deskdock/server/class_133
+	FIELD field_362 name Ljava/lang/String;
+	FIELD field_364 bounds Ljava/awt/Rectangle;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/awt/Rectangle;Z)V
+		ARG 1 name
+		ARG 3 bounds
+	METHOD method_401 right ()I
 	METHOD method_402 x (I)V
 		ARG 1 x
+	METHOD method_403 distance (IIII)I
+		ARG 0 x1
+		ARG 1 y1
+		ARG 2 x2
+		ARG 3 y2
+	METHOD method_404 overlaps (Lcom/floriandraschbacher/deskdock/server/class_133;)Z
+	METHOD method_405 (Lcom/floriandraschbacher/deskdock/server/class_133;Z)Z
+		ARG 2 includeEquals
+	METHOD method_406 location (Ljava/awt/Point;)V
+		ARG 1 point
+	METHOD method_407 bottom ()I
+	METHOD method_408 right (I)V
+		ARG 1 right
+	METHOD method_409 (Lcom/floriandraschbacher/deskdock/server/class_133;)Z
+		ARG 1 other
+	METHOD method_410 partiallyContains (Lcom/floriandraschbacher/deskdock/server/class_133;Z)Z
+		ARG 1 other
+		ARG 2 includeEquals
+	METHOD method_411 contains (Ljava/awt/Point;)Z
+		ARG 1 point
 	METHOD method_412 y (I)V
 		ARG 1 y
+	METHOD method_413 intersectingEdges (Lcom/floriandraschbacher/deskdock/server/class_133;)I
+	METHOD method_414 bottom (I)V
+		ARG 1 bottom
+	METHOD method_415 isLeftAndAbove (Lcom/floriandraschbacher/deskdock/server/class_133;)Z
+		ARG 1 other
+	METHOD method_416 (Lcom/floriandraschbacher/deskdock/server/class_133;)Z
+		ARG 1 other
 	METHOD method_417 equals (Ljava/lang/Object;)Z
+	METHOD method_418 (Lcom/floriandraschbacher/deskdock/server/class_133;)Z
+		ARG 1 other

@@ -1,6 +1,7 @@
-CLASS com/floriandraschbacher/deskdock/server/class_78
+CLASS com/floriandraschbacher/deskdock/server/class_78 com/floriandraschbacher/deskdock/server/ui/mousecage/MouseCageInputMethodListener
 	FIELD field_175 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 		ARG 1 window
 	METHOD method_206 caretPositionChanged (Ljava/awt/event/InputMethodEvent;)V
 	METHOD method_207 inputMethodTextChanged (Ljava/awt/event/InputMethodEvent;)V
+		ARG 1 event

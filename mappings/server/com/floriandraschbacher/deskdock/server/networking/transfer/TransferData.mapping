@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_135 com/floriandraschbacher/deskdock/server/networking/model/transfer/TransferData
+CLASS com/floriandraschbacher/deskdock/server/class_135 com/floriandraschbacher/deskdock/server/networking/transfer/TransferData
 	FIELD field_367 data Ljava/util/List;
 	METHOD <init> (Ljava/util/List;)V
 		ARG 1 data

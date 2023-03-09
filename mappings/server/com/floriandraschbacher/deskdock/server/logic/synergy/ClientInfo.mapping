@@ -1,5 +1,8 @@
 CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/deskdock/server/logic/synergy/ClientInfo
 	CLASS class_88
+		FIELD field_197 requestedInfoValue I
+		METHOD <init> (I)V
+			ARG 1 value
 		METHOD toString toString ()Ljava/lang/String;
 	CLASS class_89
 		FIELD field_199 screen Lcom/floriandraschbacher/deskdock/server/class_93;

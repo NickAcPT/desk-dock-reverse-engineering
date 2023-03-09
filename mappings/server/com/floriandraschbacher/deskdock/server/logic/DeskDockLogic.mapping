@@ -6,6 +6,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 	FIELD field_414 allowedPaths Ljava/util/Map;
 	FIELD field_415 filesMap Ljava/util/Map;
 	FIELD field_416 adb Lcom/floriandraschbacher/deskdock/server/class_9;
+	FIELD field_418 fileWriteListenerMap Ljava/util/Map;
+	FIELD field_420 fileReceiverListener Lcom/floriandraschbacher/deskdock/server/class_141$class_142;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_9;)V
 		ARG 1 adb
 		ARG 4 synergyEnabled

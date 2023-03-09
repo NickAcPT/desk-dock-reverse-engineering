@@ -1,5 +1,7 @@
-CLASS com/floriandraschbacher/deskdock/server/class_76
+CLASS com/floriandraschbacher/deskdock/server/class_76 com/floriandraschbacher/deskdock/server/DoMouseButtonClickTask
+	FIELD field_172 buttonIndex I
 	FIELD field_173 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
 		ARG 1 window
+		ARG 2 index
 	METHOD method_204 run ()V

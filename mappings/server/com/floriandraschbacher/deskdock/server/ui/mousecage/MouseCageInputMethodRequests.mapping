@@ -1,14 +1,19 @@
-CLASS com/floriandraschbacher/deskdock/server/class_79 com/floriandraschbacher/deskdock/server/ui/MouseCageInputMethodRequests
+CLASS com/floriandraschbacher/deskdock/server/class_79 com/floriandraschbacher/deskdock/server/ui/mousecage/MouseCageInputMethodRequests
 	FIELD field_176 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 		ARG 1 window
 	METHOD method_208 cancelLatestCommittedText ([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+		ARG 1 unknown1
 	METHOD method_209 getCommittedText (II[Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+		ARG 1 unknown1
+		ARG 2 unknown2
+		ARG 3 unknown3
 	METHOD method_210 getCommittedTextLength ()I
 	METHOD method_211 getInsertPositionOffset ()I
 	METHOD method_212 getLocationOffset (II)Ljava/awt/font/TextHitInfo;
 		ARG 1 x
 		ARG 2 y
 	METHOD method_213 getSelectedText ([Ljava/text/AttributedCharacterIterator$Attribute;)Ljava/text/AttributedCharacterIterator;
+		ARG 1 unknown1
 	METHOD method_214 getTextLocation (Ljava/awt/font/TextHitInfo;)Ljava/awt/Rectangle;
 		ARG 1 info

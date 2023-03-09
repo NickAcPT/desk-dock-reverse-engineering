@@ -1,4 +1,11 @@
 CLASS com/floriandraschbacher/deskdock/server/class_61
+	FIELD field_127 offsetX I
+	FIELD field_128 offsetY I
 	FIELD field_130 window Lcom/floriandraschbacher/deskdock/server/class_70;
+	FIELD field_134 handler Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
 	METHOD method_144 (Lcom/floriandraschbacher/deskdock/server/class_93;)V
 		ARG 1 screen
+		ARG 3 w
+	METHOD method_145 (II)V
+		ARG 1 x
+		ARG 2 y

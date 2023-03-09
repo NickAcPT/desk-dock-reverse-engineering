@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_80
+CLASS com/floriandraschbacher/deskdock/server/class_80 com/floriandraschbacher/deskdock/server/ui/mousecage/WindowEventsHandler
 	METHOD method_215 keyPressed (Ljava/awt/event/KeyEvent;)V
 		ARG 1 event
 	METHOD method_216 keyReleased (Ljava/awt/event/KeyEvent;)V

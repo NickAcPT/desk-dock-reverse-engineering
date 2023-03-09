@@ -2,11 +2,18 @@ CLASS com/floriandraschbacher/deskdock/server/class_159 com/floriandraschbacher/
 	FIELD field_404 instance Lcom/floriandraschbacher/deskdock/server/class_159;
 	FIELD field_405 profileList Ljava/util/List;
 	METHOD method_494 emptyPort ()I
+	METHOD method_495 runTaskLater (ILjava/lang/Runnable;)V
+		ARG 0 delay
+		ARG 1 task
+		ARG 3 task
 	METHOD method_496 readUrlAsString (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 url
 		ARG 5 is
 	METHOD method_497 save (Ljava/util/List;)V
 		ARG 1 profileList
 		ARG 5 manager
+	METHOD method_498 findProfileByScreensAndDevices (Ljava/util/List;Ljava/util/List;)Lcom/floriandraschbacher/deskdock/server/class_83;
+		ARG 1 screens
+		ARG 2 devices
 	METHOD method_499 instance ()Lcom/floriandraschbacher/deskdock/server/class_159;
 	METHOD method_500 profiles ()Ljava/util/List;

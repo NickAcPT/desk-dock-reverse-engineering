@@ -1,25 +1,46 @@
-CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/MouseCageWindow
+CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/deskdock/server/ui/mousecage/MouseCageWindow
 	FIELD field_151 screen Lcom/floriandraschbacher/deskdock/server/class_84;
+	FIELD field_152 handler Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
+	FIELD field_153 x I
+	FIELD field_154 y I
+	FIELD field_155 mouseButtonNumberCount I
 	FIELD field_156 switchDelay I
+	FIELD field_157 lastPressedKey I
+	FIELD field_158 eventListener Lcom/floriandraschbacher/deskdock/server/class_70$class_71;
 	FIELD field_159 macCursorHider Lcom/floriandraschbacher/deskdock/server/class_91;
+	FIELD field_160 tasks [Lcom/floriandraschbacher/deskdock/server/class_96;
+	FIELD field_161 currentKeyCode I
+	FIELD field_162 currentKeyLocation I
+	FIELD field_163 hasSwitched Z
+	FIELD field_164 moveTime I
+	FIELD field_165 pressedKeys Ljava/util/Set;
 	FIELD field_166 waitingForDataImport Z
-	METHOD method_177 (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
+	FIELD field_167 inputMethodListener Ljava/awt/event/InputMethodListener;
+	METHOD method_177 handler (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_70$class_72;
 		ARG 0 window
-	METHOD method_178 (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
+	METHOD method_178 performClick (Lcom/floriandraschbacher/deskdock/server/class_70;I)V
 		ARG 0 window
+		ARG 1 button
 	METHOD method_179 keyTyped (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;)V
 		ARG 0 window
+		ARG 1 event
 	METHOD method_180 keyClicked (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/KeyEvent;Z)V
 		ARG 0 window
+		ARG 1 event
+		ARG 2 down
 	METHOD method_181 mouseMove (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;)V
 		ARG 0 window
 		ARG 1 event
+		ARG 5 offsetY
+		ARG 6 w
 	METHOD method_182 mouseClick (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseEvent;Z)V
 		ARG 0 window
 		ARG 1 event
 		ARG 2 down
+		ARG 3 buttonIndex
 	METHOD method_183 mouseWheel (Lcom/floriandraschbacher/deskdock/server/class_70;Ljava/awt/event/MouseWheelEvent;)V
 		ARG 0 window
+		ARG 1 event
 	METHOD method_184 waitingForDataImport (Lcom/floriandraschbacher/deskdock/server/class_70;Z)Z
 		ARG 0 window
 		ARG 1 waitingForDataImport
@@ -27,12 +48,13 @@ CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/d
 		ARG 0 window
 	METHOD method_186 screen (Lcom/floriandraschbacher/deskdock/server/class_70;)Lcom/floriandraschbacher/deskdock/server/class_84;
 		ARG 0 window
-	METHOD method_188 (Lcom/floriandraschbacher/deskdock/server/class_70;)[Lcom/floriandraschbacher/deskdock/server/class_96;
+	METHOD method_187 cleanUp ()V
+	METHOD method_188 tasks (Lcom/floriandraschbacher/deskdock/server/class_70;)[Lcom/floriandraschbacher/deskdock/server/class_96;
 		ARG 0 window
 	METHOD method_189 hideCursor ()V
 	METHOD method_190 getInputMethodRequests ()Ljava/awt/im/InputMethodRequests;
 	METHOD toString toString ()Ljava/lang/String;
-	CLASS class_71
+	CLASS class_71 EventsHandler
 		FIELD field_168 window Lcom/floriandraschbacher/deskdock/server/class_70;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 			ARG 1 window
@@ -40,7 +62,30 @@ CLASS com/floriandraschbacher/deskdock/server/class_70 com/floriandraschbacher/d
 			ARG 1 window
 		METHOD method_229 (Ljava/awt/event/WindowEvent;)V
 			ARG 1 event
-	CLASS class_72
+	CLASS class_72 UserEventHandler
+		METHOD method_191 keyDown (IIC)V
+			ARG 1 keyCode
+			ARG 2 keyLocation
+			ARG 3 character
+		METHOD method_192 mouseWheel (III)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 rotation
+		METHOD method_193 mouseMoved (IIII)Ljava/awt/Point;
+			ARG 1 x
+			ARG 2 y
+			ARG 3 offsetX
+			ARG 4 offsetY
+		METHOD method_194 mouseEvent (IIIZ)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 button
+			ARG 4 down
 		METHOD method_196 dropFiles (Ljava/util/List;)V
 			ARG 1 files
+		METHOD method_197 keyUp (II)V
+			ARG 1 keyCode
+			ARG 2 keyLocation
 		METHOD method_198 dropString (Ljava/lang/String;)V
+			ARG 1 string
+		METHOD method_199 deactivated ()V

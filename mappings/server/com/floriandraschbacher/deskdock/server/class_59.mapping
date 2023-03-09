@@ -1,4 +1,9 @@
 CLASS com/floriandraschbacher/deskdock/server/class_59
+	METHOD method_130 method_130 (II)V
+		ARG 1 x
+		ARG 2 y
+		ARG 4 w
+	METHOD method_133 handleDeactivated ()V
 	CLASS class_60
 		METHOD method_140 (Lcom/floriandraschbacher/deskdock/server/class_135;)V
 			ARG 1 transferData

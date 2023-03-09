@@ -1,10 +1,11 @@
-CLASS com/floriandraschbacher/deskdock/server/class_189
+CLASS com/floriandraschbacher/deskdock/server/class_189 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyConnection
 	FIELD field_449 logic Lcom/floriandraschbacher/deskdock/server/class_191;
 	FIELD field_450 socket Ljava/net/Socket;
 	FIELD field_451 out Ljava/io/OutputStream;
 	FIELD field_452 in Ljava/io/InputStream;
 	FIELD field_458 options Ljava/util/Map;
 	FIELD field_459 disconnected Z
+	FIELD field_460 trustManager Ljavax/net/ssl/TrustManager;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_191;)V
 		ARG 1 serverLogic
 	METHOD method_561 cleanDisconnect ()V

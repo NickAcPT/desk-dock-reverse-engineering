@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_160 com/floriandraschbacher/deskdock/server/DelayedTask
+	FIELD field_406 task Ljava/lang/Runnable;
+	METHOD <init> (Ljava/lang/Runnable;)V
+		ARG 1 task
+	METHOD method_501 run ()V
