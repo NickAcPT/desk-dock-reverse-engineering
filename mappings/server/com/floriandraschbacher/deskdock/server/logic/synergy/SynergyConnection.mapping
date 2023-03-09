@@ -3,6 +3,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_189 com/floriandraschbacher/
 	FIELD field_450 socket Ljava/net/Socket;
 	FIELD field_451 out Ljava/io/OutputStream;
 	FIELD field_452 in Ljava/io/InputStream;
+	FIELD field_454 receivedOptions Z
 	FIELD field_458 options Ljava/util/Map;
 	FIELD field_459 disconnected Z
 	FIELD field_460 trustManager Ljavax/net/ssl/TrustManager;

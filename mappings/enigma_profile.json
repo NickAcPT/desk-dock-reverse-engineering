@@ -22,7 +22,10 @@
         }
       },
       {
-        "id": "deskdock:jar_index"
+        "id": "deskdock:jar_index",
+        "args": {
+          "method_patterns": "method_patterns.json"
+        }
       }
     ],
     "obfuscation_test": {

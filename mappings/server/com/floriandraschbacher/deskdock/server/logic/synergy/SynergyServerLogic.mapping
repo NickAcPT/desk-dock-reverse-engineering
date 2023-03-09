@@ -3,14 +3,17 @@ CLASS com/floriandraschbacher/deskdock/server/class_191 com/floriandraschbacher/
 	METHOD method_575 enter (II)V
 		ARG 1 x
 		ARG 2 y
+	METHOD method_578 mouseDown (Lcom/floriandraschbacher/deskdock/server/class_4$class_5;)V
 	METHOD method_579 onError (Ljava/lang/Exception;)V
 	METHOD method_580 clipboard (Ljava/lang/String;)V
 		ARG 1 text
 	METHOD method_581 filesDragged (Ljava/util/List;)V
 		ARG 1 files
 	METHOD method_582 disconnected ()V
+	METHOD method_583 handleMouseMove (II)V
 	METHOD method_584 (ILcom/floriandraschbacher/deskdock/server/class_4$class_6;)V
 		ARG 1 key
+	METHOD method_585 mouseUp (Lcom/floriandraschbacher/deskdock/server/class_4$class_5;)V
 	METHOD method_586 leave ()V
 	METHOD method_588 name ()Ljava/lang/String;
 	METHOD method_589 clientInfo ()Lcom/floriandraschbacher/deskdock/server/class_87;

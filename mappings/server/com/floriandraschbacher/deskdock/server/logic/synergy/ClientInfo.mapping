@@ -1,4 +1,10 @@
 CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/deskdock/server/logic/synergy/ClientInfo
+	FIELD field_191 x I
+	FIELD field_192 y I
+	FIELD field_193 width I
+	FIELD field_194 height I
+	FIELD field_195 mouseX I
+	FIELD field_196 mouseY I
 	CLASS class_88
 		FIELD field_197 requestedInfoValue I
 		METHOD <init> (I)V

@@ -1,0 +1,21 @@
+[
+  {
+    "_comment": "public static SynergyPacket read(ByteBuffer buf)",
+    "access": [
+      "public",
+      "static"
+    ],
+    "name": "read",
+    "return": "com/floriandraschbacher/deskdock/server/class_39",
+    "parameters": [
+      {
+        "name": "buf",
+        "type": "java/nio/ByteBuffer"
+      }
+    ],
+    "parent": {
+      "_comment": "SynergyPacket",
+      "name": "com/floriandraschbacher/deskdock/server/class_39"
+    }
+  }
+]

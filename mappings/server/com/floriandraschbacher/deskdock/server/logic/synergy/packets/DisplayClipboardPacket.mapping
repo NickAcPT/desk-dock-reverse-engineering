@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_20 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayClipboardPacket
+	FIELD field_44 type S
+	METHOD method_75 read (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
+		ARG 0 buf

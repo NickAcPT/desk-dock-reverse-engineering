@@ -1,0 +1,9 @@
+CLASS com/floriandraschbacher/deskdock/server/class_19 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayInfoPacket
+	FIELD field_38 x I
+	FIELD field_39 y I
+	FIELD field_40 width I
+	FIELD field_41 height I
+	FIELD field_42 mouseX I
+	FIELD field_43 mouseY I
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_87;)V
+		ARG 1 synergyClientInfo

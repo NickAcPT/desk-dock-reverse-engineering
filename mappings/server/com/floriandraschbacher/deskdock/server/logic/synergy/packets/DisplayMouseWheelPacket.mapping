@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_34 com/floriandraschbacher/deskdock/server/logic/synergy/packets/DisplayMouseWheelPacket
+	METHOD method_87 (Ljava/nio/ByteBuffer;)Lcom/floriandraschbacher/deskdock/server/class_39;
+		ARG 0 buf
