@@ -5,10 +5,7 @@ import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.getCacheFileP
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.repositories
 import java.nio.file.Path
-import kotlin.io.path.copyTo
-import kotlin.io.path.createDirectories
-import kotlin.io.path.deleteIfExists
-import kotlin.io.path.div
+import kotlin.io.path.*
 
 data class VirtualMavenRepository(
     val project: Project,
@@ -33,8 +30,12 @@ data class VirtualMavenRepository(
         }
     }
 
-    fun publishDependency(dependencyInfo: DependencyInfo, fileWriter: (Path) -> Unit): Path {
+    fun publishDependency(dependencyInfo: DependencyInfo, override: Boolean = false, fileWriter: (Path) -> Unit): Path {
         val finalPath = getPath(dependencyInfo)
+
+        if (!override && finalPath.exists()) {
+            return finalPath
+        }
 
         finalPath.deleteIfExists()
         fileWriter(finalPath)

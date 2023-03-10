@@ -2,6 +2,8 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin
 
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.DeskDockWorkspaceExtension
 import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.IntermediaryDeskDockProvider
+import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.NamedDeskDockProvider
+import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.mappingsPath
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.AutomateMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.DumpNamesFromIntermediaryMappingsTask
 import io.github.nickacpt.reverseengineering.deskdock.plugin.tasks.InsertProposedMappingsTask
@@ -14,7 +16,6 @@ import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.maven
 import org.gradle.kotlin.dsl.repositories
-import kotlin.io.path.div
 
 class DeskDockReverseEngineeringPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -48,11 +49,16 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
             val intermediaryJar = IntermediaryDeskDockProvider.provide(this)
 
             enigmaTasks.forEach {
-                it.workDirPath = project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME
+                it.workDirPath = project.mappingsPath
                 it.inputJarPath = intermediaryJar
                 it.mappingsPath = target.workspace.type.getMappingsDirectory(target)
                 it.initClassPath()
             }
+
+            // Now, provide the named deskdock jar
+            NamedDeskDockProvider.provide(this)
+
+            println(project.configurations.getByName("deskDockProvided").resolve())
         }
     }
 }

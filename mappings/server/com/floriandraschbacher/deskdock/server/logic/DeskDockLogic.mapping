@@ -57,4 +57,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_165 com/floriandraschbacher/
 			ARG 2 message
 			ARG 3 runnable
 	CLASS class_168 ConfigurationUpdateListener
-		METHOD method_521 onConfigChanged ()V
+		METHOD method_521 onConfigChanged2 ()V

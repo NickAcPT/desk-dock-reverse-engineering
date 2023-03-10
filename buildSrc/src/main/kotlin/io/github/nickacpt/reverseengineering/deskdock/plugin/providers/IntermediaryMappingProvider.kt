@@ -3,7 +3,6 @@ package io.github.nickacpt.reverseengineering.deskdock.plugin.providers
 import io.github.nickacpt.reverseengineering.deskdock.plugin.model.WorkspaceType
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.HashUtils
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.ModifiedGenState
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
 import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.workspace
 import net.fabricmc.stitch.representation.JarReader
 import net.fabricmc.stitch.representation.JarRootEntry
@@ -19,7 +18,7 @@ object IntermediaryMappingProvider {
         val type = project.workspace.type
 
         // Create directories for the intermediary path
-        val intermediaryDirPath = project.rootDir.toPath() / Constants.INTERMEDIARY_FOLDER_NAME / type.toString()
+        val intermediaryDirPath = project.intermediaryPath / type.toString()
         intermediaryDirPath.createDirectories()
 
         val originalJarPath = ProcessedOriginalDeskDockProvider.provide(project)

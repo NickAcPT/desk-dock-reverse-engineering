@@ -8,8 +8,9 @@ plugins {
 repositories {
     mavenCentral()
     maven("https://maven.fabricmc.net/")
-
     maven("https://jitpack.io")
+    maven("https://raw.githubusercontent.com/NickAcPT/LightCraftMaven/main/")
+    maven("https://maven.quiltmc.org/repository/release/")
 }
 
 dependencies {
@@ -23,6 +24,11 @@ dependencies {
     implementation("net.fabricmc:tiny-remapper:0.8.6")
     implementation("net.fabricmc:tiny-mappings-parser:0.3.0+build.17")
     implementation("com.github.MCPHackers:RetroDebugInjector:c4d6594")
+
+    implementation("io.github.nickacpt.patchify:patchify-gradle-plugin:2.1.0-SNAPSHOT") {
+        exclude(group = "org.quiltmc", module = "quiltflower")
+    }
+    implementation("org.quiltmc:quiltflower:1.9.0")
 
 }
 

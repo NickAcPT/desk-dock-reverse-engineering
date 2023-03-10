@@ -7,4 +7,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_104 com/floriandraschbacher/
 		METHOD method_314 handleReceivedPacket ([B)V
 			ARG 1 bytes
 			ARG 3 packet
-		METHOD method_315 disconnect ()V
+		METHOD method_315 onDisconnect ()V

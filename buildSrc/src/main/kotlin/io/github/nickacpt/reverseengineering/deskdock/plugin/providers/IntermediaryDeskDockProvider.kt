@@ -10,9 +10,6 @@ import java.nio.file.Path
 object IntermediaryDeskDockProvider : DeskDockArtifactProvider() {
     override val classifier: String = "intermediary"
 
-    override val addToProject: Boolean
-        get() = true
-
     override fun provideArtifact(project: Project, newDependency: DependencyInfo): Path {
         val intermediaryFilePath = IntermediaryMappingProvider.provide(project)
         val originalJarPath = ProcessedOriginalDeskDockProvider.provide(project)

@@ -23,16 +23,16 @@ abstract class DeskDockArtifactProvider {
             classifier = classifier
         )
 
+        if (addToProject) {
+            val config = project.configurations.maybeCreate("deskDockProvided")
+            project.configurations.findByName("implementation")!!.extendsFrom(config)
+
+            project.dependencies.add(config.name, newDependency.notation)
+        }
+
         val artifactPath = repo.getPath(newDependency)
         if (artifactPath.exists()) {
             return artifactPath
-        }
-
-        if (addToProject) {
-            val config = project.configurations.maybeCreate("amogus")
-            project.configurations.findByName("implementation")!!.extendsFrom(config)
-
-            project.dependencies.add("amogus", newDependency.notation)
         }
 
         return repo.publishDependency(newDependency, provideArtifact(project, newDependency))

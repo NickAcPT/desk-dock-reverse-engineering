@@ -1,6 +1,6 @@
 package io.github.nickacpt.reverseengineering.deskdock.plugin.model
 
-import io.github.nickacpt.reverseengineering.deskdock.plugin.utils.constants.Constants
+import io.github.nickacpt.reverseengineering.deskdock.plugin.providers.mappingsPath
 import org.gradle.api.Project
 import kotlin.io.path.createDirectories
 import kotlin.io.path.div
@@ -13,7 +13,7 @@ enum class WorkspaceType {
     };
 
     fun getMappingsDirectory(project: Project) =
-        (project.rootDir.toPath() / Constants.MAPPINGS_FOLDER_NAME / toString()).createDirectories()
+        (project.mappingsPath / toString()).createDirectories()
 
     abstract fun getDownloadUrl(version: String): String
 
