@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_62
+	FIELD field_137 mouseMotionListener Lcom/github/kwhat/jnativehook/mouse/NativeMouseMotionListener;
 	CLASS class_63
 		METHOD method_149 (Lcom/floriandraschbacher/deskdock/server/class_93;III)V
 			ARG 1 screen

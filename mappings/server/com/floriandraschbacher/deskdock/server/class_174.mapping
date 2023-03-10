@@ -1,0 +1,3 @@
+CLASS com/floriandraschbacher/deskdock/server/class_174
+	METHOD method_533 registerListener (Lcom/github/kwhat/jnativehook/mouse/NativeMouseMotionListener;)V
+		ARG 0 listener
