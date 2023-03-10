@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_69 com/floriandraschbacher/deskdock/server/DeviceReconnectionTask
+CLASS com/floriandraschbacher/deskdock/server/class_69 com/floriandraschbacher/deskdock/server/logic/tasks/DeviceReconnectionTask
 	FIELD field_148 device Lcom/floriandraschbacher/deskdock/server/class_181;
 	FIELD field_149 retryCount I
 	FIELD field_150 deviceManager Lcom/floriandraschbacher/deskdock/server/class_37;

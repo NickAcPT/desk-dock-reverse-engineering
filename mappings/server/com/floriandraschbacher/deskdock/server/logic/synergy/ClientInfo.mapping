@@ -6,6 +6,8 @@ CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/d
 	FIELD field_195 mouseX I
 	FIELD field_196 mouseY I
 	METHOD <init> (IIIIII)V
+		ARG 1 unknown1
+		ARG 2 unknown2
 		ARG 3 width
 		ARG 4 height
 		ARG 5 mouseX
@@ -20,3 +22,4 @@ CLASS com/floriandraschbacher/deskdock/server/class_87 com/floriandraschbacher/d
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_93;III)V
 			ARG 1 screen
 		METHOD method_257 equals (Ljava/lang/Object;)Z
+			ARG 1 other

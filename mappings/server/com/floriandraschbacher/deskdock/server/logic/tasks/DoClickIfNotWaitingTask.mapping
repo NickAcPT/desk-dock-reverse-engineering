@@ -1,4 +1,4 @@
-CLASS com/floriandraschbacher/deskdock/server/class_77 com/floriandraschbacher/deskdock/server/DoClickIfNotWaitingTask
+CLASS com/floriandraschbacher/deskdock/server/class_77 com/floriandraschbacher/deskdock/server/logic/tasks/DoClickIfNotWaitingTask
 	FIELD field_174 window Lcom/floriandraschbacher/deskdock/server/class_70;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_70;)V
 		ARG 1 window

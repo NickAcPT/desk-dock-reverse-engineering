@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_136
+	FIELD field_368 systemIntegrator Lcom/floriandraschbacher/deskdock/server/class_106;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_106;)V
+		ARG 1 systemIntegrator

@@ -1,0 +1,5 @@
+CLASS com/floriandraschbacher/deskdock/server/class_17 com/floriandraschbacher/deskdock/server/logic/tasks/TrustSynergyServerFingerprintTask
+	FIELD field_35 warnTask Lcom/floriandraschbacher/deskdock/server/class_16;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_16;)V
+		ARG 1 warnTask
+	METHOD method_65 run ()V

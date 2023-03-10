@@ -1,4 +1,7 @@
-CLASS com/floriandraschbacher/deskdock/server/class_190
+CLASS com/floriandraschbacher/deskdock/server/class_190 com/floriandraschbacher/deskdock/server/logic/synergy/SynergyTrustManager
+	FIELD field_461 synergyConnection Lcom/floriandraschbacher/deskdock/server/class_189;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_189;)V
+		ARG 1 synergyConnection
 	METHOD method_565 checkClientTrusted ([Ljava/security/cert/X509Certificate;)V
 	METHOD method_566 checkClientTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
 		ARG 1 cert

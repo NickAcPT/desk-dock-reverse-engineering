@@ -95,7 +95,7 @@ CLASS com/floriandraschbacher/deskdock/server/class_9 com/floriandraschbacher/de
 		ARG 2 split
 	METHOD method_34 executableName ()Ljava/lang/String;
 	METHOD method_35 virtualDesktop ()Z
-	METHOD method_36 primary ()Lcom/floriandraschbacher/deskdock/server/class_93;
+	METHOD method_36 primaryScreen ()Lcom/floriandraschbacher/deskdock/server/class_93;
 	METHOD method_37 totalBounds ()Ljava/awt/Rectangle;
 	METHOD method_38 isDebuggingEnalbed ()Z
 	METHOD method_39 locateDefaultAndroidSdk ()Ljava/lang/String;

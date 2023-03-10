@@ -1,0 +1,7 @@
+CLASS com/floriandraschbacher/deskdock/server/class_16 com/floriandraschbacher/deskdock/server/logic/tasks/logic/tasks/SynergyServerFingerprintKeyMismatchWarnTask
+	FIELD field_33 fingerprint Ljava/lang/String;
+	FIELD field_34 handshakeTask Lcom/floriandraschbacher/deskdock/server/class_15;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_15;Ljava/lang/String;)V
+		ARG 1 handshakeTask
+		ARG 2 fingerprint
+	METHOD method_64 run ()V

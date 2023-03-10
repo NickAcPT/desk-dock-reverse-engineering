@@ -1,0 +1,4 @@
+CLASS com/floriandraschbacher/deskdock/server/class_139 com/floriandraschbacher/deskdock/server/logic/tasks/DisplayConfigurationChangeListenerTask
+	FIELD field_373 listener Lcom/floriandraschbacher/deskdock/server/class_137;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_137;)V
+		ARG 1 listener

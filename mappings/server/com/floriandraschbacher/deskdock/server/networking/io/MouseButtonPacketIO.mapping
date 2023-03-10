@@ -1,0 +1,14 @@
+CLASS com/floriandraschbacher/deskdock/server/class_53 com/floriandraschbacher/deskdock/server/networking/io/MouseButtonPacketIO
+	FIELD field_113 button I
+	FIELD field_114 down Z
+	FIELD field_115 x I
+	FIELD field_116 y I
+	METHOD <init> (IZII)V
+		ARG 1 button
+		ARG 2 down
+		ARG 3 x
+		ARG 4 y
+	METHOD method_128 parse (Lcom/floriandraschbacher/deskdock/server/class_150;)Lcom/floriandraschbacher/deskdock/server/class_53;
+		ARG 0 reader
+		ARG 4 y
+	METHOD toString toString ()Ljava/lang/String;

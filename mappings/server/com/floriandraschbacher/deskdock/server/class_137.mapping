@@ -1,3 +1,0 @@
-CLASS com/floriandraschbacher/deskdock/server/class_137
-	CLASS class_138 ConfigChangeListener
-		METHOD method_431 onConfigChanged ()V

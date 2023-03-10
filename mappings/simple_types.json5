@@ -108,5 +108,18 @@
   "java/net/Socket": "socket",
   "java/io/OutputStream": "out",
   "java/io/InputStream": "in",
-  "com/floriandraschbacher/deskdock/server/class_165$class_167": "statusMenuAbstraction"
+  "com/floriandraschbacher/deskdock/server/class_165$class_167": "statusMenuAbstraction",
+  "com/floriandraschbacher/deskdock/server/class_189": "synergyConnection",
+  "com/floriandraschbacher/deskdock/server/class_106": {
+    local_name: "systemIntegrator",
+    fallback: [
+      "normalSystemIntegrator",
+    ]
+  },
+  "com/floriandraschbacher/deskdock/server/class_150": {
+    local_name: "reader",
+    fallback: [
+      "packetReader",
+    ]
+  },
 }

@@ -1,4 +1,5 @@
 CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/deskdock/server/logic/integration/SynergySystemIntegrator
+	FIELD field_17 matchesKey Z
 	FIELD field_18 synergyReverseScrolling Z
 	FIELD field_19 deviceMap Ljava/util/Map;
 	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_179$class_180;)V
@@ -43,9 +44,11 @@ CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/d
 		FIELD field_23 enterPoint Ljava/awt/Point;
 		FIELD field_24 transferData Lcom/floriandraschbacher/deskdock/server/class_135;
 		FIELD field_27 readingTask Ljava/lang/Runnable;
+		FIELD field_28 systemIntegrator Lcom/floriandraschbacher/deskdock/server/class_12;
 		FIELD field_29 serverLogic Lcom/floriandraschbacher/deskdock/server/class_191;
 		FIELD field_30 writingTask Ljava/lang/Runnable;
 		METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_12;Lcom/floriandraschbacher/deskdock/server/class_85;)V
+			ARG 1 systemIntegrator
 			ARG 2 device
 		METHOD method_59 scale (Lcom/floriandraschbacher/deskdock/server/class_12$class_13;FZ)F
 			ARG 0 client

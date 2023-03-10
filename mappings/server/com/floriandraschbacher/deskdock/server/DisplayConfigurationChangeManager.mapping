@@ -1,0 +1,15 @@
+CLASS com/floriandraschbacher/deskdock/server/class_137 com/floriandraschbacher/deskdock/server/DisplayConfigurationChangeManager
+	FIELD field_369 totalBounds Ljava/awt/Rectangle;
+	FIELD field_370 INSTANCE Lcom/floriandraschbacher/deskdock/server/class_137;
+	FIELD field_371 listeners Ljava/util/List;
+	FIELD field_372 configChangeListenerTask Lcom/floriandraschbacher/deskdock/server/class_96;
+	METHOD method_425 instance ()Lcom/floriandraschbacher/deskdock/server/class_137;
+	METHOD method_426 addListener (Lcom/floriandraschbacher/deskdock/server/class_137$class_138;)V
+		ARG 1 listener
+	METHOD method_427 notifyConfigChange ()V
+	METHOD method_428 removeListener (Lcom/floriandraschbacher/deskdock/server/class_137$class_138;)V
+		ARG 1 listener
+	METHOD method_429 init ()V
+	METHOD method_430 cleanup ()V
+	CLASS class_138 ConfigChangeListener
+		METHOD method_431 onConfigChanged ()V
