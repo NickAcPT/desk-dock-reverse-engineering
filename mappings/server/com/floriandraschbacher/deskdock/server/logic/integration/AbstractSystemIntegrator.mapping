@@ -1,5 +1,7 @@
 CLASS com/floriandraschbacher/deskdock/server/class_179 com/floriandraschbacher/deskdock/server/logic/integration/AbstractSystemIntegrator
 	FIELD field_428 handler Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_179$class_180;)V
+		ARG 1 handler
 	METHOD method_537 load ()V
 	METHOD method_538 addDevice (Lcom/floriandraschbacher/deskdock/server/class_85;)V
 		ARG 1 device

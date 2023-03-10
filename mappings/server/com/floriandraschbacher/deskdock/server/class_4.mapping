@@ -7,3 +7,9 @@ CLASS com/floriandraschbacher/deskdock/server/class_4
 		FIELD field_5 key I
 		METHOD <init> (I)V
 			ARG 1 key
+	CLASS class_7
+		METHOD <init> (I)V
+			ARG 1 requestedInfoValue
+	CLASS class_8
+		METHOD <init> (I)V
+			ARG 1 requestedInfoValue

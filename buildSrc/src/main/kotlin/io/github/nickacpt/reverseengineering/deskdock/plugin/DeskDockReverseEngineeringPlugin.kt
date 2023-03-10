@@ -57,8 +57,6 @@ class DeskDockReverseEngineeringPlugin : Plugin<Project> {
 
             // Now, provide the named deskdock jar
             NamedDeskDockProvider.provide(this)
-
-            println(project.configurations.getByName("deskDockProvided").resolve())
         }
     }
 }

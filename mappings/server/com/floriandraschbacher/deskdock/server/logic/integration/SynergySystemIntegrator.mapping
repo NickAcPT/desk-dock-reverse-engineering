@@ -1,8 +1,42 @@
 CLASS com/floriandraschbacher/deskdock/server/class_12 com/floriandraschbacher/deskdock/server/logic/integration/SynergySystemIntegrator
 	FIELD field_18 synergyReverseScrolling Z
 	FIELD field_19 deviceMap Ljava/util/Map;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_179$class_180;)V
+		ARG 1 handler
+	METHOD method_42 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_43 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_44 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_45 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
 	METHOD method_46 deviceByName (Lcom/floriandraschbacher/deskdock/server/class_85;)Lcom/floriandraschbacher/deskdock/server/class_12$class_13;
 		ARG 1 device
+	METHOD method_47 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_48 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_49 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_50 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_51 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_52 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_53 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_54 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_55 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_56 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_57 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
+	METHOD method_58 handler (Lcom/floriandraschbacher/deskdock/server/class_12;)Lcom/floriandraschbacher/deskdock/server/class_179$class_180;
+		ARG 0 handler
 	CLASS class_13 SynergyClient
 		FIELD field_21 device Lcom/floriandraschbacher/deskdock/server/class_85;
 		FIELD field_22 connection Lcom/floriandraschbacher/deskdock/server/class_189;
