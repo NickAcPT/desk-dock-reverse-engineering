@@ -1,2 +1,3 @@
 CLASS com/floriandraschbacher/deskdock/server/class_115
+	FIELD field_311 frame Lcom/floriandraschbacher/deskdock/server/class_110;
 	METHOD method_354 actionPerformed (Ljava/awt/event/ActionEvent;)V

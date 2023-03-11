@@ -1,4 +1,6 @@
 CLASS com/floriandraschbacher/deskdock/server/class_118
+	FIELD field_315 profile Lcom/floriandraschbacher/deskdock/server/class_83;
+	FIELD field_316 frame Lcom/floriandraschbacher/deskdock/server/class_110;
 	METHOD method_356 mouseClicked (Ljava/awt/event/MouseEvent;)V
 		ARG 1 event
 	METHOD method_357 mouseEntered (Ljava/awt/event/MouseEvent;)V

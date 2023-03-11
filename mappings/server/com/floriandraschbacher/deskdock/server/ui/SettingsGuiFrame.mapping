@@ -1,0 +1,57 @@
+CLASS com/floriandraschbacher/deskdock/server/class_110 com/floriandraschbacher/deskdock/server/ui/SettingsGuiFrame
+	FIELD field_254 screenSwitchShortcutField Ljavax/swing/JTextField;
+	FIELD field_255 screenSwitchShortcutChangeButton Ljavax/swing/JButton;
+	FIELD field_256 requireShortcutToSwitchLabel Ljavax/swing/JLabel;
+	FIELD field_257 requireShortcutToSwitch Ljavax/swing/JCheckBox;
+	FIELD field_258 windowsWorkaroundLabel Ljavax/swing/JLabel;
+	FIELD field_259 windowsWorkaroundCheckbox Ljavax/swing/JCheckBox;
+	FIELD field_260 synergyAddressField Ljavax/swing/JTextField;
+	FIELD field_261 synergyFingerprintField Ljavax/swing/JTextField;
+	FIELD field_262 useSynergyIntegrationLabel Ljavax/swing/JLabel;
+	FIELD field_263 useSynergyIntegrationCheckbox Ljavax/swing/JCheckBox;
+	FIELD field_264 synergyAddressLabel Ljavax/swing/JLabel;
+	FIELD field_265 synergyFingerprintLabel Ljavax/swing/JLabel;
+	FIELD field_266 titleLabel Ljavax/swing/JLabel;
+	FIELD field_267 synergyIntegrationLabel Ljavax/swing/JLabel;
+	FIELD field_268 synergyIntegrationDescriptionLabel Ljavax/swing/JLabel;
+	FIELD field_269 encryptedCheckbox Ljavax/swing/JCheckBox;
+	FIELD field_270 synergyReverseScrollingCheckbox Ljavax/swing/JCheckBox;
+	FIELD field_275 devices Ljava/util/List;
+	FIELD field_276 profileList Ljava/util/List;
+	FIELD field_278 currentProfile Lcom/floriandraschbacher/deskdock/server/class_83;
+	FIELD field_279 logic Lcom/floriandraschbacher/deskdock/server/class_165;
+	FIELD field_281 frame Lcom/floriandraschbacher/deskdock/server/class_110;
+	FIELD field_283 okButton Ljavax/swing/JButton;
+	FIELD field_284 cancelButton Ljavax/swing/JButton;
+	FIELD field_285 tabs Ljavax/swing/JTabbedPane;
+	FIELD field_286 arrangementTab Ljavax/swing/JPanel;
+	FIELD field_289 profilesPanel Ljavax/swing/JPanel;
+	FIELD field_290 attachLabel Ljavax/swing/JLabel;
+	FIELD field_291 alignLabel Ljavax/swing/JLabel;
+	FIELD field_297 advancedTabPanel Ljavax/swing/JPanel;
+	FIELD field_298 adbPathTextField Ljavax/swing/JTextField;
+	FIELD field_299 adbBinaryPathLabel Ljavax/swing/JLabel;
+	FIELD field_300 dataFolderLabel Ljavax/swing/JLabel;
+	FIELD field_301 dataFolderField Ljavax/swing/JTextField;
+	FIELD field_302 switchDelayLabel Ljavax/swing/JLabel;
+	FIELD field_303 switchDelayField Ljavax/swing/JTextField;
+	FIELD field_304 darkTrayCheckBox Ljavax/swing/JCheckBox;
+	FIELD field_305 darkTrayLabel Ljavax/swing/JLabel;
+	FIELD field_306 screenSwitchLabel Ljavax/swing/JLabel;
+	METHOD <init> (Lcom/floriandraschbacher/deskdock/server/class_165;)V
+		ARG 1 logic
+	METHOD method_333 (Lcom/floriandraschbacher/deskdock/server/class_110;Lcom/floriandraschbacher/deskdock/server/class_83;)Lcom/floriandraschbacher/deskdock/server/class_83;
+		ARG 0 frame
+		ARG 1 currentProfile
+	METHOD method_334 showSettings (Lcom/floriandraschbacher/deskdock/server/class_165;)V
+		ARG 0 logic
+	METHOD method_337 dispose (Lcom/floriandraschbacher/deskdock/server/class_110;)V
+	METHOD method_341 dispose ()V
+	METHOD method_344 (Lcom/floriandraschbacher/deskdock/server/class_110;)Lcom/floriandraschbacher/deskdock/server/class_131;
+		ARG 0 frame
+	METHOD method_345 currentProfile (Lcom/floriandraschbacher/deskdock/server/class_110;)Lcom/floriandraschbacher/deskdock/server/class_83;
+		ARG 0 currentProfile
+	METHOD method_346 devices (Lcom/floriandraschbacher/deskdock/server/class_110;)Ljava/util/List;
+		ARG 0 frame
+	METHOD method_347 profileList (Lcom/floriandraschbacher/deskdock/server/class_110;)Ljava/util/List;
+		ARG 0 frame

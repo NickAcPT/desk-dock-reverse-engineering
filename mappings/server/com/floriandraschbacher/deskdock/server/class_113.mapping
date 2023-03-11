@@ -1,3 +1,4 @@
 CLASS com/floriandraschbacher/deskdock/server/class_113
+	FIELD field_309 frame Lcom/floriandraschbacher/deskdock/server/class_110;
 	METHOD method_352 windowClosing (Ljava/awt/event/WindowEvent;)V
 		ARG 1 event
